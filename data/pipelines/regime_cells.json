@@ -1,0 +1,22 @@
+{
+  "name": "regime_cells",
+  "workdir": ".",
+  "env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "stages": [
+    {
+      "name": "rolesplit_graft",
+      "depends_on": [],
+      "cmd": ["python3", "rolesplit_graft.py"]
+    },
+    {
+      "name": "rolesplit_embedders",
+      "depends_on": ["rolesplit_graft"],
+      "cmd": ["python3", "rolesplit_embedders.py"]
+    }
+  ]
+}

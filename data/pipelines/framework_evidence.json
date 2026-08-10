@@ -1,0 +1,108 @@
+{
+  "name": "framework_evidence",
+  "workdir": ".",
+  "env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "stages": [
+    {
+      "name": "features_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "features",
+        "--dataset",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "features_mwoz",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "features",
+        "--dataset",
+        "uss_mwoz"
+      ]
+    },
+    {
+      "name": "floors_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "floors",
+        "--dataset",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "floors_mwoz",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "floors",
+        "--dataset",
+        "uss_mwoz"
+      ]
+    },
+    {
+      "name": "designs_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "designs",
+        "--dataset",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "designs_mwoz",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "designs",
+        "--dataset",
+        "uss_mwoz"
+      ]
+    },
+    {
+      "name": "hybrid_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "hybrid",
+        "--dataset",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "hybrid_mwoz",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "trace_h2h.py",
+        "--mode",
+        "hybrid",
+        "--dataset",
+        "uss_mwoz"
+      ]
+    }
+  ]
+}

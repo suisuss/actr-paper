@@ -1,0 +1,269 @@
+{
+ "n": 1000,
+ "overall_spearman": [
+  {
+   "stat": "cos_drift",
+   "rho": 0.1417,
+   "p_raw": 6.909100568451782e-06,
+   "p_fdr": 7.60001062529696e-05
+  },
+  {
+   "stat": "gap_mean",
+   "rho": -0.088,
+   "p_raw": 0.005346818092014519,
+   "p_fdr": 0.006534999890239968
+  },
+  {
+   "stat": "gap_slope",
+   "rho": -0.0998,
+   "p_raw": 0.001581214493403681,
+   "p_fdr": 0.002552357032097326
+  },
+  {
+   "stat": "resid_user",
+   "rho": 0.1134,
+   "p_raw": 0.00032730643630837504,
+   "p_fdr": 0.0012001235997973752
+  },
+  {
+   "stat": "resid_model",
+   "rho": 0.1018,
+   "p_raw": 0.0012645522359043372,
+   "p_fdr": 0.002552357032097326
+  },
+  {
+   "stat": "resid_midline",
+   "rho": 0.0995,
+   "p_raw": 0.001624227202243753,
+   "p_fdr": 0.002552357032097326
+  },
+  {
+   "stat": "resid_interleaved",
+   "rho": 0.063,
+   "p_raw": 0.04648477511207677,
+   "p_fdr": 0.051133252623284456
+  },
+  {
+   "stat": "user_sur_mean",
+   "rho": -0.1001,
+   "p_raw": 0.0015271498540134446,
+   "p_fdr": 0.002552357032097326
+  },
+  {
+   "stat": "model_sur_mean",
+   "rho": -0.0527,
+   "p_raw": 0.09569424320740486,
+   "p_fdr": 0.09569424320740484
+  },
+  {
+   "stat": "user_trend_gain",
+   "rho": -0.0911,
+   "p_raw": 0.003932638265120785,
+   "p_fdr": 0.005407377614541079
+  },
+  {
+   "stat": "model_trend_gain",
+   "rho": -0.1304,
+   "p_raw": 3.549095034068855e-05,
+   "p_fdr": 0.00019520022687378704
+  }
+ ],
+ "per_service_means": {
+  "cos_drift": {
+   "Restaurants_1": 0.4563,
+   "Flights_1": 0.3731,
+   "Services_3": 0.3958,
+   "Events_2": 0.3846,
+   "Movies_1": 0.4008,
+   "Services_1": 0.4998
+  },
+  "gap_mean": {
+   "Restaurants_1": 1.1225,
+   "Flights_1": 1.125,
+   "Services_3": 1.1268,
+   "Events_2": 1.123,
+   "Movies_1": 1.1428,
+   "Services_1": 1.102
+  },
+  "gap_slope": {
+   "Restaurants_1": 0.0183,
+   "Flights_1": 0.0074,
+   "Services_3": 0.014,
+   "Events_2": 0.0132,
+   "Movies_1": -0.0049,
+   "Services_1": 0.0234
+  },
+  "resid_user": {
+   "Restaurants_1": 0.4957,
+   "Flights_1": 0.4788,
+   "Services_3": 0.5594,
+   "Events_2": 0.5211,
+   "Movies_1": 0.5435,
+   "Services_1": 0.5125
+  },
+  "resid_model": {
+   "Restaurants_1": 0.4514,
+   "Flights_1": 0.4356,
+   "Services_3": 0.5005,
+   "Events_2": 0.4911,
+   "Movies_1": 0.5276,
+   "Services_1": 0.476
+  },
+  "resid_midline": {
+   "Restaurants_1": 0.3992,
+   "Flights_1": 0.3758,
+   "Services_3": 0.4502,
+   "Events_2": 0.4275,
+   "Movies_1": 0.4572,
+   "Services_1": 0.4167
+  },
+  "resid_interleaved": {
+   "Restaurants_1": 0.5971,
+   "Flights_1": 0.5805,
+   "Services_3": 0.6332,
+   "Events_2": 0.6147,
+   "Movies_1": 0.6414,
+   "Services_1": 0.6043
+  },
+  "user_sur_mean": {
+   "Restaurants_1": 0.7791,
+   "Flights_1": 0.7469,
+   "Services_3": 0.754,
+   "Events_2": 0.7561,
+   "Movies_1": 0.768,
+   "Services_1": 0.7461
+  },
+  "model_sur_mean": {
+   "Restaurants_1": 0.7125,
+   "Flights_1": 0.6861,
+   "Services_3": 0.6752,
+   "Events_2": 0.7134,
+   "Movies_1": 0.7358,
+   "Services_1": 0.6881
+  },
+  "user_trend_gain": {
+   "Restaurants_1": -0.0019,
+   "Flights_1": 0.0153,
+   "Services_3": -0.0314,
+   "Events_2": -0.0054,
+   "Movies_1": -0.0101,
+   "Services_1": -0.0169
+  },
+  "model_trend_gain": {
+   "Restaurants_1": 0.0034,
+   "Flights_1": -0.0017,
+   "Services_3": -0.0016,
+   "Events_2": 0.0068,
+   "Movies_1": -0.0036,
+   "Services_1": -0.0036
+  }
+ },
+ "kruskal_across_services": [
+  {
+   "stat": "cos_drift",
+   "H": 57.8,
+   "p_raw": 3.456150901903879e-11,
+   "p_fdr": 8.853870029716048e-11
+  },
+  {
+   "stat": "gap_mean",
+   "H": 13.63,
+   "p_raw": 0.018117977103467058,
+   "p_fdr": 0.019929774813813764
+  },
+  {
+   "stat": "gap_slope",
+   "H": 124.67,
+   "p_raw": 3.2079458690315926e-25,
+   "p_fdr": 3.528740455934752e-24
+  },
+  {
+   "stat": "resid_user",
+   "H": 51.7,
+   "p_raw": 6.224879985684775e-10,
+   "p_fdr": 9.781954263218931e-10
+  },
+  {
+   "stat": "resid_model",
+   "H": 57.31,
+   "p_raw": 4.3578995802010025e-11,
+   "p_fdr": 8.853870029716048e-11
+  },
+  {
+   "stat": "resid_midline",
+   "H": 57.1,
+   "p_raw": 4.8293836525723905e-11,
+   "p_fdr": 8.853870029716048e-11
+  },
+  {
+   "stat": "resid_interleaved",
+   "H": 58.21,
+   "p_raw": 2.8519870038431643e-11,
+   "p_fdr": 8.853870029716048e-11
+  },
+  {
+   "stat": "user_sur_mean",
+   "H": 30.06,
+   "p_raw": 1.437043638932588e-05,
+   "p_fdr": 1.7563866698064965e-05
+  },
+  {
+   "stat": "model_sur_mean",
+   "H": 36.74,
+   "p_raw": 6.760905456355591e-07,
+   "p_fdr": 9.296245002488938e-07
+  },
+  {
+   "stat": "user_trend_gain",
+   "H": 84.51,
+   "p_raw": 9.525395618556454e-17,
+   "p_fdr": 5.23896759020605e-16
+  },
+  {
+   "stat": "model_trend_gain",
+   "H": 4.99,
+   "p_raw": 0.4168350518677345,
+   "p_fdr": 0.4168350518677345
+  }
+ ],
+ "services": [
+  "Restaurants_1",
+  "Flights_1",
+  "Services_3",
+  "Events_2",
+  "Movies_1",
+  "Services_1"
+ ],
+ "corpus_uss_sgd": {
+  "n_dialogues": 1000,
+  "turns_mean": 25.7,
+  "turns_min": 8,
+  "turns_max": 50,
+  "user_turns_mean": 12.8,
+  "n_annotators_dist": {
+   "3": 540,
+   "4": 386,
+   "5": 69,
+   "6": 4,
+   "7": 1
+  }
+ },
+ "corpus_uss_mwoz": {
+  "n_dialogues": 1000,
+  "turns_mean": 22.1,
+  "turns_min": 7,
+  "turns_max": 47,
+  "user_turns_mean": 11.6,
+  "n_annotators_dist": {
+   "4": 369,
+   "3": 575,
+   "5": 49,
+   "6": 7
+  }
+ },
+ "figure2_residuals": {
+  "interleaved": 0.583,
+  "user": 0.421,
+  "model": 0.413
+ }
+}

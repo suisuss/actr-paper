@@ -1,0 +1,23 @@
+{
+ "uss_sgd": {
+  "gap_0.5": {
+   "ceiling": 0.943,
+   "n_pairs_scored": 1428921
+  },
+  "gap_1.0": {
+   "ceiling": 0.9895,
+   "n_pairs_scored": 310687
+  }
+ },
+ "uss_mwoz": {
+  "gap_0.5": {
+   "ceiling": 0.9476,
+   "n_pairs_scored": 1315106
+  },
+  "gap_1.0": {
+   "ceiling": 0.9918,
+   "n_pairs_scored": 233482
+  }
+ },
+ "note": "Leave-one-annotator-out agreement with mean-rating preferences; PRISM has one first-person rating per conversation, no ceiling estimable."
+}

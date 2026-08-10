@@ -1,0 +1,122 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/hybrid",
+    "config": "none",
+    "dataset": "uss_mwoz",
+    "variant": "default",
+    "n_samples": null,
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "timestamp": "20260709T044222",
+    "script": "lib/experiment.py",
+    "duration_seconds": 11.113614320755005,
+    "git_commit": "c3e80c24d48ba73b55c4d3741fb97bfa7d338410",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "991538d573b22768ef44cc7573b53a39f481505062c427e796b3367117bafb8c",
+    "argv": [
+      "experiments/trace/trace_h2h.py",
+      "--mode",
+      "hybrid",
+      "--dataset",
+      "uss_mwoz"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_mwoz",
+    "n_dialogues": 1000,
+    "mode": "hybrid",
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "evaluation": {
+      "gap_0.5": {
+        "trace": {
+          "acc": 0.5872
+        },
+        "design_a": {
+          "acc": 0.5532,
+          "vs_trace": {
+            "ci_lo": -0.06713552516738434,
+            "ci_hi": 0.0015664353264865395,
+            "p_boot": 0.058
+          }
+        },
+        "design_b": {
+          "acc": 0.5602,
+          "vs_trace": {
+            "ci_lo": -0.069049913954683,
+            "ci_hi": 0.015055388382610358,
+            "p_boot": 0.198
+          }
+        },
+        "hybrid": {
+          "acc": 0.6055,
+          "vs_trace": {
+            "ci_lo": -0.005785576984323392,
+            "ci_hi": 0.04177605777269164,
+            "p_boot": 0.136
+          }
+        },
+        "n_pairs": 185118
+      },
+      "gap_1.0": {
+        "trace": {
+          "acc": 0.6479
+        },
+        "design_a": {
+          "acc": 0.5899,
+          "vs_trace": {
+            "ci_lo": -0.11433090864303272,
+            "ci_hi": 0.004283872762307404,
+            "p_boot": 0.066
+          }
+        },
+        "design_b": {
+          "acc": 0.6134,
+          "vs_trace": {
+            "ci_lo": -0.1078612754290766,
+            "ci_hi": 0.03530680137162543,
+            "p_boot": 0.378
+          }
+        },
+        "hybrid": {
+          "acc": 0.6835,
+          "vs_trace": {
+            "ci_lo": -0.00814171111022291,
+            "ci_hi": 0.08295757647050878,
+            "p_boot": 0.11
+          }
+        },
+        "n_pairs": 33334
+      }
+    },
+    "bucket_ablation": {
+      "counts": {
+        "gap_0.5": 0.5451,
+        "gap_1.0": 0.5964
+      },
+      "repetition": {
+        "gap_0.5": 0.5106,
+        "gap_1.0": 0.5534
+      },
+      "cohesion_relevance": {
+        "gap_0.5": 0.5841,
+        "gap_1.0": 0.6196
+      },
+      "goal": {
+        "gap_0.5": 0.5283,
+        "gap_1.0": 0.5919
+      }
+    }
+  }
+}

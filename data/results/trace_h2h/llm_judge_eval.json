@@ -1,0 +1,158 @@
+{
+ "uss_sgd": {
+  "haiku": {
+   "n_rated": 1000,
+   "gap_0.5": {
+    "judge_strict": 0.392,
+    "judge_ties_half": 0.6343,
+    "g0": 0.6612,
+    "g0_plus_judge": 0.6935,
+    "rolesplit_k1": 0.6677,
+    "rolesplit_k1_plus_judge": 0.7125,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.019933441780375653,
+     "ci_hi": 0.06799970654194676,
+     "p_boot": 0.002
+    }
+   },
+   "gap_1.0": {
+    "judge_strict": 0.5126,
+    "judge_ties_half": 0.7176,
+    "g0": 0.7371,
+    "g0_plus_judge": 0.7888,
+    "rolesplit_k1": 0.7517,
+    "rolesplit_k1_plus_judge": 0.8152,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.02721975236270986,
+     "ci_hi": 0.09675951483553,
+     "p_boot": 0.0
+    }
+   },
+   "disagreement_frac_gap1.0": 0.2412
+  },
+  "opus": {
+   "n_rated": 1000,
+   "gap_0.5": {
+    "judge_strict": 0.4707,
+    "judge_ties_half": 0.6407,
+    "g0": 0.6612,
+    "g0_plus_judge": 0.6925,
+    "rolesplit_k1": 0.6677,
+    "rolesplit_k1_plus_judge": 0.7068,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.021290195168386414,
+     "ci_hi": 0.05589243676517167,
+     "p_boot": 0.0
+    }
+   },
+   "gap_1.0": {
+    "judge_strict": 0.585,
+    "judge_ties_half": 0.7277,
+    "g0": 0.7371,
+    "g0_plus_judge": 0.7718,
+    "rolesplit_k1": 0.7517,
+    "rolesplit_k1_plus_judge": 0.7961,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.015001336122785702,
+     "ci_hi": 0.07060367909397025,
+     "p_boot": 0.002
+    }
+   },
+   "disagreement_frac_gap1.0": 0.2531
+  }
+ },
+ "uss_mwoz": {
+  "haiku": {
+   "n_rated": 1000,
+   "gap_0.5": {
+    "judge_strict": 0.3407,
+    "judge_ties_half": 0.586,
+    "g0": 0.6438,
+    "g0_plus_judge": 0.6453,
+    "rolesplit_k1": 0.6688,
+    "rolesplit_k1_plus_judge": 0.6657,
+    "judge_gain_rolesplit": {
+     "ci_lo": -0.00967427872533727,
+     "ci_hi": 0.0036562886920704853,
+     "p_boot": 0.39
+    }
+   },
+   "gap_1.0": {
+    "judge_strict": 0.4942,
+    "judge_ties_half": 0.6905,
+    "g0": 0.7109,
+    "g0_plus_judge": 0.7156,
+    "rolesplit_k1": 0.7702,
+    "rolesplit_k1_plus_judge": 0.767,
+    "judge_gain_rolesplit": {
+     "ci_lo": -0.015078339518313146,
+     "ci_hi": 0.009357610860251924,
+     "p_boot": 0.606
+    }
+   },
+   "disagreement_frac_gap1.0": 0.2661
+  }
+ },
+ "prism": {
+  "haiku": {
+   "n_rated": 2000,
+   "gap_0.5": {
+    "judge_strict": 0.374,
+    "judge_ties_half": 0.6025,
+    "g0": 0.566,
+    "g0_plus_judge": 0.6093,
+    "rolesplit_k1": 0.5587,
+    "rolesplit_k1_plus_judge": 0.6098,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.03035435501603821,
+     "ci_hi": 0.07137955888230697,
+     "p_boot": 0.0
+    }
+   },
+   "gap_1.0": {
+    "judge_strict": 0.4344,
+    "judge_ties_half": 0.6413,
+    "g0": 0.5868,
+    "g0_plus_judge": 0.6502,
+    "rolesplit_k1": 0.5864,
+    "rolesplit_k1_plus_judge": 0.6565,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.042950785616827254,
+     "ci_hi": 0.09622112388342847,
+     "p_boot": 0.0
+    }
+   },
+   "disagreement_frac_gap1.0": 0.3857
+  },
+  "opus": {
+   "n_rated": 1000,
+   "gap_0.5": {
+    "judge_strict": 0.4905,
+    "judge_ties_half": 0.6239,
+    "g0": 0.5238,
+    "g0_plus_judge": 0.5985,
+    "rolesplit_k1": 0.5501,
+    "rolesplit_k1_plus_judge": 0.6043,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.024998301217904667,
+     "ci_hi": 0.0860934875764514,
+     "p_boot": 0.004
+    }
+   },
+   "gap_1.0": {
+    "judge_strict": 0.545,
+    "judge_ties_half": 0.6671,
+    "g0": 0.5276,
+    "g0_plus_judge": 0.6287,
+    "rolesplit_k1": 0.5704,
+    "rolesplit_k1_plus_judge": 0.6363,
+    "judge_gain_rolesplit": {
+     "ci_lo": 0.024993901716384794,
+     "ci_hi": 0.10838990531764174,
+     "p_boot": 0.006
+    }
+   },
+   "disagreement_frac_gap1.0": 0.4129
+  }
+ }
+}

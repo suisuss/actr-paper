@@ -1,0 +1,52 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_mdl_degree_uss_sgd",
+    "config": "minilm",
+    "dataset": "uss_sgd",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "analysis": "mdl_degree"
+    },
+    "timestamp": "20260709T014051",
+    "script": "scripts/spike5_mdl_degree.py",
+    "duration_seconds": null,
+    "git_commit": "86daedfd6d1deb489ea9014dda4cc2a78f1b5179",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "9764f08eca1cc96f9c2d4665b9124875a82b386615d95abcdc9930d651aa0002",
+    "argv": [
+      "scripts/spike5_mdl_degree.py",
+      "uss_sgd"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_sgd",
+    "degree_distribution": {
+      "0": 926,
+      "1": 70,
+      "2": 1,
+      "6": 3
+    },
+    "gap_0.5": {
+      "fixed3": 0.6435,
+      "adaptive_mdl": 0.6569,
+      "adaptive_vs_fixed": {
+        "ci_lo": -0.007897915271442154,
+        "ci_hi": 0.03670300610639847,
+        "p_boot": 0.272
+      }
+    },
+    "gap_1.0": {
+      "fixed3": 0.7154,
+      "adaptive_mdl": 0.7296,
+      "adaptive_vs_fixed": {
+        "ci_lo": -0.021007566557358023,
+        "ci_hi": 0.04966121348476878,
+        "p_boot": 0.446
+      }
+    }
+  }
+}

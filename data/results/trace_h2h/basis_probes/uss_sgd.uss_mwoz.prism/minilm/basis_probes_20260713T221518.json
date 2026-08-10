@@ -1,0 +1,575 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/basis_probes",
+    "config": "minilm",
+    "dataset": "uss_sgd.uss_mwoz.prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seeds": [
+        42,
+        7,
+        123,
+        2024,
+        31337
+      ],
+      "n_folds": 5,
+      "band": 0.01,
+      "gap_primary": 1.0,
+      "n_boot": 1000,
+      "issues": "#43 #44 #46"
+    },
+    "timestamp": "20260713T221518",
+    "script": "scripts/basis_probes.py",
+    "duration_seconds": null,
+    "git_commit": "ebbd71cd0a303ddd58e939f1e2944830909ac3e6",
+    "git_branch": "main",
+    "git_dirty": false,
+    "script_sha256": "730b96dcc108557140ac3eb1eddaff9664012364628fa73d90fbf3b555879c60",
+    "argv": [
+      "scripts/basis_probes.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "seeds": [
+      42,
+      7,
+      123,
+      2024,
+      31337
+    ],
+    "band": 0.01,
+    "gap_primary": 1.0,
+    "arms": "dct_raw/dct_rolesplit_k1/dst_raw/dst_dc/g1to3 (all 1536-d except g1to3=1152) vs raw/rolesplit_k1",
+    "uss_sgd": {
+      "multiseed": {
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.6446,
+            "std": 0.0019
+          },
+          "gap_1.0": {
+            "mean": 0.705,
+            "std": 0.0078
+          }
+        },
+        "rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6721,
+            "std": 0.0061
+          },
+          "gap_1.0": {
+            "mean": 0.7516,
+            "std": 0.0083
+          }
+        },
+        "dct_raw": {
+          "gap_0.5": {
+            "mean": 0.6498,
+            "std": 0.0064
+          },
+          "gap_1.0": {
+            "mean": 0.7143,
+            "std": 0.018
+          }
+        },
+        "dct_rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6675,
+            "std": 0.0037
+          },
+          "gap_1.0": {
+            "mean": 0.7464,
+            "std": 0.0091
+          }
+        },
+        "dst_raw": {
+          "gap_0.5": {
+            "mean": 0.6467,
+            "std": 0.0056
+          },
+          "gap_1.0": {
+            "mean": 0.7088,
+            "std": 0.0095
+          }
+        },
+        "dst_dc": {
+          "gap_0.5": {
+            "mean": 0.6452,
+            "std": 0.0065
+          },
+          "gap_1.0": {
+            "mean": 0.7117,
+            "std": 0.0135
+          }
+        },
+        "g1to3": {
+          "gap_0.5": {
+            "mean": 0.6295,
+            "std": 0.0068
+          },
+          "gap_1.0": {
+            "mean": 0.6896,
+            "std": 0.0113
+          }
+        }
+      },
+      "linear_probes": {
+        "raw": {
+          "gap_0.5": 0.6698,
+          "gap_1.0": 0.7503
+        },
+        "rolesplit_k1": {
+          "gap_0.5": 0.6931,
+          "gap_1.0": 0.7882
+        },
+        "dct_raw": {
+          "gap_0.5": 0.6604,
+          "gap_1.0": 0.7372
+        },
+        "dct_rolesplit_k1": {
+          "gap_0.5": 0.6912,
+          "gap_1.0": 0.7869
+        },
+        "dst_raw": {
+          "gap_0.5": 0.6614,
+          "gap_1.0": 0.7321
+        },
+        "dst_dc": {
+          "gap_0.5": 0.6698,
+          "gap_1.0": 0.7508
+        },
+        "g1to3": {
+          "gap_0.5": 0.6527,
+          "gap_1.0": 0.7264
+        }
+      }
+    },
+    "uss_mwoz": {
+      "multiseed": {
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.6653,
+            "std": 0.0096
+          },
+          "gap_1.0": {
+            "mean": 0.757,
+            "std": 0.0141
+          }
+        },
+        "rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6679,
+            "std": 0.0019
+          },
+          "gap_1.0": {
+            "mean": 0.7656,
+            "std": 0.0028
+          }
+        },
+        "dct_raw": {
+          "gap_0.5": {
+            "mean": 0.659,
+            "std": 0.0048
+          },
+          "gap_1.0": {
+            "mean": 0.7506,
+            "std": 0.0105
+          }
+        },
+        "dct_rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6697,
+            "std": 0.0045
+          },
+          "gap_1.0": {
+            "mean": 0.7687,
+            "std": 0.0102
+          }
+        },
+        "dst_raw": {
+          "gap_0.5": {
+            "mean": 0.643,
+            "std": 0.0099
+          },
+          "gap_1.0": {
+            "mean": 0.7231,
+            "std": 0.0116
+          }
+        },
+        "dst_dc": {
+          "gap_0.5": {
+            "mean": 0.6537,
+            "std": 0.0057
+          },
+          "gap_1.0": {
+            "mean": 0.7439,
+            "std": 0.005
+          }
+        },
+        "g1to3": {
+          "gap_0.5": {
+            "mean": 0.6423,
+            "std": 0.0082
+          },
+          "gap_1.0": {
+            "mean": 0.7115,
+            "std": 0.0101
+          }
+        }
+      },
+      "linear_probes": {
+        "raw": {
+          "gap_0.5": 0.6624,
+          "gap_1.0": 0.7641
+        },
+        "rolesplit_k1": {
+          "gap_0.5": 0.665,
+          "gap_1.0": 0.7671
+        },
+        "dct_raw": {
+          "gap_0.5": 0.6518,
+          "gap_1.0": 0.7554
+        },
+        "dct_rolesplit_k1": {
+          "gap_0.5": 0.6672,
+          "gap_1.0": 0.7689
+        },
+        "dst_raw": {
+          "gap_0.5": 0.627,
+          "gap_1.0": 0.7289
+        },
+        "dst_dc": {
+          "gap_0.5": 0.655,
+          "gap_1.0": 0.7581
+        },
+        "g1to3": {
+          "gap_0.5": 0.6346,
+          "gap_1.0": 0.7195
+        }
+      }
+    },
+    "prism": {
+      "multiseed": {
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.5815,
+            "std": 0.0016
+          },
+          "gap_1.0": {
+            "mean": 0.61,
+            "std": 0.0016
+          }
+        },
+        "rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6004,
+            "std": 0.0014
+          },
+          "gap_1.0": {
+            "mean": 0.6382,
+            "std": 0.0014
+          }
+        },
+        "dct_raw": {
+          "gap_0.5": {
+            "mean": 0.584,
+            "std": 0.0018
+          },
+          "gap_1.0": {
+            "mean": 0.6106,
+            "std": 0.0024
+          }
+        },
+        "dct_rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.5914,
+            "std": 0.0009
+          },
+          "gap_1.0": {
+            "mean": 0.6248,
+            "std": 0.0015
+          }
+        },
+        "dst_raw": {
+          "gap_0.5": {
+            "mean": 0.5816,
+            "std": 0.0014
+          },
+          "gap_1.0": {
+            "mean": 0.6093,
+            "std": 0.0019
+          }
+        },
+        "dst_dc": {
+          "gap_0.5": {
+            "mean": 0.5812,
+            "std": 0.0007
+          },
+          "gap_1.0": {
+            "mean": 0.6081,
+            "std": 0.0007
+          }
+        },
+        "g1to3": {
+          "gap_0.5": {
+            "mean": 0.518,
+            "std": 0.0018
+          },
+          "gap_1.0": {
+            "mean": 0.5234,
+            "std": 0.0025
+          }
+        }
+      },
+      "linear_probes": {
+        "raw": {
+          "gap_0.5": 0.5826,
+          "gap_1.0": 0.6141
+        },
+        "rolesplit_k1": {
+          "gap_0.5": 0.5941,
+          "gap_1.0": 0.6289
+        },
+        "dct_raw": {
+          "gap_0.5": 0.5809,
+          "gap_1.0": 0.6111
+        },
+        "dct_rolesplit_k1": {
+          "gap_0.5": 0.5948,
+          "gap_1.0": 0.6296
+        },
+        "dst_raw": {
+          "gap_0.5": 0.5774,
+          "gap_1.0": 0.6079
+        },
+        "dst_dc": {
+          "gap_0.5": 0.5835,
+          "gap_1.0": 0.6165
+        },
+        "g1to3": {
+          "gap_0.5": 0.5615,
+          "gap_1.0": 0.5866
+        }
+      }
+    },
+    "F_basis_raw_eq": [
+      {
+        "h": "B dct_raw~raw SGD",
+        "corpus": "uss_sgd",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.0036313351343187396,
+          0.04620369477136232
+        ],
+        "p_raw": 0.104,
+        "in_band": false
+      },
+      {
+        "h": "B dct_raw~raw MWOZ",
+        "corpus": "uss_mwoz",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.032205375075626264,
+          0.013618187793680335
+        ],
+        "p_raw": 0.458,
+        "in_band": false
+      }
+    ],
+    "F_basis_rs_sup": [
+      {
+        "h": "B dct_rs_k1>dct_raw SGD",
+        "corpus": "uss_sgd",
+        "test": "superiority",
+        "diff_ci": [
+          -0.013581112257771049,
+          0.0535537328276848
+        ],
+        "p_raw": 0.264,
+        "p_holm": 0.528
+      },
+      {
+        "h": "B dct_rs_k1>dct_raw MWOZ",
+        "corpus": "uss_mwoz",
+        "test": "superiority",
+        "diff_ci": [
+          -0.02785534175325303,
+          0.0400997765069418
+        ],
+        "p_raw": 0.798,
+        "p_holm": 0.798
+      }
+    ],
+    "F_basis_rs_eq": [
+      {
+        "h": "B dct_rs_k1~rs_k1 SGD",
+        "corpus": "uss_sgd",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.015314679489149682,
+          0.022045121121183557
+        ],
+        "p_raw": 0.67,
+        "in_band": false
+      },
+      {
+        "h": "B dct_rs_k1~rs_k1 MWOZ",
+        "corpus": "uss_mwoz",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.029663517675006128,
+          0.009100714133449308
+        ],
+        "p_raw": 0.344,
+        "in_band": false
+      }
+    ],
+    "F_dst_sup": [
+      {
+        "h": "D raw>dst_raw SGD",
+        "corpus": "uss_sgd",
+        "test": "superiority",
+        "diff_ci": [
+          -0.034181486958335755,
+          0.027144724404048616
+        ],
+        "p_raw": 0.804,
+        "p_holm": 0.804
+      },
+      {
+        "h": "D raw>dst_raw MWOZ",
+        "corpus": "uss_mwoz",
+        "test": "superiority",
+        "diff_ci": [
+          -0.008531114482100435,
+          0.0678956108635613
+        ],
+        "p_raw": 0.118,
+        "p_holm": 0.236
+      }
+    ],
+    "F_dst_eq": [
+      {
+        "h": "D dst_dc~raw SGD",
+        "corpus": "uss_sgd",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.01442269629270327,
+          0.04305965222310566
+        ],
+        "p_raw": 0.324,
+        "in_band": false
+      },
+      {
+        "h": "D dst_dc~raw MWOZ",
+        "corpus": "uss_mwoz",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.04338692826607513,
+          0.02112677338405672
+        ],
+        "p_raw": 0.454,
+        "in_band": false
+      }
+    ],
+    "secondary_prism": {
+      "dct_raw_vs_raw": {
+        "h": "S dct_raw~raw PRISM",
+        "corpus": "prism",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.02597459780873523,
+          0.026769581242107918
+        ],
+        "p_raw": 0.96,
+        "in_band": false
+      },
+      "dct_rs_vs_dct_raw": {
+        "h": "S dct_rs_k1>dct_raw PRISM",
+        "corpus": "prism",
+        "test": "superiority",
+        "diff_ci": [
+          0.001181409662206944,
+          0.03906594424838844
+        ],
+        "p_raw": 0.042
+      },
+      "dct_rs_vs_rs": {
+        "h": "S dct_rs_k1~rs_k1 PRISM",
+        "corpus": "prism",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.024846020085722686,
+          0.004444104290343626
+        ],
+        "p_raw": 0.144,
+        "in_band": false
+      },
+      "raw_vs_dst": {
+        "h": "S raw>dst_raw PRISM",
+        "corpus": "prism",
+        "test": "superiority",
+        "diff_ci": [
+          -0.03440680550158262,
+          0.023673643308118577
+        ],
+        "p_raw": 0.772
+      },
+      "dst_dc_vs_raw": {
+        "h": "S dst_dc~raw PRISM",
+        "corpus": "prism",
+        "test": "equivalence",
+        "band": 0.01,
+        "diff_ci": [
+          -0.029616191478516764,
+          0.03126027435027375
+        ],
+        "p_raw": 0.994,
+        "in_band": false
+      }
+    },
+    "secondary_dst_collapse": {
+      "uss_sgd": {
+        "h": "S dst_raw vs g1to3 uss_sgd",
+        "corpus": "uss_sgd",
+        "test": "superiority",
+        "diff_ci": [
+          -0.023002855224532857,
+          0.05372561687513234
+        ],
+        "p_raw": 0.4
+      },
+      "uss_mwoz": {
+        "h": "S dst_raw vs g1to3 uss_mwoz",
+        "corpus": "uss_mwoz",
+        "test": "superiority",
+        "diff_ci": [
+          -0.019753212512354238,
+          0.08047959599596878
+        ],
+        "p_raw": 0.24
+      },
+      "prism": {
+        "h": "S dst_raw vs g1to3 prism",
+        "corpus": "prism",
+        "test": "superiority",
+        "diff_ci": [
+          0.048477109157672026,
+          0.12625976563701705
+        ],
+        "p_raw": 0.0
+      }
+    }
+  }
+}

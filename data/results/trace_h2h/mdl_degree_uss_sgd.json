@@ -1,0 +1,27 @@
+{
+ "dataset": "uss_sgd",
+ "degree_distribution": {
+  "0": 926,
+  "1": 70,
+  "2": 1,
+  "6": 3
+ },
+ "gap_0.5": {
+  "fixed3": 0.6435,
+  "adaptive_mdl": 0.6569,
+  "adaptive_vs_fixed": {
+   "ci_lo": -0.007897915271442154,
+   "ci_hi": 0.03670300610639847,
+   "p_boot": 0.272
+  }
+ },
+ "gap_1.0": {
+  "fixed3": 0.7154,
+  "adaptive_mdl": 0.7296,
+  "adaptive_vs_fixed": {
+   "ci_lo": -0.021007566557358023,
+   "ci_hi": 0.04966121348476878,
+   "p_boot": 0.446
+  }
+ }
+}

@@ -1,0 +1,122 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/floors",
+    "config": "none",
+    "dataset": "uss_sgd",
+    "variant": "default",
+    "n_samples": null,
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "timestamp": "20260709T043958",
+    "script": "lib/experiment.py",
+    "duration_seconds": 8.959063529968262,
+    "git_commit": "c3e80c24d48ba73b55c4d3741fb97bfa7d338410",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "991538d573b22768ef44cc7573b53a39f481505062c427e796b3367117bafb8c",
+    "argv": [
+      "experiments/trace/trace_h2h.py",
+      "--mode",
+      "floors",
+      "--dataset",
+      "uss_sgd"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_sgd",
+    "n_dialogues": 1000,
+    "mode": "floors",
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "evaluation": {
+      "gap_0.5": {
+        "floor1": {
+          "acc": 0.5593,
+          "vs_trace": {
+            "ci_lo": -0.09600527139900865,
+            "ci_hi": -0.011766913627759341,
+            "p_boot": 0.008
+          }
+        },
+        "floor2": {
+          "acc": 0.5593,
+          "vs_trace": {
+            "ci_lo": -0.09600527139900865,
+            "ci_hi": -0.011766913627759341,
+            "p_boot": 0.008
+          }
+        },
+        "trace": {
+          "acc": 0.6132
+        },
+        "trace_nocount": {
+          "acc": 0.616,
+          "vs_trace": {
+            "ci_lo": -0.005287553730353396,
+            "ci_hi": 0.010724280438617643,
+            "p_boot": 0.532
+          }
+        },
+        "n_pairs": 204065
+      },
+      "gap_1.0": {
+        "floor1": {
+          "acc": 0.58,
+          "vs_trace": {
+            "ci_lo": -0.16705317052122698,
+            "ci_hi": -0.019402305587530408,
+            "p_boot": 0.012
+          }
+        },
+        "floor2": {
+          "acc": 0.58,
+          "vs_trace": {
+            "ci_lo": -0.16705317052122698,
+            "ci_hi": -0.019402305587530408,
+            "p_boot": 0.012
+          }
+        },
+        "trace": {
+          "acc": 0.6739
+        },
+        "trace_nocount": {
+          "acc": 0.6753,
+          "vs_trace": {
+            "ci_lo": -0.011105671886860817,
+            "ci_hi": 0.013809220881505473,
+            "p_boot": 0.846
+          }
+        },
+        "n_pairs": 44052
+      }
+    },
+    "kill_switch": {
+      "gap_0.5": {
+        "trace_minus_floor1": 0.0539,
+        "floor1_vs_trace_ci": [
+          -0.09600527139900865,
+          -0.011766913627759341
+        ],
+        "significant": true
+      },
+      "gap_1.0": {
+        "trace_minus_floor1": 0.0939,
+        "floor1_vs_trace_ci": [
+          -0.16705317052122698,
+          -0.019402305587530408
+        ],
+        "significant": true
+      }
+    }
+  }
+}

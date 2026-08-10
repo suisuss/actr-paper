@@ -1,0 +1,152 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_dims_control",
+    "config": "minilm",
+    "dataset": "uss_sgd.uss_mwoz",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5,
+      "pca_k": 26
+    },
+    "timestamp": "20260708T203112",
+    "script": "scripts/dims_control.py",
+    "duration_seconds": null,
+    "git_commit": "ef00494ce6d49d46f5eef6e85df3f8d41aa4b1e5",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "fe773ed144d349a69b6f61fbb119105ba6e23e90810e70d31b1a3d85ce42cf20",
+    "argv": [
+      "scripts/dims_control.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "uss_sgd": {
+      "raw_pca26": {
+        "gap_0.5": {
+          "acc": 0.6416,
+          "trace": 0.6132,
+          "vs_trace": {
+            "ci_lo": -0.014703649780312862,
+            "ci_hi": 0.06999957168611501,
+            "p_boot": 0.138
+          }
+        },
+        "gap_1.0": {
+          "acc": 0.7106,
+          "trace": 0.6739,
+          "vs_trace": {
+            "ci_lo": -0.023727733758688578,
+            "ci_hi": 0.09785613121085845,
+            "p_boot": 0.212
+          }
+        }
+      },
+      "rolesplit_pca26": {
+        "gap_0.5": {
+          "acc": 0.6542,
+          "trace": 0.6132,
+          "vs_trace": {
+            "ci_lo": 0.002053520795112632,
+            "ci_hi": 0.08207793356381701,
+            "p_boot": 0.042
+          }
+        },
+        "gap_1.0": {
+          "acc": 0.7379,
+          "trace": 0.6739,
+          "vs_trace": {
+            "ci_lo": 0.0036101089731343334,
+            "ci_hi": 0.13029750361021009,
+            "p_boot": 0.04
+          }
+        }
+      },
+      "raw_rp26": {
+        "gap_0.5": {
+          "acc": 0.5338,
+          "trace": 0.6132,
+          "vs_trace": {
+            "ci_lo": -0.12574217421688738,
+            "ci_hi": -0.028483420623525147,
+            "p_boot": 0.0
+          }
+        },
+        "gap_1.0": {
+          "acc": 0.536,
+          "trace": 0.6739,
+          "vs_trace": {
+            "ci_lo": -0.21309590079375149,
+            "ci_hi": -0.05999615504903935,
+            "p_boot": 0.0
+          }
+        }
+      }
+    },
+    "uss_mwoz": {
+      "raw_pca26": {
+        "gap_0.5": {
+          "acc": 0.6149,
+          "trace": 0.5872,
+          "vs_trace": {
+            "ci_lo": -0.01240954449557759,
+            "ci_hi": 0.06962406660323224,
+            "p_boot": 0.188
+          }
+        },
+        "gap_1.0": {
+          "acc": 0.6569,
+          "trace": 0.6479,
+          "vs_trace": {
+            "ci_lo": -0.05020863957685428,
+            "ci_hi": 0.07360789066421902,
+            "p_boot": 0.776
+          }
+        }
+      },
+      "rolesplit_pca26": {
+        "gap_0.5": {
+          "acc": 0.6336,
+          "trace": 0.5872,
+          "vs_trace": {
+            "ci_lo": 0.007748895816350127,
+            "ci_hi": 0.0898150565368697,
+            "p_boot": 0.028
+          }
+        },
+        "gap_1.0": {
+          "acc": 0.7134,
+          "trace": 0.6479,
+          "vs_trace": {
+            "ci_lo": -0.0038805015836909326,
+            "ci_hi": 0.13254620432354935,
+            "p_boot": 0.062
+          }
+        }
+      },
+      "raw_rp26": {
+        "gap_0.5": {
+          "acc": 0.5303,
+          "trace": 0.5872,
+          "vs_trace": {
+            "ci_lo": -0.09957335276375388,
+            "ci_hi": -0.010647170770333829,
+            "p_boot": 0.024
+          }
+        },
+        "gap_1.0": {
+          "acc": 0.5555,
+          "trace": 0.6479,
+          "vs_trace": {
+            "ci_lo": -0.15987753594724075,
+            "ci_hi": -0.022103255709820645,
+            "p_boot": 0.016
+          }
+        }
+      }
+    }
+  }
+}

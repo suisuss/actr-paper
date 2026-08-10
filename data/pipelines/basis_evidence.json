@@ -1,0 +1,20 @@
+{
+  "name": "basis_evidence",
+  "workdir": ".",
+  "env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "stages": [
+    {
+      "name": "basis_probes",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "basis_probes.py"
+      ]
+    }
+  ]
+}

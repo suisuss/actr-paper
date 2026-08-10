@@ -1,0 +1,173 @@
+{
+ "n_dialogues": 7951,
+ "n_models": 21,
+ "protocol": {
+  "cv": "GroupKFold(5) by user_id",
+  "head": "LogisticRegression(max_iter=3000)",
+  "n_folds": 5
+ },
+ "A1_label_by_model": {
+  "eta_squared": 0.0303,
+  "F": 12.405,
+  "p": 1.4184514920766696e-40,
+  "df_between": 20,
+  "df_within": 7930,
+  "n_levels": 21,
+  "n": 7951,
+  "per_model": {
+   "command": {
+    "n": 711,
+    "mean_label": 4.4529
+   },
+   "meta-llama/Llama-2-70b-chat-hf": {
+    "n": 411,
+    "mean_label": 4.3544
+   },
+   "gpt-4": {
+    "n": 402,
+    "mean_label": 4.3172
+   },
+   "models/chat-bison-001": {
+    "n": 549,
+    "mean_label": 4.3156
+   },
+   "claude-instant-1": {
+    "n": 556,
+    "mean_label": 4.3146
+   },
+   "command-nightly": {
+    "n": 506,
+    "mean_label": 4.3101
+   },
+   "HuggingFaceH4/zephyr-7b-beta": {
+    "n": 560,
+    "mean_label": 4.3048
+   },
+   "meta-llama/Llama-2-7b-chat-hf": {
+    "n": 488,
+    "mean_label": 4.3005
+   },
+   "claude-2": {
+    "n": 360,
+    "mean_label": 4.2932
+   },
+   "gpt-4-1106-preview": {
+    "n": 425,
+    "mean_label": 4.2894
+   },
+   "claude-2.1": {
+    "n": 364,
+    "mean_label": 4.2519
+   },
+   "mistralai/Mistral-7B-Instruct-v0.1": {
+    "n": 343,
+    "mean_label": 4.2296
+   },
+   "timdettmers/guanaco-33b-merged": {
+    "n": 467,
+    "mean_label": 4.2249
+   },
+   "gpt-3.5-turbo": {
+    "n": 353,
+    "mean_label": 4.2187
+   },
+   "command-light": {
+    "n": 478,
+    "mean_label": 4.2107
+   },
+   "meta-llama/Llama-2-13b-chat-hf": {
+    "n": 201,
+    "mean_label": 4.1831
+   },
+   "OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5": {
+    "n": 238,
+    "mean_label": 4.1121
+   },
+   "tiiuae/falcon-7b-instruct": {
+    "n": 261,
+    "mean_label": 4.0703
+   },
+   "luminous-supreme-control": {
+    "n": 114,
+    "mean_label": 3.7958
+   },
+   "luminous-extended-control": {
+    "n": 95,
+    "mean_label": 3.6227
+   },
+   "google/flan-t5-xxl": {
+    "n": 69,
+    "mean_label": 3.2922
+   }
+  }
+ },
+ "A2_fingerprint": {
+  "majority_baseline": 0.0894,
+  "G0_model": {
+   "acc_mean": 0.3484,
+   "acc_std": 0.0112,
+   "lift_over_majority": 0.259,
+   "folds": [
+    0.3369,
+    0.3698,
+    0.3459,
+    0.344,
+    0.3453
+   ],
+   "distinct_preds_per_fold": [
+    21,
+    21,
+    21,
+    21,
+    21
+   ]
+  },
+  "G0_pooled": {
+   "acc_mean": 0.2276,
+   "acc_std": 0.0094,
+   "lift_over_majority": 0.1382,
+   "folds": [
+    0.2269,
+    0.2277,
+    0.2434,
+    0.2264,
+    0.2138
+   ],
+   "distinct_preds_per_fold": [
+    21,
+    21,
+    21,
+    21,
+    21
+   ]
+  },
+  "G0_user": {
+   "acc_mean": 0.0653,
+   "acc_std": 0.0029,
+   "lift_over_majority": -0.0241,
+   "folds": [
+    0.0641,
+    0.0704,
+    0.0654,
+    0.0616,
+    0.0648
+   ],
+   "distinct_preds_per_fold": [
+    21,
+    21,
+    21,
+    21,
+    21
+   ]
+  },
+  "differential_access": {
+   "G0_model_minus_G0_pooled": 0.1208,
+   "note": "the confound needs DIFFERENTIAL access; this margin bounds the identity the split can add over the interleaved mean"
+  }
+ },
+ "gate": {
+  "confound_live": true,
+  "rule": "non-trivial eta^2 (>=0.02) AND a real fingerprint (G0_model lift >5pt) -> B/C mandatory",
+  "verdict": "B/C mandatory"
+ }
+}
