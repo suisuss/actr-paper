@@ -1,0 +1,22 @@
+% Header include for the pandoc preview build. Rendering concerns only; the
+% source markdown is unchanged and the real two-column build handles these
+% itself.
+
+% (1) Shrink pandoc longtables so wide reference/results tables fit the
+% single-column preview page (they overflow at body font size).
+\usepackage{etoolbox}
+\AtBeginEnvironment{longtable}{\scriptsize}
+
+% (2) No word breaks: disable hyphenation, both automatic and at explicit
+% hyphens, so no word is split across a line. \emergencystretch lets interword
+% space stretch on hard lines, keeping text justified without overfull boxes.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
+
+% (3) XCharter lacks a few math relation/operator glyphs; render them from the
+% math font so they don't drop out as blanks.
+\usepackage{newunicodechar}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{≡}{\ensuremath{\equiv}}
+\newunicodechar{−}{\ensuremath{-}}

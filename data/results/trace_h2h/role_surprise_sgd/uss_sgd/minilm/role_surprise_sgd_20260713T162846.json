@@ -1,0 +1,55 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/role_surprise_sgd",
+    "config": "minilm",
+    "dataset": "uss_sgd",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5
+    },
+    "timestamp": "20260713T162846",
+    "script": "scripts/role_surprise.py",
+    "duration_seconds": null,
+    "git_commit": "59860a5324186187a1510906ea37d63e9b58f88a",
+    "git_branch": "HEAD",
+    "git_dirty": false,
+    "script_sha256": "946106fcdd68656408e640fe2c339888faf486be6f2c0f2e9040a8591fea48c0",
+    "argv": [
+      "scripts/role_surprise.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "spearman": {
+      "user_sur_mean": -0.10010094076043925,
+      "user_sur_max": 0.0212969446708802,
+      "user_trend_gain": -0.09110900100423294,
+      "user_bits": -0.10010094076043925,
+      "model_sur_mean": -0.052715886320017356,
+      "model_sur_max": 0.024558310597633554,
+      "model_trend_gain": -0.13036575099066686,
+      "model_bits": -0.052715886320017356
+    },
+    "gap_0.5": {
+      "rolesplit": 0.6693,
+      "plus_surprise": 0.6748,
+      "diff": {
+        "ci_lo": -0.0015362367714629006,
+        "ci_hi": 0.013066043670687902,
+        "p_boot": 0.148
+      }
+    },
+    "gap_1.0": {
+      "rolesplit": 0.7433,
+      "plus_surprise": 0.7497,
+      "diff": {
+        "ci_lo": -0.004849720537218706,
+        "ci_hi": 0.016542891011223856,
+        "p_boot": 0.26
+      }
+    }
+  }
+}

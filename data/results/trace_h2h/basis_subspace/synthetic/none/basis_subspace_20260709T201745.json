@@ -1,0 +1,439 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_basis_subspace",
+    "config": "none",
+    "dataset": "synthetic",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "n_lo": 4,
+      "n_hi": 40,
+      "ncoef": 4,
+      "note": "deterministic, no seeds involved"
+    },
+    "timestamp": "20260709T201745",
+    "script": "scripts/basis_probes.py",
+    "duration_seconds": null,
+    "git_commit": "b0f8e3ffd0f8364b0ec9ac1a2edba4a43c3eef79",
+    "git_branch": "evidence/basis-invariance",
+    "git_dirty": false,
+    "script_sha256": "e18e11a7c0e5d3f299b7ac3f9cd566b2be9c5bd93f804a8949670728581a9b7e",
+    "argv": [
+      "scripts/basis_probes.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "ncoef": 4,
+    "per_n": {
+      "4": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "overlap_gram_dct": 1.0,
+        "overlap_gram_dst": 1.0,
+        "dst_dc_capture": 1.0
+      },
+      "5": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.0,
+          0.0,
+          8.3
+        ],
+        "overlap_gram_dct": 0.9948,
+        "overlap_gram_dst": 0.9329,
+        "dst_dc_capture": 0.96
+      },
+      "6": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.0,
+          10.89,
+          11.87
+        ],
+        "overlap_gram_dct": 0.9805,
+        "overlap_gram_dst": 0.824,
+        "dst_dc_capture": 0.9405
+      },
+      "7": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.0,
+          12.33,
+          15.96
+        ],
+        "overlap_gram_dct": 0.9697,
+        "overlap_gram_dst": 0.7738,
+        "dst_dc_capture": 0.9293
+      },
+      "8": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.01,
+          13.23,
+          18.36
+        ],
+        "overlap_gram_dct": 0.9621,
+        "overlap_gram_dst": 0.7461,
+        "dst_dc_capture": 0.9223
+      },
+      "9": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.01,
+          13.84,
+          19.93
+        ],
+        "overlap_gram_dct": 0.9567,
+        "overlap_gram_dst": 0.7291,
+        "dst_dc_capture": 0.9176
+      },
+      "10": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.02,
+          14.26,
+          21.01
+        ],
+        "overlap_gram_dct": 0.9527,
+        "overlap_gram_dst": 0.7178,
+        "dst_dc_capture": 0.9143
+      },
+      "11": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.02,
+          14.57,
+          21.79
+        ],
+        "overlap_gram_dct": 0.9497,
+        "overlap_gram_dst": 0.7098,
+        "dst_dc_capture": 0.9119
+      },
+      "12": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.02,
+          14.8,
+          22.38
+        ],
+        "overlap_gram_dct": 0.9474,
+        "overlap_gram_dst": 0.704,
+        "dst_dc_capture": 0.9101
+      },
+      "13": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.02,
+          14.98,
+          22.83
+        ],
+        "overlap_gram_dct": 0.9457,
+        "overlap_gram_dst": 0.6996,
+        "dst_dc_capture": 0.9086
+      },
+      "14": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.02,
+          15.13,
+          23.18
+        ],
+        "overlap_gram_dct": 0.9442,
+        "overlap_gram_dst": 0.6962,
+        "dst_dc_capture": 0.9075
+      },
+      "15": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.02,
+          15.24,
+          23.46
+        ],
+        "overlap_gram_dct": 0.9431,
+        "overlap_gram_dst": 0.6935,
+        "dst_dc_capture": 0.9066
+      },
+      "16": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.34,
+          23.69
+        ],
+        "overlap_gram_dct": 0.9421,
+        "overlap_gram_dst": 0.6914,
+        "dst_dc_capture": 0.9059
+      },
+      "17": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.41,
+          23.88
+        ],
+        "overlap_gram_dct": 0.9414,
+        "overlap_gram_dst": 0.6896,
+        "dst_dc_capture": 0.9053
+      },
+      "18": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.48,
+          24.04
+        ],
+        "overlap_gram_dct": 0.9407,
+        "overlap_gram_dst": 0.6881,
+        "dst_dc_capture": 0.9048
+      },
+      "19": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.53,
+          24.17
+        ],
+        "overlap_gram_dct": 0.9401,
+        "overlap_gram_dst": 0.6869,
+        "dst_dc_capture": 0.9044
+      },
+      "20": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.58,
+          24.29
+        ],
+        "overlap_gram_dct": 0.9397,
+        "overlap_gram_dst": 0.6858,
+        "dst_dc_capture": 0.904
+      },
+      "21": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.62,
+          24.39
+        ],
+        "overlap_gram_dct": 0.9393,
+        "overlap_gram_dst": 0.6849,
+        "dst_dc_capture": 0.9037
+      },
+      "22": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.65,
+          24.47
+        ],
+        "overlap_gram_dct": 0.9389,
+        "overlap_gram_dst": 0.6842,
+        "dst_dc_capture": 0.9034
+      },
+      "23": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.69,
+          24.54
+        ],
+        "overlap_gram_dct": 0.9386,
+        "overlap_gram_dst": 0.6835,
+        "dst_dc_capture": 0.9032
+      },
+      "24": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.71,
+          24.61
+        ],
+        "overlap_gram_dct": 0.9383,
+        "overlap_gram_dst": 0.6829,
+        "dst_dc_capture": 0.903
+      },
+      "25": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.74,
+          24.66
+        ],
+        "overlap_gram_dct": 0.9381,
+        "overlap_gram_dst": 0.6824,
+        "dst_dc_capture": 0.9028
+      },
+      "26": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.76,
+          24.71
+        ],
+        "overlap_gram_dct": 0.9379,
+        "overlap_gram_dst": 0.6819,
+        "dst_dc_capture": 0.9026
+      },
+      "27": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.77,
+          24.76
+        ],
+        "overlap_gram_dct": 0.9377,
+        "overlap_gram_dst": 0.6815,
+        "dst_dc_capture": 0.9025
+      },
+      "28": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.79,
+          24.8
+        ],
+        "overlap_gram_dct": 0.9375,
+        "overlap_gram_dst": 0.6812,
+        "dst_dc_capture": 0.9023
+      },
+      "29": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.81,
+          24.83
+        ],
+        "overlap_gram_dct": 0.9374,
+        "overlap_gram_dst": 0.6808,
+        "dst_dc_capture": 0.9022
+      },
+      "30": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.82,
+          24.87
+        ],
+        "overlap_gram_dct": 0.9372,
+        "overlap_gram_dst": 0.6806,
+        "dst_dc_capture": 0.9021
+      },
+      "31": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.83,
+          24.9
+        ],
+        "overlap_gram_dct": 0.9371,
+        "overlap_gram_dst": 0.6803,
+        "dst_dc_capture": 0.902
+      },
+      "32": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.84,
+          24.92
+        ],
+        "overlap_gram_dct": 0.937,
+        "overlap_gram_dst": 0.6801,
+        "dst_dc_capture": 0.9019
+      },
+      "33": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.85,
+          24.95
+        ],
+        "overlap_gram_dct": 0.9369,
+        "overlap_gram_dst": 0.6798,
+        "dst_dc_capture": 0.9019
+      },
+      "34": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.86,
+          24.97
+        ],
+        "overlap_gram_dct": 0.9368,
+        "overlap_gram_dst": 0.6796,
+        "dst_dc_capture": 0.9018
+      },
+      "35": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.87,
+          24.99
+        ],
+        "overlap_gram_dct": 0.9367,
+        "overlap_gram_dst": 0.6795,
+        "dst_dc_capture": 0.9017
+      },
+      "36": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.88,
+          25.01
+        ],
+        "overlap_gram_dct": 0.9366,
+        "overlap_gram_dst": 0.6793,
+        "dst_dc_capture": 0.9017
+      },
+      "37": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.88,
+          25.02
+        ],
+        "overlap_gram_dct": 0.9365,
+        "overlap_gram_dst": 0.6791,
+        "dst_dc_capture": 0.9016
+      },
+      "38": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.89,
+          25.04
+        ],
+        "overlap_gram_dct": 0.9365,
+        "overlap_gram_dst": 0.679,
+        "dst_dc_capture": 0.9016
+      },
+      "39": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.9,
+          25.05
+        ],
+        "overlap_gram_dct": 0.9364,
+        "overlap_gram_dst": 0.6789,
+        "dst_dc_capture": 0.9015
+      },
+      "40": {
+        "angles_gram_dct_deg": [
+          0.0,
+          0.03,
+          15.9,
+          25.07
+        ],
+        "overlap_gram_dct": 0.9364,
+        "overlap_gram_dst": 0.6788,
+        "dst_dc_capture": 0.9015
+      }
+    }
+  }
+}

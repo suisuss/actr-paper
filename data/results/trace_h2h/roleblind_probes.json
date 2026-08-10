@@ -1,0 +1,239 @@
+{
+ "seeds": [
+  42,
+  7,
+  123,
+  2024,
+  31337
+ ],
+ "gap_primary": 1.0,
+ "admitting": [
+  "n_turns",
+  "volatility_mean",
+  "turn_dist_max",
+  "late_volatility",
+  "final_turn_goal_dist",
+  "conv_drift_from_goal",
+  "goal_initial_prompt_dist",
+  "model_self_sim_mean",
+  "model_self_sim_max",
+  "user_self_consistency",
+  "semantic_cohesion",
+  "model_goal_dist_mean",
+  "user_goal_dist_mean",
+  "model_goal_dist_min",
+  "model_goal_dist_max",
+  "final_model_goal_dist",
+  "model_initial_prompt_dist",
+  "goal_adherence_trend",
+  "goal_convergence_ratio"
+ ],
+ "arms": "combo26(410) combo19(403) comboRB(403) g0(384)",
+ "prism": {
+  "multiseed": {
+   "combo26": {
+    "gap_0.5": {
+     "mean": 0.6049,
+     "std": 0.0019
+    },
+    "gap_1.0": {
+     "mean": 0.6458,
+     "std": 0.002
+    }
+   },
+   "combo19": {
+    "gap_0.5": {
+     "mean": 0.6,
+     "std": 0.001
+    },
+    "gap_1.0": {
+     "mean": 0.6388,
+     "std": 0.0015
+    }
+   },
+   "comboRB": {
+    "gap_0.5": {
+     "mean": 0.6004,
+     "std": 0.0007
+    },
+    "gap_1.0": {
+     "mean": 0.6394,
+     "std": 0.0003
+    }
+   },
+   "g0": {
+    "gap_0.5": {
+     "mean": 0.5817,
+     "std": 0.0011
+    },
+    "gap_1.0": {
+     "mean": 0.6135,
+     "std": 0.001
+    }
+   }
+  },
+  "accuracy_seedens": {
+   "combo26": 0.6487,
+   "combo19": 0.6418,
+   "comboRB": 0.6426,
+   "g0": 0.6158
+  }
+ },
+ "uss_sgd": {
+  "multiseed": {
+   "combo26": {
+    "gap_0.5": {
+     "mean": 0.6602,
+     "std": 0.0032
+    },
+    "gap_1.0": {
+     "mean": 0.733,
+     "std": 0.0074
+    }
+   },
+   "combo19": {
+    "gap_0.5": {
+     "mean": 0.6595,
+     "std": 0.0036
+    },
+    "gap_1.0": {
+     "mean": 0.7342,
+     "std": 0.0089
+    }
+   },
+   "comboRB": {
+    "gap_0.5": {
+     "mean": 0.658,
+     "std": 0.0029
+    },
+    "gap_1.0": {
+     "mean": 0.7322,
+     "std": 0.0071
+    }
+   },
+   "g0": {
+    "gap_0.5": {
+     "mean": 0.6557,
+     "std": 0.0037
+    },
+    "gap_1.0": {
+     "mean": 0.7285,
+     "std": 0.0069
+    }
+   }
+  },
+  "accuracy_seedens": {
+   "combo26": 0.7478,
+   "combo19": 0.749,
+   "comboRB": 0.7468,
+   "g0": 0.7441
+  }
+ },
+ "F_roleblind": [
+  {
+   "h": "R1 combo26>comboRB PRISM",
+   "corpus": "prism",
+   "test": "superiority",
+   "point": 0.0061,
+   "diff_ci": [
+    -0.0037068337981754343,
+    0.01587744836205263
+   ],
+   "p_raw": 0.222,
+   "p_holm": 0.444
+  },
+  {
+   "h": "R2 combo19>comboRB PRISM",
+   "corpus": "prism",
+   "test": "superiority",
+   "point": -0.0008,
+   "diff_ci": [
+    -0.008061798407168587,
+    0.006243092723109046
+   ],
+   "p_raw": 0.828,
+   "p_holm": 0.828
+  }
+ ],
+ "R3_estimate": {
+  "h": "R3 combo26 vs combo19 PRISM",
+  "corpus": "prism",
+  "test": "estimation",
+  "point": 0.0068,
+  "diff_ci": [
+   -0.0007155358285168499,
+   0.015037520381550918
+  ],
+  "p_raw": 0.076
+ },
+ "prism_gains_over_g0": {
+  "combo26": {
+   "h": "gain combo26>g0 PRISM",
+   "corpus": "prism",
+   "test": "descriptive",
+   "point": 0.0328,
+   "diff_ci": [
+    0.015113877026780026,
+    0.050131332275077975
+   ],
+   "p_raw": 0.0
+  },
+  "combo19": {
+   "h": "gain combo19>g0 PRISM",
+   "corpus": "prism",
+   "test": "descriptive",
+   "point": 0.026,
+   "diff_ci": [
+    0.010862348741362146,
+    0.041249237055173145
+   ],
+   "p_raw": 0.0
+  },
+  "comboRB": {
+   "h": "gain comboRB>g0 PRISM",
+   "corpus": "prism",
+   "test": "descriptive",
+   "point": 0.0267,
+   "diff_ci": [
+    0.01326678257545065,
+    0.040656989637878505
+   ],
+   "p_raw": 0.0
+  }
+ },
+ "secondary_sgd": [
+  {
+   "h": "S combo26 vs comboRB SGD",
+   "corpus": "uss_sgd",
+   "test": "secondary",
+   "point": 0.001,
+   "diff_ci": [
+    -0.005178305946962379,
+    0.007948117503473512
+   ],
+   "p_raw": 0.782
+  },
+  {
+   "h": "S combo19 vs comboRB SGD",
+   "corpus": "uss_sgd",
+   "test": "secondary",
+   "point": 0.0022,
+   "diff_ci": [
+    -0.002820730095026965,
+    0.0074264617430704165
+   ],
+   "p_raw": 0.43
+  },
+  {
+   "h": "S comboRB vs g0 SGD",
+   "corpus": "uss_sgd",
+   "test": "secondary",
+   "point": 0.0027,
+   "diff_ci": [
+    -0.004455241118789345,
+    0.009807673769333539
+   ],
+   "p_raw": 0.5
+  }
+ ]
+}

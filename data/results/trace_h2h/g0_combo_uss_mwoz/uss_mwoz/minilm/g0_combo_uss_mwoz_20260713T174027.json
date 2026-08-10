@@ -1,0 +1,67 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/g0_combo_uss_mwoz",
+    "config": "minilm",
+    "dataset": "uss_mwoz",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5
+    },
+    "timestamp": "20260713T174027",
+    "script": "scripts/g0_combo.py",
+    "duration_seconds": null,
+    "git_commit": "59860a5324186187a1510906ea37d63e9b58f88a",
+    "git_branch": "HEAD",
+    "git_dirty": false,
+    "script_sha256": "1bdb77b5d0d59ab968f2753d56e37168865c7d8133e74b14d3b4e06e89b61db7",
+    "argv": [
+      "scripts/g0_combo.py",
+      "uss_mwoz"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_mwoz",
+    "arms": [
+      "g0_only",
+      "trace",
+      "g0_plus_trace",
+      "design_b_raw"
+    ],
+    "gap_0.5": {
+      "g0_only": 0.6438,
+      "trace": 0.5872,
+      "g0_plus_trace": 0.6409,
+      "design_b_raw": 0.6731,
+      "combo_vs_g0": {
+        "ci_lo": -0.014937990047341452,
+        "ci_hi": 0.008593662224697127,
+        "p_boot": 0.61
+      },
+      "combo_vs_raw": {
+        "ci_lo": -0.06192868842939118,
+        "ci_hi": -0.002747218201100144,
+        "p_boot": 0.034
+      }
+    },
+    "gap_1.0": {
+      "g0_only": 0.7109,
+      "trace": 0.6479,
+      "g0_plus_trace": 0.7139,
+      "design_b_raw": 0.764,
+      "combo_vs_g0": {
+        "ci_lo": -0.015279475933350984,
+        "ci_hi": 0.02326476561391166,
+        "p_boot": 0.794
+      },
+      "combo_vs_raw": {
+        "ci_lo": -0.10369976307890491,
+        "ci_hi": 0.0036283812797328345,
+        "p_boot": 0.068
+      }
+    }
+  }
+}

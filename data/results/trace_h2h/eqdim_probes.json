@@ -1,0 +1,139 @@
+{
+ "seeds": [
+  42,
+  7,
+  123,
+  2024,
+  31337
+ ],
+ "arms": "rolesplit_k1(1536) vs raw(1536)",
+ "uss_sgd": {
+  "multiseed": {
+   "raw": {
+    "gap_0.5": {
+     "mean": 0.6446,
+     "std": 0.0019
+    },
+    "gap_1.0": {
+     "mean": 0.705,
+     "std": 0.0078
+    }
+   },
+   "rolesplit_k1": {
+    "gap_0.5": {
+     "mean": 0.6721,
+     "std": 0.0061
+    },
+    "gap_1.0": {
+     "mean": 0.7516,
+     "std": 0.0083
+    }
+   }
+  },
+  "linear_probes": {
+   "raw": {
+    "gap_0.5": 0.6698,
+    "gap_1.0": 0.7503
+   },
+   "rolesplit_k1": {
+    "gap_0.5": 0.6931,
+    "gap_1.0": 0.7882
+   }
+  }
+ },
+ "uss_mwoz": {
+  "multiseed": {
+   "raw": {
+    "gap_0.5": {
+     "mean": 0.6653,
+     "std": 0.0096
+    },
+    "gap_1.0": {
+     "mean": 0.757,
+     "std": 0.0141
+    }
+   },
+   "rolesplit_k1": {
+    "gap_0.5": {
+     "mean": 0.6679,
+     "std": 0.0019
+    },
+    "gap_1.0": {
+     "mean": 0.7656,
+     "std": 0.0028
+    }
+   }
+  },
+  "linear_probes": {
+   "raw": {
+    "gap_0.5": 0.6624,
+    "gap_1.0": 0.7641
+   },
+   "rolesplit_k1": {
+    "gap_0.5": 0.665,
+    "gap_1.0": 0.7671
+   }
+  }
+ },
+ "prism": {
+  "multiseed": {
+   "raw": {
+    "gap_0.5": {
+     "mean": 0.5815,
+     "std": 0.0016
+    },
+    "gap_1.0": {
+     "mean": 0.61,
+     "std": 0.0016
+    }
+   },
+   "rolesplit_k1": {
+    "gap_0.5": {
+     "mean": 0.6004,
+     "std": 0.0014
+    },
+    "gap_1.0": {
+     "mean": 0.6382,
+     "std": 0.0014
+    }
+   }
+  },
+  "linear_probes": {
+   "raw": {
+    "gap_0.5": 0.5826,
+    "gap_1.0": 0.6141
+   },
+   "rolesplit_k1": {
+    "gap_0.5": 0.5941,
+    "gap_1.0": 0.6289
+   }
+  }
+ },
+ "primary_family_eqdim": [
+  {
+   "h": "E1 rolesplit_k1>raw SGD",
+   "corpus": "uss_sgd",
+   "diff_ci": [
+    0.0036157098195125324,
+    0.07028853728881786
+   ],
+   "p_raw": 0.024,
+   "p_holm": 0.048
+  },
+  {
+   "h": "E2 rolesplit_k1>raw MWOZ",
+   "corpus": "uss_mwoz",
+   "diff_ci": [
+    -0.025653802072816752,
+    0.0394508343722538
+   ],
+   "p_raw": 0.74,
+   "p_holm": 0.74
+  }
+ ],
+ "E3_prism_rf": {
+  "ci_lo": 0.0037898257871672378,
+  "ci_hi": 0.054114279212513904,
+  "p_boot": 0.018
+ }
+}

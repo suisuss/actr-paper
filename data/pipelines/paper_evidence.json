@@ -1,0 +1,188 @@
+{
+  "name": "paper_evidence",
+  "workdir": ".",
+  "env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "stages": [
+    {
+      "name": "dims_control",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "dims_control.py"
+      ]
+    },
+    {
+      "name": "degree_ablation",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "degree_ablation.py"
+      ]
+    },
+    {
+      "name": "deconfound_length",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "deconfound_length.py"
+      ]
+    },
+    {
+      "name": "extension_arms",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "extension_arms.py"
+      ]
+    },
+    {
+      "name": "hier_eval",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "hier_eval.py"
+      ]
+    },
+    {
+      "name": "role_surprise",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "role_surprise.py"
+      ]
+    },
+    {
+      "name": "dim_frontier",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "dim_frontier.py"
+      ]
+    },
+    {
+      "name": "service_transfer",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "service_transfer.py"
+      ]
+    },
+    {
+      "name": "descriptive_profiles",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "descriptive_profiles.py"
+      ]
+    },
+    {
+      "name": "prism_reversal",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "prism_reversal.py"
+      ]
+    },
+    {
+      "name": "mdl_degree_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "mdl_degree.py",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "feature_ablation_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "feature_ablation.py",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "feature_ablation_mwoz",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "feature_ablation.py",
+        "uss_mwoz"
+      ]
+    },
+    {
+      "name": "g0_combo_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "g0_combo.py",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "g0_combo_mwoz",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "g0_combo.py",
+        "uss_mwoz"
+      ]
+    },
+    {
+      "name": "g0_combo_prism",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "g0_combo.py",
+        "prism"
+      ]
+    },
+    {
+      "name": "containment_graft_sgd",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "containment_graft.py",
+        "uss_sgd"
+      ]
+    },
+    {
+      "name": "containment_graft_mwoz",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "containment_graft.py",
+        "uss_mwoz"
+      ]
+    },
+    {
+      "name": "multiseed_probes",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "multiseed_probes.py"
+      ]
+    },
+    {
+      "name": "multimodel_eval",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "multimodel_eval.py"
+      ]
+    },
+    {
+      "name": "cross_encoder_encode",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "cross_encoder_eval.py"
+      ]
+    }
+  ]
+}

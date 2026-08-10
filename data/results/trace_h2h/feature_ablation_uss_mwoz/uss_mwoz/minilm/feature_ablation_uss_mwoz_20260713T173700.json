@@ -1,0 +1,85 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/feature_ablation_uss_mwoz",
+    "config": "minilm",
+    "dataset": "uss_mwoz",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5
+    },
+    "timestamp": "20260713T173700",
+    "script": "scripts/feature_ablation.py",
+    "duration_seconds": null,
+    "git_commit": "59860a5324186187a1510906ea37d63e9b58f88a",
+    "git_branch": "HEAD",
+    "git_dirty": false,
+    "script_sha256": "7071dd52ccc78cf45566559784f1ad48259b32f4adc964d70a8f481e3f7cfa2d",
+    "argv": [
+      "scripts/feature_ablation.py",
+      "uss_mwoz"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_mwoz",
+    "gap_0.5": {
+      "floor1": 0.5451,
+      "trace": 0.5872,
+      "g0_only": 0.6438,
+      "g1to3_only": 0.6387,
+      "design_b_raw": 0.6731,
+      "mean_pool": 0.6438,
+      "g1to3_vs_g0": {
+        "ci_lo": -0.048036472858198453,
+        "ci_hi": 0.03584335764470958,
+        "p_boot": 0.8
+      },
+      "raw_vs_g0": {
+        "ci_lo": -0.00030924223650608657,
+        "ci_hi": 0.05864827311636011,
+        "p_boot": 0.054
+      },
+      "raw_vs_floor1": {
+        "ci_lo": 0.08703220831426754,
+        "ci_hi": 0.17396311563765074,
+        "p_boot": 0.0
+      },
+      "raw_vs_meanpool": {
+        "ci_lo": -0.00030924223650608657,
+        "ci_hi": 0.05864827311636011,
+        "p_boot": 0.054
+      }
+    },
+    "gap_1.0": {
+      "floor1": 0.5964,
+      "trace": 0.6479,
+      "g0_only": 0.7109,
+      "g1to3_only": 0.7042,
+      "design_b_raw": 0.764,
+      "mean_pool": 0.7109,
+      "g1to3_vs_g0": {
+        "ci_lo": -0.0875399464418387,
+        "ci_hi": 0.08167929689765116,
+        "p_boot": 0.828
+      },
+      "raw_vs_g0": {
+        "ci_lo": -0.0005723416995288865,
+        "ci_hi": 0.11038963321796116,
+        "p_boot": 0.058
+      },
+      "raw_vs_floor1": {
+        "ci_lo": 0.09100689149683101,
+        "ci_hi": 0.2469883354794101,
+        "p_boot": 0.0
+      },
+      "raw_vs_meanpool": {
+        "ci_lo": -0.0005723416995288865,
+        "ci_hi": 0.11038963321796116,
+        "p_boot": 0.058
+      }
+    }
+  }
+}

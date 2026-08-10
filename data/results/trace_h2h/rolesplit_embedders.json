@@ -1,0 +1,262 @@
+{
+ "seeds": [
+  42,
+  7,
+  123
+ ],
+ "gap_primary": 1.0,
+ "embedders": [
+  "gte",
+  "bge"
+ ],
+ "gte": {
+  "uss_sgd": {
+   "multiseed": {
+    "raw": {
+     "gap_0.5": {
+      "mean": 0.6779,
+      "std": 0.0072
+     },
+     "gap_1.0": {
+      "mean": 0.7518,
+      "std": 0.0118
+     }
+    },
+    "rolesplit_k1": {
+     "gap_0.5": {
+      "mean": 0.6928,
+      "std": 0.0049
+     },
+     "gap_1.0": {
+      "mean": 0.7861,
+      "std": 0.0054
+     }
+    }
+   },
+   "accuracy_seedens": {
+    "raw": 0.763,
+    "rolesplit_k1": 0.7958
+   }
+  },
+  "uss_mwoz": {
+   "multiseed": {
+    "raw": {
+     "gap_0.5": {
+      "mean": 0.669,
+      "std": 0.0031
+     },
+     "gap_1.0": {
+      "mean": 0.7679,
+      "std": 0.0035
+     }
+    },
+    "rolesplit_k1": {
+     "gap_0.5": {
+      "mean": 0.6827,
+      "std": 0.0047
+     },
+     "gap_1.0": {
+      "mean": 0.785,
+      "std": 0.0074
+     }
+    }
+   },
+   "accuracy_seedens": {
+    "raw": 0.7791,
+    "rolesplit_k1": 0.7942
+   }
+  },
+  "prism": {
+   "multiseed": {
+    "raw": {
+     "gap_0.5": {
+      "mean": 0.5658,
+      "std": 0.001
+     },
+     "gap_1.0": {
+      "mean": 0.5903,
+      "std": 0.0018
+     }
+    },
+    "rolesplit_k1": {
+     "gap_0.5": {
+      "mean": 0.5867,
+      "std": 0.0008
+     },
+     "gap_1.0": {
+      "mean": 0.6189,
+      "std": 0.0002
+     }
+    }
+   },
+   "accuracy_seedens": {
+    "raw": 0.5927,
+    "rolesplit_k1": 0.6217
+   }
+  }
+ },
+ "bge": {
+  "uss_sgd": {
+   "multiseed": {
+    "raw": {
+     "gap_0.5": {
+      "mean": 0.6707,
+      "std": 0.0091
+     },
+     "gap_1.0": {
+      "mean": 0.7531,
+      "std": 0.0074
+     }
+    },
+    "rolesplit_k1": {
+     "gap_0.5": {
+      "mean": 0.7154,
+      "std": 0.0037
+     },
+     "gap_1.0": {
+      "mean": 0.8021,
+      "std": 0.0034
+     }
+    }
+   },
+   "accuracy_seedens": {
+    "raw": 0.7642,
+    "rolesplit_k1": 0.8112
+   }
+  },
+  "uss_mwoz": {
+   "multiseed": {
+    "raw": {
+     "gap_0.5": {
+      "mean": 0.6887,
+      "std": 0.0003
+     },
+     "gap_1.0": {
+      "mean": 0.7871,
+      "std": 0.0033
+     }
+    },
+    "rolesplit_k1": {
+     "gap_0.5": {
+      "mean": 0.6955,
+      "std": 0.0047
+     },
+     "gap_1.0": {
+      "mean": 0.7932,
+      "std": 0.008
+     }
+    }
+   },
+   "accuracy_seedens": {
+    "raw": 0.7992,
+    "rolesplit_k1": 0.8033
+   }
+  },
+  "prism": {
+   "multiseed": {
+    "raw": {
+     "gap_0.5": {
+      "mean": 0.5788,
+      "std": 0.0006
+     },
+     "gap_1.0": {
+      "mean": 0.6102,
+      "std": 0.0008
+     }
+    },
+    "rolesplit_k1": {
+     "gap_0.5": {
+      "mean": 0.5995,
+      "std": 0.0009
+     },
+     "gap_1.0": {
+      "mean": 0.639,
+      "std": 0.0015
+     }
+    }
+   },
+   "accuracy_seedens": {
+    "raw": 0.6131,
+    "rolesplit_k1": 0.6419
+   }
+  }
+ },
+ "F_emb": [
+  {
+   "h": "E1-gte rs1>raw SGD",
+   "embedder": "gte",
+   "corpus": "uss_sgd",
+   "test": "superiority",
+   "point": 0.0328,
+   "diff_ci": [
+    0.0020513956966663784,
+    0.06508488178598498
+   ],
+   "p_raw": 0.03,
+   "p_holm": 0.03
+  },
+  {
+   "h": "E1-bge rs1>raw SGD",
+   "embedder": "bge",
+   "corpus": "uss_sgd",
+   "test": "superiority",
+   "point": 0.047,
+   "diff_ci": [
+    0.014728967490583764,
+    0.08042166411929286
+   ],
+   "p_raw": 0.0,
+   "p_holm": 0.0
+  }
+ ],
+ "estimates": [
+  {
+   "h": "S rs1>raw gte/uss_mwoz",
+   "embedder": "gte",
+   "corpus": "uss_mwoz",
+   "test": "estimation",
+   "point": 0.0151,
+   "diff_ci": [
+    -0.007770632826726912,
+    0.038045306015824835
+   ],
+   "p_raw": 0.202
+  },
+  {
+   "h": "S rs1>raw gte/prism",
+   "embedder": "gte",
+   "corpus": "prism",
+   "test": "estimation",
+   "point": 0.029,
+   "diff_ci": [
+    0.004918952189521327,
+    0.05050925498434682
+   ],
+   "p_raw": 0.022
+  },
+  {
+   "h": "S rs1>raw bge/uss_mwoz",
+   "embedder": "bge",
+   "corpus": "uss_mwoz",
+   "test": "estimation",
+   "point": 0.0041,
+   "diff_ci": [
+    -0.017473890017443715,
+    0.02594554654159907
+   ],
+   "p_raw": 0.72
+  },
+  {
+   "h": "S rs1>raw bge/prism",
+   "embedder": "bge",
+   "corpus": "prism",
+   "test": "estimation",
+   "point": 0.0288,
+   "diff_ci": [
+    0.006372544953718903,
+    0.05034971734040589
+   ],
+   "p_raw": 0.014
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/features",
+    "config": "none",
+    "dataset": "uss_mwoz",
+    "variant": "default",
+    "n_samples": null,
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "timestamp": "20260709T043948",
+    "script": "lib/experiment.py",
+    "duration_seconds": 0.1892855167388916,
+    "git_commit": "c3e80c24d48ba73b55c4d3741fb97bfa7d338410",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "991538d573b22768ef44cc7573b53a39f481505062c427e796b3367117bafb8c",
+    "argv": [
+      "experiments/trace/trace_h2h.py",
+      "--mode",
+      "features",
+      "--dataset",
+      "uss_mwoz"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_mwoz",
+    "n_dialogues": 1000,
+    "mode": "features",
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "correlation_trace": {
+      "n_features": 26,
+      "n_pairs_over_thresh": 8,
+      "mean_abs_offdiag_r": 0.195,
+      "pairs": [
+        {
+          "a": "model_goal_dist_mean",
+          "b": "model_initial_prompt_dist",
+          "r": 1.0
+        },
+        {
+          "a": "user_model_dist_max",
+          "b": "turn_dist_max",
+          "r": 0.895
+        },
+        {
+          "a": "model_goal_dist_mean",
+          "b": "conv_drift_from_goal",
+          "r": 0.876
+        },
+        {
+          "a": "model_initial_prompt_dist",
+          "b": "conv_drift_from_goal",
+          "r": 0.876
+        },
+        {
+          "a": "user_goal_dist_mean",
+          "b": "conv_drift_from_goal",
+          "r": 0.859
+        },
+        {
+          "a": "model_user_dist_mean",
+          "b": "volatility_mean",
+          "r": 0.805
+        },
+        {
+          "a": "model_goal_dist_min",
+          "b": "goal_convergence_ratio",
+          "r": -0.775
+        },
+        {
+          "a": "semantic_cohesion",
+          "b": "user_self_consistency",
+          "r": -0.707
+        }
+      ]
+    },
+    "feature_names": [
+      "n_turns",
+      "model_self_sim_mean",
+      "model_self_sim_max",
+      "initial_response_dist",
+      "model_user_dist_mean",
+      "model_user_dist_max",
+      "model_user_dist_min",
+      "user_model_dist_mean",
+      "user_model_dist_max",
+      "relevance_trend",
+      "semantic_cohesion",
+      "volatility_mean",
+      "turn_dist_max",
+      "late_volatility",
+      "user_self_consistency",
+      "model_goal_dist_mean",
+      "user_goal_dist_mean",
+      "model_goal_dist_min",
+      "model_goal_dist_max",
+      "final_turn_goal_dist",
+      "final_model_goal_dist",
+      "model_initial_prompt_dist",
+      "goal_initial_prompt_dist",
+      "conv_drift_from_goal",
+      "goal_adherence_trend",
+      "goal_convergence_ratio"
+    ],
+    "goal_analog": "first_user_utterance",
+    "excluded_temporal": [
+      "turn_duration",
+      "gap_time_median",
+      "pacing_jitter"
+    ]
+  }
+}

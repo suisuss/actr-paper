@@ -1,0 +1,47 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_annotator_ceiling",
+    "config": "none",
+    "dataset": "uss_sgd.uss_mwoz",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42
+    },
+    "timestamp": "20260708T202944",
+    "script": "scripts/annotator_ceiling.py",
+    "duration_seconds": null,
+    "git_commit": "ef00494ce6d49d46f5eef6e85df3f8d41aa4b1e5",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "5217342b4162c7928f0bc9c73d363c101d7dd5a0ceb7561f84e8c70436be810a",
+    "argv": [
+      "scripts/annotator_ceiling.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "uss_sgd": {
+      "gap_0.5": {
+        "ceiling": 0.943,
+        "n_pairs_scored": 1428921
+      },
+      "gap_1.0": {
+        "ceiling": 0.9895,
+        "n_pairs_scored": 310687
+      }
+    },
+    "uss_mwoz": {
+      "gap_0.5": {
+        "ceiling": 0.9476,
+        "n_pairs_scored": 1315106
+      },
+      "gap_1.0": {
+        "ceiling": 0.9918,
+        "n_pairs_scored": 233482
+      }
+    },
+    "note": "Leave-one-annotator-out agreement with mean-rating preferences; PRISM has one first-person rating per conversation, no ceiling estimable."
+  }
+}

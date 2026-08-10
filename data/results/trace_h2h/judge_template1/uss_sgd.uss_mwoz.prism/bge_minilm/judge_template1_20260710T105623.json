@@ -1,0 +1,364 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_judge_t1",
+    "config": "bge_minilm",
+    "dataset": "uss_sgd.uss_mwoz.prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seeds": [
+        42,
+        7,
+        123
+      ],
+      "n_folds": 5,
+      "n_boot": 1000,
+      "judge_model": "claude-haiku-4-5",
+      "prompt": "trace_appendix_d_template_1",
+      "inference": "seed-ensembled",
+      "issues": "#53"
+    },
+    "timestamp": "20260710T105623",
+    "script": "scripts/judge_t1.py",
+    "duration_seconds": null,
+    "git_commit": "39b4f308a96376e1f4a2592df8f57745e4e08c3b",
+    "git_branch": "evidence/judge-t1",
+    "git_dirty": false,
+    "script_sha256": "5da03e024edda7f9f73bbce75490fe0245d28b72f99f399c996b5a9998838820",
+    "argv": [
+      "scripts/judge_t1.py",
+      "eval"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "seeds": [
+      42,
+      7,
+      123
+    ],
+    "gap_primary": 1.0,
+    "judge_model": "claude-haiku-4-5",
+    "prompt": "trace_appendix_d_template_1",
+    "n_boot": 1000,
+    "inference": "seed-ensembled",
+    "calibration": "no equivalence bands below +-2.5pt (#43)",
+    "uss_sgd": {
+      "n": 1000,
+      "judge_alone_t1": {
+        "gap_0.5": {
+          "judge_strict": 0.4179,
+          "judge_ties_half": 0.6274
+        },
+        "gap_1.0": {
+          "judge_strict": 0.526,
+          "judge_ties_half": 0.7117
+        }
+      },
+      "judge_alone_old": {
+        "gap_0.5": {
+          "judge_strict": 0.392,
+          "judge_ties_half": 0.6343
+        },
+        "gap_1.0": {
+          "judge_strict": 0.5126,
+          "judge_ties_half": 0.7176
+        }
+      },
+      "multiseed": {
+        "bge_rs1": {
+          "gap_0.5": {
+            "mean": 0.7154,
+            "std": 0.0037
+          },
+          "gap_1.0": {
+            "mean": 0.8021,
+            "std": 0.0034
+          }
+        },
+        "minilm_rs1": {
+          "gap_0.5": {
+            "mean": 0.6717,
+            "std": 0.0028
+          },
+          "gap_1.0": {
+            "mean": 0.7555,
+            "std": 0.0031
+          }
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.7234,
+            "std": 0.0054
+          },
+          "gap_1.0": {
+            "mean": 0.8181,
+            "std": 0.0013
+          }
+        },
+        "minilm_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.7038,
+            "std": 0.0063
+          },
+          "gap_1.0": {
+            "mean": 0.7999,
+            "std": 0.011
+          }
+        },
+        "bge_rs1_judge_t1": {
+          "gap_0.5": {
+            "mean": 0.7179,
+            "std": 0.005
+          },
+          "gap_1.0": {
+            "mean": 0.8068,
+            "std": 0.0046
+          }
+        },
+        "minilm_rs1_judge_t1": {
+          "gap_0.5": {
+            "mean": 0.6905,
+            "std": 0.0084
+          },
+          "gap_1.0": {
+            "mean": 0.7799,
+            "std": 0.0138
+          }
+        }
+      },
+      "accuracy_seedens": {
+        "bge_rs1": {
+          "gap_0.5": 0.7227,
+          "gap_1.0": 0.8112
+        },
+        "minilm_rs1": {
+          "gap_0.5": 0.6801,
+          "gap_1.0": 0.7655
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": 0.7307,
+          "gap_1.0": 0.8257
+        },
+        "minilm_rs1_judge": {
+          "gap_0.5": 0.7105,
+          "gap_1.0": 0.8083
+        },
+        "bge_rs1_judge_t1": {
+          "gap_0.5": 0.7257,
+          "gap_1.0": 0.8169
+        },
+        "minilm_rs1_judge_t1": {
+          "gap_0.5": 0.6985,
+          "gap_1.0": 0.7915
+        }
+      }
+    },
+    "uss_mwoz": {
+      "n": 1000,
+      "judge_alone_t1": {
+        "gap_0.5": {
+          "judge_strict": 0.3332,
+          "judge_ties_half": 0.6023
+        },
+        "gap_1.0": {
+          "judge_strict": 0.4688,
+          "judge_ties_half": 0.6849
+        }
+      },
+      "judge_alone_old": {
+        "gap_0.5": {
+          "judge_strict": 0.3407,
+          "judge_ties_half": 0.586
+        },
+        "gap_1.0": {
+          "judge_strict": 0.4942,
+          "judge_ties_half": 0.6905
+        }
+      },
+      "multiseed": {
+        "bge_rs1": {
+          "gap_0.5": {
+            "mean": 0.6955,
+            "std": 0.0047
+          },
+          "gap_1.0": {
+            "mean": 0.7932,
+            "std": 0.008
+          }
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.6965,
+            "std": 0.005
+          },
+          "gap_1.0": {
+            "mean": 0.793,
+            "std": 0.0096
+          }
+        },
+        "bge_rs1_judge_t1": {
+          "gap_0.5": {
+            "mean": 0.6968,
+            "std": 0.0055
+          },
+          "gap_1.0": {
+            "mean": 0.7931,
+            "std": 0.01
+          }
+        }
+      },
+      "accuracy_seedens": {
+        "bge_rs1": {
+          "gap_0.5": 0.7039,
+          "gap_1.0": 0.8033
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": 0.7047,
+          "gap_1.0": 0.8028
+        },
+        "bge_rs1_judge_t1": {
+          "gap_0.5": 0.7058,
+          "gap_1.0": 0.8028
+        }
+      }
+    },
+    "prism": {
+      "n": 2000,
+      "judge_alone_t1": {
+        "gap_0.5": {
+          "judge_strict": 0.334,
+          "judge_ties_half": 0.5912
+        },
+        "gap_1.0": {
+          "judge_strict": 0.3847,
+          "judge_ties_half": 0.6247
+        }
+      },
+      "judge_alone_old": {
+        "gap_0.5": {
+          "judge_strict": 0.374,
+          "judge_ties_half": 0.6025
+        },
+        "gap_1.0": {
+          "judge_strict": 0.4344,
+          "judge_ties_half": 0.6413
+        }
+      },
+      "multiseed": {
+        "bge_rs1": {
+          "gap_0.5": {
+            "mean": 0.5765,
+            "std": 0.0015
+          },
+          "gap_1.0": {
+            "mean": 0.6088,
+            "std": 0.0023
+          }
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.6159,
+            "std": 0.0021
+          },
+          "gap_1.0": {
+            "mean": 0.6608,
+            "std": 0.002
+          }
+        },
+        "bge_rs1_judge_t1": {
+          "gap_0.5": {
+            "mean": 0.5982,
+            "std": 0.0024
+          },
+          "gap_1.0": {
+            "mean": 0.6389,
+            "std": 0.0027
+          }
+        }
+      },
+      "accuracy_seedens": {
+        "bge_rs1": {
+          "gap_0.5": 0.5785,
+          "gap_1.0": 0.6115
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": 0.617,
+          "gap_1.0": 0.6625
+        },
+        "bge_rs1_judge_t1": {
+          "gap_0.5": 0.5993,
+          "gap_1.0": 0.6406
+        }
+      },
+      "note": "judge-rated 2000-conversation subset (#23 rng(42) draw), GroupKFold by user; geometry and old-judge arms reused from #53 checkpoints"
+    },
+    "primary_family": [
+      {
+        "h": "T1-C1 bge_rs1_judge_t1>bge_rs1 SGD",
+        "test": "superiority",
+        "gap": 1.0,
+        "point": 0.0057,
+        "diff_ci": [
+          -0.00440547308837041,
+          0.016655860506999836
+        ],
+        "p_boot": 0.226,
+        "p_holm": 0.226
+      }
+    ],
+    "estimates": [
+      {
+        "h": "T1-C2 t1 vs old-prompt hybrid SGD",
+        "test": "estimation",
+        "gap": 1.0,
+        "point": -0.0088,
+        "diff_ci": [
+          -0.023876288403058464,
+          0.008522138819962262
+        ],
+        "p_boot": 0.3
+      },
+      {
+        "h": "T1-C3 minilm t1 vs old-prompt (#23 arm) SGD",
+        "test": "estimation",
+        "gap": 1.0,
+        "point": -0.0167,
+        "diff_ci": [
+          -0.03898465935617866,
+          0.007640930144164779
+        ],
+        "p_boot": 0.152
+      },
+      {
+        "h": "T1-S1 bge_rs1_judge_t1>bge_rs1 MWOZ",
+        "test": "estimation",
+        "gap": 1.0,
+        "point": -0.0005,
+        "diff_ci": [
+          -0.006677193995066675,
+          0.006152756506377598
+        ],
+        "p_boot": 0.962
+      },
+      {
+        "h": "T1-S2 bge_rs1_judge_t1>bge_rs1 PRISM-subset",
+        "test": "estimation",
+        "gap": 1.0,
+        "point": 0.0291,
+        "diff_ci": [
+          0.006991343341400765,
+          0.05101725246919513
+        ],
+        "p_boot": 0.012
+      }
+    ],
+    "ceiling_distance_sgd": {
+      "ceiling_gap_1.0": 0.9895,
+      "best_arm": "bge_rs1_judge",
+      "accuracy_seedens": 0.8257,
+      "distance": 0.1638
+    }
+  }
+}

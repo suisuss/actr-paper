@@ -1,0 +1,63 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_uniqueness_mwoz",
+    "config": "minilm",
+    "dataset": "uss_mwoz",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seeds": [
+        42,
+        7,
+        123,
+        2024,
+        31337
+      ],
+      "n_boot": 1000,
+      "follows_issue": 63
+    },
+    "timestamp": "20260711T014648",
+    "script": "scripts/uniqueness_mwoz.py",
+    "duration_seconds": null,
+    "git_commit": "ebeec5d0b017cb92ac0afc2026c51b78cb01ff2e",
+    "git_branch": "docs/post-63-polish",
+    "git_dirty": false,
+    "script_sha256": "e9c84f50da070011caa89e469049f2fa98ab95b1c0136f7dcf620ae9e35857a7",
+    "argv": [
+      "scripts/uniqueness_mwoz.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "seeds": [
+      42,
+      7,
+      123,
+      2024,
+      31337
+    ],
+    "uniqueness_mwoz": {
+      "gap_0.5": {
+        "rs1_acc": 0.6752,
+        "combo_acc": 0.6536,
+        "diff": 0.0216,
+        "ci": [
+          -0.002377342475303009,
+          0.04664383450198089
+        ],
+        "p_boot": 0.08
+      },
+      "gap_1.0": {
+        "rs1_acc": 0.7746,
+        "combo_acc": 0.7432,
+        "diff": 0.0314,
+        "ci": [
+          -0.010150804210972246,
+          0.07263874577792545
+        ],
+        "p_boot": 0.126
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_second_task_service",
+    "config": "minilm",
+    "dataset": "uss_sgd",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5
+    },
+    "timestamp": "20260709T011156",
+    "script": "scripts/second_task.py",
+    "duration_seconds": null,
+    "git_commit": "86daedfd6d1deb489ea9014dda4cc2a78f1b5179",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "57360c130f76351e493ccf904dd6657bb4b5670fc1f6274f7de1b39ff17ea684",
+    "argv": [
+      "scripts/second_task.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "task": "dominant service, top-8 + other",
+    "n": 1000,
+    "n_classes": 9,
+    "trace": {
+      "acc": 0.452,
+      "macro_f1": 0.3379
+    },
+    "g0": {
+      "acc": 0.769,
+      "macro_f1": 0.6945
+    },
+    "raw": {
+      "acc": 0.846,
+      "macro_f1": 0.7939
+    },
+    "rolesplit": {
+      "acc": 0.825,
+      "macro_f1": 0.754
+    }
+  }
+}

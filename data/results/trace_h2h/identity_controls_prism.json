@@ -1,0 +1,568 @@
+{
+ "seeds": [
+  42,
+  7,
+  123,
+  2024,
+  31337
+ ],
+ "n_boot": 1000,
+ "max_m": 2000,
+ "n_dialogues": 7951,
+ "n_models": 21,
+ "arms": {
+  "interleaved": "eqdim_probes/prism_seed*.npz[raw]",
+  "rolesplit_1": "eqdim_probes/prism_seed*.npz[rolesplit_k1]",
+  "mean_pool": "rolesplit_graft/prism_seed*.npz[g0]",
+  "combo": "rolesplit_graft/prism_seed*.npz[combo]"
+ },
+ "pair_counts": {
+  "gap_0.5": {
+   "all": 18425701,
+   "same_model": 1013640,
+   "diff_model": 17412061,
+   "same_model_share": 0.055
+  },
+  "gap_1.0": {
+   "all": 10722580,
+   "same_model": 575520,
+   "diff_model": 10147060,
+   "same_model_share": 0.0537
+  }
+ },
+ "top_models_same_pairs": {
+  "command": {
+   "n_conversations": 711,
+   "same_model_pairs_gap1": 66297
+  },
+  "HuggingFaceH4/zephyr-7b-beta": {
+   "n_conversations": 560,
+   "same_model_pairs_gap1": 51481
+  },
+  "claude-instant-1": {
+   "n_conversations": 556,
+   "same_model_pairs_gap1": 46780
+  },
+  "models/chat-bison-001": {
+   "n_conversations": 549,
+   "same_model_pairs_gap1": 47743
+  },
+  "command-nightly": {
+   "n_conversations": 506,
+   "same_model_pairs_gap1": 41330
+  },
+  "meta-llama/Llama-2-7b-chat-hf": {
+   "n_conversations": 488,
+   "same_model_pairs_gap1": 39194
+  }
+ },
+ "regression_test": {
+  "interleaved": {
+   "per_seed_mean": 0.61,
+   "per_seed_std": 0.0016
+  },
+  "rolesplit_1": {
+   "per_seed_mean": 0.6382,
+   "per_seed_std": 0.0014
+  },
+  "E3_prism_rf_seed42": {
+   "ci": [
+    0.0037898257871672378,
+    0.054114279212513904
+   ],
+   "p_boot": 0.018
+  },
+  "expected": {
+   "interleaved": 0.61,
+   "rolesplit_1": 0.6382,
+   "E3_ci": [
+    0.0037898257871672378,
+    0.054114279212513904
+   ],
+   "E3_p": 0.018,
+   "source": "data/results/trace_h2h/eqdim_probes.json"
+  },
+  "reproduces_table2": true
+ },
+ "inference_seedens": {
+  "rolesplit_1_vs_interleaved": {
+   "kind": "primary",
+   "arms": [
+    "rolesplit_1",
+    "interleaved"
+   ],
+   "gap_0.5": {
+    "n_pairs": {
+     "all": 18425701,
+     "same_model": 1013640,
+     "diff_model": 17412061,
+     "same_model_share": 0.055
+    },
+    "all": {
+     "acc_a": 0.6035,
+     "acc_b": 0.5848,
+     "delta": {
+      "point": 0.0184,
+      "ci": [
+       -0.0013,
+       0.0382
+      ],
+      "p_boot": 0.074
+     }
+    },
+    "same_model": {
+     "acc_a": 0.5999,
+     "acc_b": 0.5835,
+     "delta": {
+      "point": 0.0163,
+      "ci": [
+       -0.0049,
+       0.0358
+      ],
+      "p_boot": 0.138
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6037,
+     "acc_b": 0.5848,
+     "delta": {
+      "point": 0.0186,
+      "ci": [
+       -0.0012,
+       0.0384
+      ],
+      "p_boot": 0.072
+     }
+    },
+    "attenuation": {
+     "point": 0.0022,
+     "ci": [
+      -0.0065,
+      0.0116
+     ],
+     "p_boot": 0.644,
+     "definition": "Delta_all - Delta_same"
+    },
+    "decision": {
+     "verdict": "CLEAN - the split's gain survives holding model identity constant; not a fingerprint effect",
+     "attenuation_ci_excludes_zero": false,
+     "delta_same_at_least_half_of_delta_all": true,
+     "rule": "clean = attenuation CI includes zero AND Delta_same >= 0.5*Delta_all; dirty = CI excludes zero AND Delta_same < 0.5*Delta_all; else undecidable"
+    }
+   },
+   "gap_1.0": {
+    "n_pairs": {
+     "all": 10722580,
+     "same_model": 575520,
+     "diff_model": 10147060,
+     "same_model_share": 0.0537
+    },
+    "all": {
+     "acc_a": 0.6424,
+     "acc_b": 0.6143,
+     "delta": {
+      "point": 0.0276,
+      "ci": [
+       0.0024,
+       0.0511
+      ],
+      "p_boot": 0.032
+     }
+    },
+    "same_model": {
+     "acc_a": 0.6387,
+     "acc_b": 0.6147,
+     "delta": {
+      "point": 0.0236,
+      "ci": [
+       -0.0028,
+       0.0488
+      ],
+      "p_boot": 0.092
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6426,
+     "acc_b": 0.6143,
+     "delta": {
+      "point": 0.0278,
+      "ci": [
+       0.0026,
+       0.0517
+      ],
+      "p_boot": 0.032
+     }
+    },
+    "attenuation": {
+     "point": 0.0039,
+     "ci": [
+      -0.0076,
+      0.0168
+     ],
+     "p_boot": 0.514,
+     "definition": "Delta_all - Delta_same"
+    },
+    "decision": {
+     "verdict": "CLEAN - the split's gain survives holding model identity constant; not a fingerprint effect",
+     "attenuation_ci_excludes_zero": false,
+     "delta_same_at_least_half_of_delta_all": true,
+     "rule": "clean = attenuation CI includes zero AND Delta_same >= 0.5*Delta_all; dirty = CI excludes zero AND Delta_same < 0.5*Delta_all; else undecidable"
+    }
+   }
+  },
+  "combo_vs_mean_pool": {
+   "kind": "free_ride",
+   "arms": [
+    "combo",
+    "mean_pool"
+   ],
+   "gap_0.5": {
+    "n_pairs": {
+     "all": 18425701,
+     "same_model": 1013640,
+     "diff_model": 17412061,
+     "same_model_share": 0.055
+    },
+    "all": {
+     "acc_a": 0.607,
+     "acc_b": 0.5834,
+     "delta": {
+      "point": 0.0237,
+      "ci": [
+       0.0104,
+       0.0369
+      ],
+      "p_boot": 0.0
+     }
+    },
+    "same_model": {
+     "acc_a": 0.6004,
+     "acc_b": 0.5827,
+     "delta": {
+      "point": 0.0178,
+      "ci": [
+       0.0043,
+       0.0316
+      ],
+      "p_boot": 0.012
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6074,
+     "acc_b": 0.5835,
+     "delta": {
+      "point": 0.024,
+      "ci": [
+       0.0108,
+       0.0373
+      ],
+      "p_boot": 0.0
+     }
+    },
+    "attenuation": {
+     "point": 0.0059,
+     "ci": [
+      -0.0003,
+      0.0126
+     ],
+     "p_boot": 0.072,
+     "definition": "Delta_all - Delta_same"
+    }
+   },
+   "gap_1.0": {
+    "n_pairs": {
+     "all": 10722580,
+     "same_model": 575520,
+     "diff_model": 10147060,
+     "same_model_share": 0.0537
+    },
+    "all": {
+     "acc_a": 0.6487,
+     "acc_b": 0.6158,
+     "delta": {
+      "point": 0.033,
+      "ci": [
+       0.0151,
+       0.0501
+      ],
+      "p_boot": 0.0
+     }
+    },
+    "same_model": {
+     "acc_a": 0.64,
+     "acc_b": 0.6161,
+     "delta": {
+      "point": 0.0242,
+      "ci": [
+       0.0065,
+       0.0416
+      ],
+      "p_boot": 0.008
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6491,
+     "acc_b": 0.6158,
+     "delta": {
+      "point": 0.0335,
+      "ci": [
+       0.0154,
+       0.0511
+      ],
+      "p_boot": 0.0
+     }
+    },
+    "attenuation": {
+     "point": 0.0088,
+     "ci": [
+      0.0,
+      0.0188
+     ],
+     "p_boot": 0.048,
+     "definition": "Delta_all - Delta_same"
+    }
+   }
+  }
+ },
+ "inference_seed42": {
+  "rolesplit_1_vs_interleaved": {
+   "kind": "primary",
+   "arms": [
+    "rolesplit_1",
+    "interleaved"
+   ],
+   "gap_0.5": {
+    "n_pairs": {
+     "all": 18425701,
+     "same_model": 1013640,
+     "diff_model": 17412061,
+     "same_model_share": 0.055
+    },
+    "all": {
+     "acc_a": 0.5997,
+     "acc_b": 0.5785,
+     "delta": {
+      "point": 0.0209,
+      "ci": [
+       0.0003,
+       0.0422
+      ],
+      "p_boot": 0.046
+     }
+    },
+    "same_model": {
+     "acc_a": 0.5948,
+     "acc_b": 0.5769,
+     "delta": {
+      "point": 0.0177,
+      "ci": [
+       -0.0037,
+       0.0388
+      ],
+      "p_boot": 0.122
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6,
+     "acc_b": 0.5786,
+     "delta": {
+      "point": 0.021,
+      "ci": [
+       0.0003,
+       0.0425
+      ],
+      "p_boot": 0.044
+     }
+    },
+    "attenuation": {
+     "point": 0.0031,
+     "ci": [
+      -0.006,
+      0.0127
+     ],
+     "p_boot": 0.49,
+     "definition": "Delta_all - Delta_same"
+    },
+    "decision": {
+     "verdict": "CLEAN - the split's gain survives holding model identity constant; not a fingerprint effect",
+     "attenuation_ci_excludes_zero": false,
+     "delta_same_at_least_half_of_delta_all": true,
+     "rule": "clean = attenuation CI includes zero AND Delta_same >= 0.5*Delta_all; dirty = CI excludes zero AND Delta_same < 0.5*Delta_all; else undecidable"
+    }
+   },
+   "gap_1.0": {
+    "n_pairs": {
+     "all": 10722580,
+     "same_model": 575520,
+     "diff_model": 10147060,
+     "same_model_share": 0.0537
+    },
+    "all": {
+     "acc_a": 0.6373,
+     "acc_b": 0.6073,
+     "delta": {
+      "point": 0.0295,
+      "ci": [
+       0.0038,
+       0.0541
+      ],
+      "p_boot": 0.018
+     }
+    },
+    "same_model": {
+     "acc_a": 0.632,
+     "acc_b": 0.6072,
+     "delta": {
+      "point": 0.0245,
+      "ci": [
+       -0.0031,
+       0.051
+      ],
+      "p_boot": 0.082
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6376,
+     "acc_b": 0.6073,
+     "delta": {
+      "point": 0.0298,
+      "ci": [
+       0.0043,
+       0.0546
+      ],
+      "p_boot": 0.018
+     }
+    },
+    "attenuation": {
+     "point": 0.0051,
+     "ci": [
+      -0.0072,
+      0.018
+     ],
+     "p_boot": 0.408,
+     "definition": "Delta_all - Delta_same"
+    },
+    "decision": {
+     "verdict": "CLEAN - the split's gain survives holding model identity constant; not a fingerprint effect",
+     "attenuation_ci_excludes_zero": false,
+     "delta_same_at_least_half_of_delta_all": true,
+     "rule": "clean = attenuation CI includes zero AND Delta_same >= 0.5*Delta_all; dirty = CI excludes zero AND Delta_same < 0.5*Delta_all; else undecidable"
+    }
+   }
+  },
+  "combo_vs_mean_pool": {
+   "kind": "free_ride",
+   "arms": [
+    "combo",
+    "mean_pool"
+   ],
+   "gap_0.5": {
+    "n_pairs": {
+     "all": 18425701,
+     "same_model": 1013640,
+     "diff_model": 17412061,
+     "same_model_share": 0.055
+    },
+    "all": {
+     "acc_a": 0.604,
+     "acc_b": 0.5831,
+     "delta": {
+      "point": 0.0211,
+      "ci": [
+       0.0077,
+       0.036
+      ],
+      "p_boot": 0.004
+     }
+    },
+    "same_model": {
+     "acc_a": 0.5973,
+     "acc_b": 0.5817,
+     "delta": {
+      "point": 0.0157,
+      "ci": [
+       0.0014,
+       0.031
+      ],
+      "p_boot": 0.032
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6044,
+     "acc_b": 0.5832,
+     "delta": {
+      "point": 0.0214,
+      "ci": [
+       0.008,
+       0.0362
+      ],
+      "p_boot": 0.004
+     }
+    },
+    "attenuation": {
+     "point": 0.0053,
+     "ci": [
+      -0.001,
+      0.0125
+     ],
+     "p_boot": 0.104,
+     "definition": "Delta_all - Delta_same"
+    }
+   },
+   "gap_1.0": {
+    "n_pairs": {
+     "all": 10722580,
+     "same_model": 575520,
+     "diff_model": 10147060,
+     "same_model_share": 0.0537
+    },
+    "all": {
+     "acc_a": 0.645,
+     "acc_b": 0.6139,
+     "delta": {
+      "point": 0.0313,
+      "ci": [
+       0.0131,
+       0.0499
+      ],
+      "p_boot": 0.0
+     }
+    },
+    "same_model": {
+     "acc_a": 0.636,
+     "acc_b": 0.6132,
+     "delta": {
+      "point": 0.0231,
+      "ci": [
+       0.0046,
+       0.0434
+      ],
+      "p_boot": 0.014
+     }
+    },
+    "diff_model": {
+     "acc_a": 0.6455,
+     "acc_b": 0.614,
+     "delta": {
+      "point": 0.0318,
+      "ci": [
+       0.0135,
+       0.0503
+      ],
+      "p_boot": 0.0
+     }
+    },
+    "attenuation": {
+     "point": 0.0082,
+     "ci": [
+      -0.0011,
+      0.0183
+     ],
+     "p_boot": 0.088,
+     "definition": "Delta_all - Delta_same"
+    }
+   }
+  }
+ },
+ "verdict": "CLEAN - the split's gain survives holding model identity constant; not a fingerprint effect"
+}

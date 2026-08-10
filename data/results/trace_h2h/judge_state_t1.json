@@ -1,0 +1,10 @@
+{
+ "batches": {
+  "haiku_t1": {
+   "id": "msgbatch_01QV64oJSyNXtXmY4UCyTszd",
+   "n": 4000,
+   "model": "claude-haiku-4-5",
+   "prompt": "trace_appendix_d_template_1"
+  }
+ }
+}

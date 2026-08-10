@@ -1,0 +1,306 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_multiseed_probes",
+    "config": "minilm",
+    "dataset": "uss_sgd.uss_mwoz.prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seeds": [
+        42,
+        7,
+        123,
+        2024,
+        31337
+      ],
+      "n_folds": 5
+    },
+    "timestamp": "20260709T021525",
+    "script": "scripts/multiseed_probes.py",
+    "duration_seconds": null,
+    "git_commit": "86daedfd6d1deb489ea9014dda4cc2a78f1b5179",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "3a14930b0969c899cd7b19a4ebd35534a6adb10eeb7304016ebdcb9b799abd3d",
+    "argv": [
+      "scripts/multiseed_probes.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "seeds": [
+      42,
+      7,
+      123,
+      2024,
+      31337
+    ],
+    "uss_sgd": {
+      "multiseed": {
+        "trace": {
+          "gap_0.5": {
+            "mean": 0.6,
+            "std": 0.0093
+          },
+          "gap_1.0": {
+            "mean": 0.6527,
+            "std": 0.0129
+          }
+        },
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.6446,
+            "std": 0.0019
+          },
+          "gap_1.0": {
+            "mean": 0.705,
+            "std": 0.0078
+          }
+        },
+        "g0": {
+          "gap_0.5": {
+            "mean": 0.6557,
+            "std": 0.0037
+          },
+          "gap_1.0": {
+            "mean": 0.7285,
+            "std": 0.0069
+          }
+        },
+        "combo": {
+          "gap_0.5": {
+            "mean": 0.6602,
+            "std": 0.0032
+          },
+          "gap_1.0": {
+            "mean": 0.733,
+            "std": 0.0074
+          }
+        },
+        "rolesplit": {
+          "gap_0.5": {
+            "mean": 0.6661,
+            "std": 0.0058
+          },
+          "gap_1.0": {
+            "mean": 0.7431,
+            "std": 0.0132
+          }
+        }
+      },
+      "linear_probes": {
+        "trace": {
+          "gap_0.5": 0.5937,
+          "gap_1.0": 0.643
+        },
+        "raw": {
+          "gap_0.5": 0.6698,
+          "gap_1.0": 0.7503
+        },
+        "g0": {
+          "gap_0.5": 0.6793,
+          "gap_1.0": 0.7577
+        },
+        "combo": {
+          "gap_0.5": 0.6892,
+          "gap_1.0": 0.7692
+        },
+        "rolesplit": {
+          "gap_0.5": 0.6738,
+          "gap_1.0": 0.7525
+        }
+      }
+    },
+    "uss_mwoz": {
+      "multiseed": {
+        "trace": {
+          "gap_0.5": {
+            "mean": 0.5894,
+            "std": 0.0044
+          },
+          "gap_1.0": {
+            "mean": 0.6505,
+            "std": 0.0085
+          }
+        },
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.6653,
+            "std": 0.0096
+          },
+          "gap_1.0": {
+            "mean": 0.757,
+            "std": 0.0141
+          }
+        },
+        "g0": {
+          "gap_0.5": {
+            "mean": 0.645,
+            "std": 0.0031
+          },
+          "gap_1.0": {
+            "mean": 0.7302,
+            "std": 0.0123
+          }
+        },
+        "combo": {
+          "gap_0.5": {
+            "mean": 0.6462,
+            "std": 0.0056
+          },
+          "gap_1.0": {
+            "mean": 0.7327,
+            "std": 0.0125
+          }
+        },
+        "rolesplit": {
+          "gap_0.5": {
+            "mean": 0.6604,
+            "std": 0.0052
+          },
+          "gap_1.0": {
+            "mean": 0.7601,
+            "std": 0.0032
+          }
+        }
+      },
+      "linear_probes": {
+        "trace": {
+          "gap_0.5": 0.5883,
+          "gap_1.0": 0.6325
+        },
+        "raw": {
+          "gap_0.5": 0.6624,
+          "gap_1.0": 0.7641
+        },
+        "g0": {
+          "gap_0.5": 0.6544,
+          "gap_1.0": 0.7415
+        },
+        "combo": {
+          "gap_0.5": 0.6631,
+          "gap_1.0": 0.746
+        },
+        "rolesplit": {
+          "gap_0.5": 0.6667,
+          "gap_1.0": 0.7821
+        }
+      }
+    },
+    "prism": {
+      "multiseed": {
+        "trace": {
+          "gap_0.5": {
+            "mean": 0.5565,
+            "std": 0.0014
+          },
+          "gap_1.0": {
+            "mean": 0.5821,
+            "std": 0.0017
+          }
+        },
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.5815,
+            "std": 0.0016
+          },
+          "gap_1.0": {
+            "mean": 0.61,
+            "std": 0.0016
+          }
+        },
+        "g0": {
+          "gap_0.5": {
+            "mean": 0.5817,
+            "std": 0.0011
+          },
+          "gap_1.0": {
+            "mean": 0.6135,
+            "std": 0.001
+          }
+        },
+        "combo": {
+          "gap_0.5": {
+            "mean": 0.6049,
+            "std": 0.0019
+          },
+          "gap_1.0": {
+            "mean": 0.6458,
+            "std": 0.002
+          }
+        }
+      },
+      "linear_probes": {
+        "trace": {
+          "gap_0.5": 0.568,
+          "gap_1.0": 0.594
+        },
+        "raw": {
+          "gap_0.5": 0.5826,
+          "gap_1.0": 0.6141
+        },
+        "g0": {
+          "gap_0.5": 0.6041,
+          "gap_1.0": 0.6426
+        },
+        "combo": {
+          "gap_0.5": 0.6096,
+          "gap_1.0": 0.6505
+        }
+      }
+    },
+    "primary_family": [
+      {
+        "h": "H1 raw>trace SGD",
+        "corpus": "uss_sgd",
+        "diff_ci": [
+          -0.010062689946171786,
+          0.09878994939968734
+        ],
+        "p_raw": 0.16,
+        "p_holm": 0.32
+      },
+      {
+        "h": "H2 raw>trace MWOZ",
+        "corpus": "uss_mwoz",
+        "diff_ci": [
+          0.05848465436191986,
+          0.1716261902064778
+        ],
+        "p_raw": 0.0,
+        "p_holm": 0.0
+      },
+      {
+        "h": "H3 rolesplit>raw SGD",
+        "corpus": "uss_sgd",
+        "diff_ci": [
+          5.783153644488402e-05,
+          0.05725163029253908
+        ],
+        "p_raw": 0.05,
+        "p_holm": 0.15
+      },
+      {
+        "h": "H4 rolesplit>raw MWOZ",
+        "corpus": "uss_mwoz",
+        "diff_ci": [
+          -0.03737724605562189,
+          0.028670501739170542
+        ],
+        "p_raw": 0.81,
+        "p_holm": 0.81
+      },
+      {
+        "h": "H5 combo>g0 PRISM",
+        "corpus": "prism",
+        "diff_ci": [
+          0.01314128122694159,
+          0.04990782933780025
+        ],
+        "p_raw": 0.0,
+        "p_holm": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/designs",
+    "config": "none",
+    "dataset": "uss_sgd",
+    "variant": "default",
+    "n_samples": null,
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "timestamp": "20260709T044100",
+    "script": "lib/experiment.py",
+    "duration_seconds": 53.07774329185486,
+    "git_commit": "c3e80c24d48ba73b55c4d3741fb97bfa7d338410",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "991538d573b22768ef44cc7573b53a39f481505062c427e796b3367117bafb8c",
+    "argv": [
+      "experiments/trace/trace_h2h.py",
+      "--mode",
+      "designs",
+      "--dataset",
+      "uss_sgd"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_sgd",
+    "n_dialogues": 1000,
+    "mode": "designs",
+    "params": {
+      "n_folds": 5,
+      "n_bootstrap": 1000,
+      "degree": 3,
+      "seed": 42
+    },
+    "evaluation": {
+      "gap_0.5": {
+        "trace": {
+          "acc": 0.6132
+        },
+        "design_a": {
+          "acc": 0.601,
+          "vs_trace": {
+            "ci_lo": -0.04368568430033474,
+            "ci_hi": 0.02039684583377611,
+            "p_boot": 0.45
+          }
+        },
+        "design_b": {
+          "acc": 0.5281,
+          "vs_trace": {
+            "ci_lo": -0.12803133627848695,
+            "ci_hi": -0.042010895582713786,
+            "p_boot": 0.0
+          }
+        },
+        "design_b_raw": {
+          "acc": 0.6435,
+          "vs_trace": {
+            "ci_lo": -0.007809691902269109,
+            "ci_hi": 0.07197600863528338,
+            "p_boot": 0.118
+          }
+        },
+        "n_pairs": 204065
+      },
+      "gap_1.0": {
+        "trace": {
+          "acc": 0.6739
+        },
+        "design_a": {
+          "acc": 0.6688,
+          "vs_trace": {
+            "ci_lo": -0.04962731273791084,
+            "ci_hi": 0.044772259276167355,
+            "p_boot": 0.84
+          }
+        },
+        "design_b": {
+          "acc": 0.5568,
+          "vs_trace": {
+            "ci_lo": -0.18850816631546902,
+            "ci_hi": -0.04896649597683304,
+            "p_boot": 0.0
+          }
+        },
+        "design_b_raw": {
+          "acc": 0.7154,
+          "vs_trace": {
+            "ci_lo": -0.010062689946171786,
+            "ci_hi": 0.09878994939968734,
+            "p_boot": 0.16
+          }
+        },
+        "n_pairs": 44052
+      }
+    },
+    "correlation_trace": {
+      "n_features": 26,
+      "n_pairs_over_thresh": 11,
+      "mean_abs_offdiag_r": 0.232,
+      "pairs": [
+        {
+          "a": "model_goal_dist_mean",
+          "b": "model_initial_prompt_dist",
+          "r": 1.0
+        },
+        {
+          "a": "final_turn_goal_dist",
+          "b": "final_model_goal_dist",
+          "r": 1.0
+        },
+        {
+          "a": "model_goal_dist_mean",
+          "b": "conv_drift_from_goal",
+          "r": 0.889
+        },
+        {
+          "a": "model_initial_prompt_dist",
+          "b": "conv_drift_from_goal",
+          "r": 0.889
+        },
+        {
+          "a": "user_goal_dist_mean",
+          "b": "conv_drift_from_goal",
+          "r": 0.873
+        },
+        {
+          "a": "model_user_dist_mean",
+          "b": "volatility_mean",
+          "r": 0.862
+        },
+        {
+          "a": "user_model_dist_mean",
+          "b": "volatility_mean",
+          "r": 0.808
+        },
+        {
+          "a": "user_model_dist_max",
+          "b": "turn_dist_max",
+          "r": 0.79
+        },
+        {
+          "a": "model_goal_dist_min",
+          "b": "goal_convergence_ratio",
+          "r": -0.784
+        },
+        {
+          "a": "model_goal_dist_mean",
+          "b": "user_goal_dist_mean",
+          "r": 0.707
+        },
+        {
+          "a": "user_goal_dist_mean",
+          "b": "model_initial_prompt_dist",
+          "r": 0.707
+        }
+      ]
+    },
+    "correlation_design_a": {
+      "n_features": 20,
+      "n_pairs_over_thresh": 6,
+      "mean_abs_offdiag_r": 0.212,
+      "pairs": [
+        {
+          "a": "volatility_g0",
+          "b": "model_relevance_g0",
+          "r": -0.862
+        },
+        {
+          "a": "volatility_g1",
+          "b": "model_relevance_g1",
+          "r": -0.835
+        },
+        {
+          "a": "volatility_g2",
+          "b": "model_relevance_g2",
+          "r": -0.82
+        },
+        {
+          "a": "volatility_g0",
+          "b": "user_from_model_g0",
+          "r": 0.808
+        },
+        {
+          "a": "volatility_g3",
+          "b": "model_relevance_g3",
+          "r": -0.787
+        },
+        {
+          "a": "goal_dist_user_g0",
+          "b": "goal_dist_model_g0",
+          "r": 0.707
+        }
+      ]
+    },
+    "correlation_design_b": {
+      "n_features": 9,
+      "n_pairs_over_thresh": 0,
+      "mean_abs_offdiag_r": 0.213,
+      "pairs": []
+    }
+  }
+}

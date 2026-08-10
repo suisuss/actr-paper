@@ -1,0 +1,74 @@
+{
+ "uss_sgd": {
+  "gap_0.5": {
+   "trace_bienc": 0.6132,
+   "trace_plus_xenc": 0.5979,
+   "design_a_bienc": 0.601,
+   "design_a_plus_xenc": 0.5965,
+   "xenc_only": 0.5352,
+   "trace_gain": {
+    "ci_lo": -0.030583555303415114,
+    "ci_hi": 0.0004970913639191934,
+    "p_boot": 0.064
+   },
+   "design_a_gain": {
+    "ci_lo": -0.01921213522970583,
+    "ci_hi": 0.010068536988346291,
+    "p_boot": 0.572
+   }
+  },
+  "gap_1.0": {
+   "trace_bienc": 0.6739,
+   "trace_plus_xenc": 0.6589,
+   "design_a_bienc": 0.6688,
+   "design_a_plus_xenc": 0.662,
+   "xenc_only": 0.563,
+   "trace_gain": {
+    "ci_lo": -0.039837432029325985,
+    "ci_hi": 0.012617383638368127,
+    "p_boot": 0.276
+   },
+   "design_a_gain": {
+    "ci_lo": -0.030371525639706347,
+    "ci_hi": 0.0167851803268092,
+    "p_boot": 0.582
+   }
+  }
+ },
+ "uss_mwoz": {
+  "gap_0.5": {
+   "trace_bienc": 0.5872,
+   "trace_plus_xenc": 0.5975,
+   "design_a_bienc": 0.5532,
+   "design_a_plus_xenc": 0.5714,
+   "xenc_only": 0.5527,
+   "trace_gain": {
+    "ci_lo": -0.006385526645610644,
+    "ci_hi": 0.02774608127598126,
+    "p_boot": 0.26
+   },
+   "design_a_gain": {
+    "ci_lo": -0.0006054110953453624,
+    "ci_hi": 0.0385296299775696,
+    "p_boot": 0.072
+   }
+  },
+  "gap_1.0": {
+   "trace_bienc": 0.6479,
+   "trace_plus_xenc": 0.6562,
+   "design_a_bienc": 0.5899,
+   "design_a_plus_xenc": 0.6141,
+   "xenc_only": 0.5803,
+   "trace_gain": {
+    "ci_lo": -0.024124346127003742,
+    "ci_hi": 0.037932578587269394,
+    "p_boot": 0.646
+   },
+   "design_a_gain": {
+    "ci_lo": -0.02016302789014668,
+    "ci_hi": 0.06852945785891058,
+    "p_boot": 0.292
+   }
+  }
+ }
+}

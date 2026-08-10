@@ -1,0 +1,217 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/prism_reversal",
+    "config": "minilm",
+    "dataset": "prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_boot": 1000
+    },
+    "timestamp": "20260713T173032",
+    "script": "scripts/prism_reversal.py",
+    "duration_seconds": null,
+    "git_commit": "59860a5324186187a1510906ea37d63e9b58f88a",
+    "git_branch": "HEAD",
+    "git_dirty": false,
+    "script_sha256": "3c4e35ddc663468f1135c278c0d0f5614f2ac426c0470380d96db78f9edab284",
+    "argv": [
+      "scripts/prism_reversal.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "n_conversations": 7951,
+    "n_users": 1395,
+    "cv": "GroupKFold(5) by user_id",
+    "label": "performance_attributes.helpfulness rescaled 1-5",
+    "gap_0.5": {
+      "floor1": {
+        "acc": 0.4921,
+        "within_user": {
+          "mean": 0.3649,
+          "std": 0.2829,
+          "n_users": 1093
+        },
+        "vs_trace": {
+          "ci_lo": -0.09146840302413821,
+          "ci_hi": -0.03530798168811841,
+          "p_boot": 0.0
+        }
+      },
+      "trace": {
+        "acc": 0.5566,
+        "within_user": {
+          "mean": 0.5576,
+          "std": 0.3037,
+          "n_users": 1093
+        }
+      },
+      "design_a": {
+        "acc": 0.5423,
+        "within_user": {
+          "mean": 0.5491,
+          "std": 0.2998,
+          "n_users": 1093
+        },
+        "vs_trace": {
+          "ci_lo": -0.0310714702141615,
+          "ci_hi": 0.0011882459746492776,
+          "p_boot": 0.086
+        }
+      },
+      "design_b": {
+        "acc": 0.5465,
+        "within_user": {
+          "mean": 0.5498,
+          "std": 0.3024,
+          "n_users": 1093
+        },
+        "vs_trace": {
+          "ci_lo": -0.033363828512553595,
+          "ci_hi": 0.012540739101082159,
+          "p_boot": 0.382
+        }
+      },
+      "design_b_raw": {
+        "acc": 0.5785,
+        "within_user": {
+          "mean": 0.604,
+          "std": 0.2844,
+          "n_users": 1093
+        },
+        "vs_trace": {
+          "ci_lo": -0.008795435144330956,
+          "ci_hi": 0.0503396002189493,
+          "p_boot": 0.162
+        }
+      },
+      "g0_only": {
+        "acc": 0.5831,
+        "within_user": {
+          "mean": 0.5931,
+          "std": 0.2925,
+          "n_users": 1093
+        },
+        "vs_trace": {
+          "ci_lo": -0.0024138132273199735,
+          "ci_hi": 0.05486850459114978,
+          "p_boot": 0.078
+        }
+      },
+      "g1to3_only": {
+        "acc": 0.5191,
+        "within_user": {
+          "mean": 0.5261,
+          "std": 0.2917,
+          "n_users": 1093
+        },
+        "vs_trace": {
+          "ci_lo": -0.07026573427485905,
+          "ci_hi": -0.009066355454293133,
+          "p_boot": 0.012
+        }
+      },
+      "raw_vs_g0": {
+        "ci_lo": -0.02870381373709157,
+        "ci_hi": 0.01931209062032076,
+        "p_boot": 0.7
+      }
+    },
+    "gap_1.0": {
+      "floor1": {
+        "acc": 0.4979,
+        "within_user": {
+          "mean": 0.3669,
+          "std": 0.3309,
+          "n_users": 810
+        },
+        "vs_trace": {
+          "ci_lo": -0.12030202905028131,
+          "ci_hi": -0.04559298674391495,
+          "p_boot": 0.0
+        }
+      },
+      "trace": {
+        "acc": 0.582,
+        "within_user": {
+          "mean": 0.5781,
+          "std": 0.3391,
+          "n_users": 810
+        }
+      },
+      "design_a": {
+        "acc": 0.5616,
+        "within_user": {
+          "mean": 0.5703,
+          "std": 0.3391,
+          "n_users": 810
+        },
+        "vs_trace": {
+          "ci_lo": -0.04274473662886571,
+          "ci_hi": 0.0006052132962985983,
+          "p_boot": 0.062
+        }
+      },
+      "design_b": {
+        "acc": 0.5606,
+        "within_user": {
+          "mean": 0.5706,
+          "std": 0.3351,
+          "n_users": 810
+        },
+        "vs_trace": {
+          "ci_lo": -0.051142912073489116,
+          "ci_hi": 0.008879193516335574,
+          "p_boot": 0.168
+        }
+      },
+      "design_b_raw": {
+        "acc": 0.6073,
+        "within_user": {
+          "mean": 0.6286,
+          "std": 0.3231,
+          "n_users": 810
+        },
+        "vs_trace": {
+          "ci_lo": -0.011279627453742834,
+          "ci_hi": 0.06243692408129178,
+          "p_boot": 0.184
+        }
+      },
+      "g0_only": {
+        "acc": 0.6139,
+        "within_user": {
+          "mean": 0.623,
+          "std": 0.333,
+          "n_users": 810
+        },
+        "vs_trace": {
+          "ci_lo": -0.005852370395202712,
+          "ci_hi": 0.06878711337578657,
+          "p_boot": 0.106
+        }
+      },
+      "g1to3_only": {
+        "acc": 0.5246,
+        "within_user": {
+          "mean": 0.5386,
+          "std": 0.3293,
+          "n_users": 810
+        },
+        "vs_trace": {
+          "ci_lo": -0.09713857833122472,
+          "ci_hi": -0.020212222653048693,
+          "p_boot": 0.0
+        }
+      },
+      "raw_vs_g0": {
+        "ci_lo": -0.03612754801418527,
+        "ci_hi": 0.023629240659364784,
+        "p_boot": 0.672
+      }
+    }
+  }
+}
