@@ -1,0 +1,52 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/mdl_degree_uss_sgd",
+    "config": "minilm",
+    "dataset": "uss_sgd",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "analysis": "mdl_degree"
+    },
+    "timestamp": "20260713T173200",
+    "script": "scripts/mdl_degree.py",
+    "duration_seconds": null,
+    "git_commit": "59860a5324186187a1510906ea37d63e9b58f88a",
+    "git_branch": "HEAD",
+    "git_dirty": false,
+    "script_sha256": "d98c6721450bc5441c014d496d0aa028382607e8e2eebf749bd9313247a1bc3d",
+    "argv": [
+      "scripts/mdl_degree.py",
+      "uss_sgd"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "dataset": "uss_sgd",
+    "degree_distribution": {
+      "0": 926,
+      "1": 70,
+      "2": 1,
+      "6": 3
+    },
+    "gap_0.5": {
+      "fixed3": 0.6435,
+      "adaptive_mdl": 0.6569,
+      "adaptive_vs_fixed": {
+        "ci_lo": -0.007897915271442154,
+        "ci_hi": 0.03670300610639847,
+        "p_boot": 0.272
+      }
+    },
+    "gap_1.0": {
+      "fixed3": 0.7154,
+      "adaptive_mdl": 0.7296,
+      "adaptive_vs_fixed": {
+        "ci_lo": -0.021007566557358023,
+        "ci_hi": 0.04966121348476878,
+        "p_boot": 0.446
+      }
+    }
+  }
+}

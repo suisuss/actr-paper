@@ -1,0 +1,537 @@
+{
+ "gap": 1.0,
+ "n_boot": 1000,
+ "seeds": [
+  42,
+  7,
+  123,
+  2024,
+  31337
+ ],
+ "modes": {
+  "seed42": "single-seed preds, as basis_probes",
+  "seedavg": "mean of 5 OOF pred vectors per arm"
+ },
+ "uss_sgd": {
+  "n_dialogues": 1000,
+  "accuracy_seedavg": {
+   "raw": 0.7192,
+   "rolesplit_k1": 0.7646,
+   "dct_raw": 0.7308,
+   "dct_rolesplit_k1": 0.7604,
+   "dst_raw": 0.7257,
+   "dst_dc": 0.7266,
+   "g1to3": 0.7059
+  },
+  "dct_raw__vs__raw": {
+   "label": "basis tie, raw",
+   "seed42": {
+    "point": 0.0205,
+    "ci": [
+     -0.0036313351343187396,
+     0.04620369477136232
+    ],
+    "ci_half_width": 0.0249,
+    "p": 0.104
+   },
+   "seedavg": {
+    "point": 0.0116,
+    "ci": [
+     -0.0047991442652952,
+     0.02600235243662015
+    ],
+    "ci_half_width": 0.0154,
+    "p": 0.166
+   }
+  },
+  "dct_rolesplit_k1__vs__dct_raw": {
+   "label": "role-split transfer (DCT)",
+   "seed42": {
+    "point": 0.0199,
+    "ci": [
+     -0.013581112257771049,
+     0.0535537328276848
+    ],
+    "ci_half_width": 0.0336,
+    "p": 0.264
+   },
+   "seedavg": {
+    "point": 0.0296,
+    "ci": [
+     0.0018503839800526126,
+     0.05769766063500644
+    ],
+    "ci_half_width": 0.0279,
+    "p": 0.034
+   }
+  },
+  "dct_rolesplit_k1__vs__rolesplit_k1": {
+   "label": "basis tie, role-split",
+   "seed42": {
+    "point": 0.0041,
+    "ci": [
+     -0.015314679489149682,
+     0.022045121121183557
+    ],
+    "ci_half_width": 0.0187,
+    "p": 0.67
+   },
+   "seedavg": {
+    "point": -0.0042,
+    "ci": [
+     -0.014728298289683377,
+     0.006610748565485496
+    ],
+    "ci_half_width": 0.0107,
+    "p": 0.434
+   }
+  },
+  "raw__vs__dst_raw": {
+   "label": "DST penalty",
+   "seed42": {
+    "point": -0.0026,
+    "ci": [
+     -0.034181486958335755,
+     0.027144724404048616
+    ],
+    "ci_half_width": 0.0307,
+    "p": 0.804
+   },
+   "seedavg": {
+    "point": -0.0064,
+    "ci": [
+     -0.031894005723690666,
+     0.01739711454480624
+    ],
+    "ci_half_width": 0.0246,
+    "p": 0.564
+   }
+  },
+  "dst_dc__vs__raw": {
+   "label": "DC restoration",
+   "seed42": {
+    "point": 0.014,
+    "ci": [
+     -0.01442269629270327,
+     0.04305965222310566
+    ],
+    "ci_half_width": 0.0287,
+    "p": 0.324
+   },
+   "seedavg": {
+    "point": 0.0074,
+    "ci": [
+     -0.01270766940981181,
+     0.02645302347965235
+    ],
+    "ci_half_width": 0.0196,
+    "p": 0.464
+   }
+  },
+  "dst_raw__vs__g1to3": {
+   "label": "DST vs shape-only (collapse cell)",
+   "seed42": {
+    "point": 0.0151,
+    "ci": [
+     -0.023002855224532857,
+     0.05372561687513234
+    ],
+    "ci_half_width": 0.0384,
+    "p": 0.4
+   },
+   "seedavg": {
+    "point": 0.0198,
+    "ci": [
+     -0.009769252332709222,
+     0.0500408403159037
+    ],
+    "ci_half_width": 0.0299,
+    "p": 0.212
+   }
+  },
+  "rolesplit_k1__vs__raw": {
+   "label": "anchor: role-split advantage (Gram)",
+   "seed42": {
+    "point": 0.0363,
+    "ci": [
+     0.0036157098195125324,
+     0.07028853728881786
+    ],
+    "ci_half_width": 0.0333,
+    "p": 0.024
+   },
+   "seedavg": {
+    "point": 0.0454,
+    "ci": [
+     0.01801159746529337,
+     0.071865950608538
+    ],
+    "ci_half_width": 0.0269,
+    "p": 0.0
+   }
+  },
+  "resolution": {
+   "seed42": {
+    "median_ci_half_width": 0.0307,
+    "max_ci_half_width": 0.0384
+   },
+   "seedavg": {
+    "median_ci_half_width": 0.0246,
+    "max_ci_half_width": 0.0299
+   }
+  },
+  "minimal_decidable_band": 0.0246
+ },
+ "uss_mwoz": {
+  "n_dialogues": 1000,
+  "accuracy_seedavg": {
+   "raw": 0.774,
+   "rolesplit_k1": 0.7746,
+   "dct_raw": 0.7687,
+   "dct_rolesplit_k1": 0.7795,
+   "dst_raw": 0.7395,
+   "dst_dc": 0.7584,
+   "g1to3": 0.7272
+  },
+  "dct_raw__vs__raw": {
+   "label": "basis tie, raw",
+   "seed42": {
+    "point": -0.0085,
+    "ci": [
+     -0.032205375075626264,
+     0.013618187793680335
+    ],
+    "ci_half_width": 0.0229,
+    "p": 0.458
+   },
+   "seedavg": {
+    "point": -0.0052,
+    "ci": [
+     -0.021441500216158305,
+     0.009339552876644818
+    ],
+    "ci_half_width": 0.0154,
+    "p": 0.524
+   }
+  },
+  "dct_rolesplit_k1__vs__dct_raw": {
+   "label": "role-split transfer (DCT)",
+   "seed42": {
+    "point": 0.0043,
+    "ci": [
+     -0.02785534175325303,
+     0.0400997765069418
+    ],
+    "ci_half_width": 0.034,
+    "p": 0.798
+   },
+   "seedavg": {
+    "point": 0.0108,
+    "ci": [
+     -0.012678439055033859,
+     0.03406483905734785
+    ],
+    "ci_half_width": 0.0234,
+    "p": 0.368
+   }
+  },
+  "dct_rolesplit_k1__vs__rolesplit_k1": {
+   "label": "basis tie, role-split",
+   "seed42": {
+    "point": -0.0104,
+    "ci": [
+     -0.029663517675006128,
+     0.009100714133449308
+    ],
+    "ci_half_width": 0.0194,
+    "p": 0.344
+   },
+   "seedavg": {
+    "point": 0.0049,
+    "ci": [
+     -0.006866094399980953,
+     0.01770381534410645
+    ],
+    "ci_half_width": 0.0123,
+    "p": 0.43
+   }
+  },
+  "raw__vs__dst_raw": {
+   "label": "DST penalty",
+   "seed42": {
+    "point": 0.0302,
+    "ci": [
+     -0.008531114482100435,
+     0.0678956108635613
+    ],
+    "ci_half_width": 0.0382,
+    "p": 0.118
+   },
+   "seedavg": {
+    "point": 0.0345,
+    "ci": [
+     0.006316672577051345,
+     0.06478658851977175
+    ],
+    "ci_half_width": 0.0292,
+    "p": 0.012
+   }
+  },
+  "dst_dc__vs__raw": {
+   "label": "DC restoration",
+   "seed42": {
+    "point": -0.012,
+    "ci": [
+     -0.04338692826607513,
+     0.02112677338405672
+    ],
+    "ci_half_width": 0.0323,
+    "p": 0.454
+   },
+   "seedavg": {
+    "point": -0.0155,
+    "ci": [
+     -0.04087679441009712,
+     0.007503315299494307
+    ],
+    "ci_half_width": 0.0242,
+    "p": 0.196
+   }
+  },
+  "dst_raw__vs__g1to3": {
+   "label": "DST vs shape-only (collapse cell)",
+   "seed42": {
+    "point": 0.0296,
+    "ci": [
+     -0.019753212512354238,
+     0.08047959599596878
+    ],
+    "ci_half_width": 0.0501,
+    "p": 0.24
+   },
+   "seedavg": {
+    "point": 0.0123,
+    "ci": [
+     -0.03870440897562883,
+     0.061958988592800565
+    ],
+    "ci_half_width": 0.0503,
+    "p": 0.646
+   }
+  },
+  "rolesplit_k1__vs__raw": {
+   "label": "anchor: role-split advantage (Gram)",
+   "seed42": {
+    "point": 0.0063,
+    "ci": [
+     -0.025653802072816752,
+     0.0394508343722538
+    ],
+    "ci_half_width": 0.0326,
+    "p": 0.74
+   },
+   "seedavg": {
+    "point": 0.0007,
+    "ci": [
+     -0.020058233576066415,
+     0.020619881847336895
+    ],
+    "ci_half_width": 0.0203,
+    "p": 0.992
+   }
+  },
+  "resolution": {
+   "seed42": {
+    "median_ci_half_width": 0.0326,
+    "max_ci_half_width": 0.0501
+   },
+   "seedavg": {
+    "median_ci_half_width": 0.0234,
+    "max_ci_half_width": 0.0503
+   }
+  },
+  "minimal_decidable_band": 0.0234
+ },
+ "prism": {
+  "n_dialogues": 7951,
+  "accuracy_seedavg": {
+   "raw": 0.6143,
+   "rolesplit_k1": 0.6424,
+   "dct_raw": 0.6135,
+   "dct_rolesplit_k1": 0.6275,
+   "dst_raw": 0.6129,
+   "dst_dc": 0.6107,
+   "g1to3": 0.5243
+  },
+  "dct_raw__vs__raw": {
+   "label": "basis tie, raw",
+   "seed42": {
+    "point": 0.0001,
+    "ci": [
+     -0.02597459780873523,
+     0.026769581242107918
+    ],
+    "ci_half_width": 0.0264,
+    "p": 0.96
+   },
+   "seedavg": {
+    "point": -0.0008,
+    "ci": [
+     -0.025403434199220653,
+     0.0258285596706465
+    ],
+    "ci_half_width": 0.0256,
+    "p": 0.91
+   }
+  },
+  "dct_rolesplit_k1__vs__dct_raw": {
+   "label": "role-split transfer (DCT)",
+   "seed42": {
+    "point": 0.0192,
+    "ci": [
+     0.001181409662206944,
+     0.03906594424838844
+    ],
+    "ci_half_width": 0.0189,
+    "p": 0.042
+   },
+   "seedavg": {
+    "point": 0.014,
+    "ci": [
+     -0.0038896578806246413,
+     0.031767177950408856
+    ],
+    "ci_half_width": 0.0178,
+    "p": 0.118
+   }
+  },
+  "dct_rolesplit_k1__vs__rolesplit_k1": {
+   "label": "basis tie, role-split",
+   "seed42": {
+    "point": -0.0107,
+    "ci": [
+     -0.024846020085722686,
+     0.004444104290343626
+    ],
+    "ci_half_width": 0.0146,
+    "p": 0.144
+   },
+   "seedavg": {
+    "point": -0.0149,
+    "ci": [
+     -0.02685802825474643,
+     -0.0024186819421987667
+    ],
+    "ci_half_width": 0.0122,
+    "p": 0.018
+   }
+  },
+  "raw__vs__dst_raw": {
+   "label": "DST penalty",
+   "seed42": {
+    "point": -0.0044,
+    "ci": [
+     -0.03440680550158262,
+     0.023673643308118577
+    ],
+    "ci_half_width": 0.029,
+    "p": 0.772
+   },
+   "seedavg": {
+    "point": 0.0015,
+    "ci": [
+     -0.02611834224508767,
+     0.02876092542213009
+    ],
+    "ci_half_width": 0.0274,
+    "p": 0.876
+   }
+  },
+  "dst_dc__vs__raw": {
+   "label": "DC restoration",
+   "seed42": {
+    "point": -0.0003,
+    "ci": [
+     -0.029616191478516764,
+     0.03126027435027375
+    ],
+    "ci_half_width": 0.0304,
+    "p": 0.994
+   },
+   "seedavg": {
+    "point": -0.0036,
+    "ci": [
+     -0.032993710700025325,
+     0.026169173081249185
+    ],
+    "ci_half_width": 0.0296,
+    "p": 0.812
+   }
+  },
+  "dst_raw__vs__g1to3": {
+   "label": "DST vs shape-only (collapse cell)",
+   "seed42": {
+    "point": 0.0871,
+    "ci": [
+     0.048477109157672026,
+     0.12625976563701705
+    ],
+    "ci_half_width": 0.0389,
+    "p": 0.0
+   },
+   "seedavg": {
+    "point": 0.0885,
+    "ci": [
+     0.050105041899139315,
+     0.1266986113753196
+    ],
+    "ci_half_width": 0.0383,
+    "p": 0.0
+   }
+  },
+  "rolesplit_k1__vs__raw": {
+   "label": "anchor: role-split advantage (Gram)",
+   "seed42": {
+    "point": 0.03,
+    "ci": [
+     0.0037898257871672378,
+     0.054114279212513904
+    ],
+    "ci_half_width": 0.0252,
+    "p": 0.018
+   },
+   "seedavg": {
+    "point": 0.0281,
+    "ci": [
+     0.002417486525099285,
+     0.05109478854344543
+    ],
+    "ci_half_width": 0.0243,
+    "p": 0.032
+   }
+  },
+  "resolution": {
+   "seed42": {
+    "median_ci_half_width": 0.0264,
+    "max_ci_half_width": 0.0389
+   },
+   "seedavg": {
+    "median_ci_half_width": 0.0256,
+    "max_ci_half_width": 0.0383
+   }
+  },
+  "minimal_decidable_band": 0.0256
+ },
+ "exploratory_fisher_transfer": {
+  "per_corpus_p_seedavg": {
+   "uss_sgd": 0.034,
+   "uss_mwoz": 0.368,
+   "prism": 0.118
+  },
+  "chi2": 13.036,
+  "df": 6,
+  "p_combined": 0.042463492333074816,
+  "note": "post-hoc, two-sided per-corpus p; all point diffs positive"
+ },
+ "calibration_verdict": "TOST at +-1pt is undecidable on all three corpora (median CI half-widths exceed the band in both modes). Calibrated inference for this data: report point estimates with CIs (estimation framing); equivalence claims only at bands >= the per-corpus minimal_decidable_band."
+}

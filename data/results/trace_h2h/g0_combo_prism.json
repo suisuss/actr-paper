@@ -1,0 +1,57 @@
+{
+ "dataset": "prism",
+ "arms": [
+  "g0_only",
+  "trace",
+  "g0_plus_trace",
+  "design_b_raw",
+  "g0_plus_trace_temporal",
+  "floor_temporal"
+ ],
+ "gap_0.5": {
+  "g0_only": 0.5831,
+  "trace": 0.5566,
+  "g0_plus_trace": 0.604,
+  "design_b_raw": 0.5785,
+  "g0_plus_trace_temporal": 0.6092,
+  "floor_temporal": 0.5076,
+  "combo_vs_g0": {
+   "ci_lo": 0.007679787041653655,
+   "ci_hi": 0.0359714460521607,
+   "p_boot": 0.004
+  },
+  "combo_vs_raw": {
+   "ci_lo": 0.0030607913492062856,
+   "ci_hi": 0.04882088687834083,
+   "p_boot": 0.02
+  },
+  "temporal_gain": {
+   "ci_lo": -0.0010725388083535727,
+   "ci_hi": 0.01180203474995437,
+   "p_boot": 0.096
+  }
+ },
+ "gap_1.0": {
+  "g0_only": 0.6139,
+  "trace": 0.582,
+  "g0_plus_trace": 0.645,
+  "design_b_raw": 0.6073,
+  "g0_plus_trace_temporal": 0.6501,
+  "floor_temporal": 0.5104,
+  "combo_vs_g0": {
+   "ci_lo": 0.01314128122694159,
+   "ci_hi": 0.04990782933780025,
+   "p_boot": 0.0
+  },
+  "combo_vs_raw": {
+   "ci_lo": 0.010477528566697057,
+   "ci_hi": 0.06610206618996115,
+   "p_boot": 0.008
+  },
+  "temporal_gain": {
+   "ci_lo": -0.0026481346680635766,
+   "ci_hi": 0.013118996015033309,
+   "p_boot": 0.186
+  }
+ }
+}

@@ -1,0 +1,663 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/interleaved_degree",
+    "config": "minilm",
+    "dataset": "uss_sgd.uss_mwoz.prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seeds": [
+        42,
+        7,
+        123,
+        2024,
+        31337
+      ],
+      "n_folds": 5,
+      "arms": "inter_k1(768) inter_k2(1152) vs raw/rolesplit_k1/g0 (reused)"
+    },
+    "timestamp": "20260717T030523",
+    "script": "interleaved_degree.py",
+    "duration_seconds": null,
+    "git_commit": "645be7275b524d7bd04d6567039a4730b63ad671",
+    "git_branch": "exp/interleaved-degree",
+    "git_dirty": false,
+    "script_sha256": "c68a77cde153e9e75b4e04e9feb20b956c40a2bdfe694c877bc9dbb4fe145529",
+    "argv": [
+      "interleaved_degree.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "seeds": [
+      42,
+      7,
+      123,
+      2024,
+      31337
+    ],
+    "arms": {
+      "inter_k1": "[G0|G1] 768-d",
+      "inter_k2": "[G0|G1|G2] 1152-d",
+      "raw": "[G0..G3] 1536-d",
+      "rolesplit_k1": "[gu0|gu1|gm0|gm1] 1536-d",
+      "g0": "mean pooling 384-d"
+    },
+    "protocol": "RF 300 trees, 5-fold OOF (grouped on PRISM), seed-ensembled inference (Section 5.2)",
+    "uss_sgd": {
+      "multiseed": {
+        "inter_k1": {
+          "gap_0.5": {
+            "mean": 0.6478,
+            "std": 0.0077
+          },
+          "gap_1.0": {
+            "mean": 0.7176,
+            "std": 0.0154
+          }
+        },
+        "inter_k2": {
+          "gap_0.5": {
+            "mean": 0.6526,
+            "std": 0.0027
+          },
+          "gap_1.0": {
+            "mean": 0.7197,
+            "std": 0.004
+          }
+        },
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.6446,
+            "std": 0.0019
+          },
+          "gap_1.0": {
+            "mean": 0.705,
+            "std": 0.0078
+          }
+        },
+        "rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6721,
+            "std": 0.0061
+          },
+          "gap_1.0": {
+            "mean": 0.7516,
+            "std": 0.0083
+          }
+        },
+        "g0": {
+          "gap_0.5": {
+            "mean": 0.6557,
+            "std": 0.0037
+          },
+          "gap_1.0": {
+            "mean": 0.7285,
+            "std": 0.0069
+          }
+        }
+      },
+      "seedens_accuracy": {
+        "inter_k1": {
+          "gap_0.5": 0.6572,
+          "gap_1.0": 0.7316
+        },
+        "inter_k2": {
+          "gap_0.5": 0.6628,
+          "gap_1.0": 0.7337
+        },
+        "raw": {
+          "gap_0.5": 0.6544,
+          "gap_1.0": 0.7192
+        },
+        "rolesplit_k1": {
+          "gap_0.5": 0.6826,
+          "gap_1.0": 0.7646
+        },
+        "g0": {
+          "gap_0.5": 0.667,
+          "gap_1.0": 0.7441
+        }
+      },
+      "contrasts": {
+        "rolesplit_k1_vs_inter_k1": {
+          "label": "C1 decisive degree-matched",
+          "arms": [
+            "rolesplit_k1",
+            "inter_k1"
+          ],
+          "gap_0.5": {
+            "delta": 0.0254,
+            "ci": [
+              0.011,
+              0.0412
+            ],
+            "p_boot": 0.0
+          },
+          "gap_1.0": {
+            "delta": 0.0331,
+            "ci": [
+              0.0131,
+              0.0556
+            ],
+            "p_boot": 0.006
+          }
+        },
+        "inter_k1_vs_raw": {
+          "label": "C2 truncation effect",
+          "arms": [
+            "inter_k1",
+            "raw"
+          ],
+          "gap_0.5": {
+            "delta": 0.0029,
+            "ci": [
+              -0.0096,
+              0.0154
+            ],
+            "p_boot": 0.666
+          },
+          "gap_1.0": {
+            "delta": 0.0123,
+            "ci": [
+              -0.0079,
+              0.0311
+            ],
+            "p_boot": 0.212
+          }
+        },
+        "inter_k1_vs_g0": {
+          "label": "C3 drift over mean, interleaved",
+          "arms": [
+            "inter_k1",
+            "g0"
+          ],
+          "gap_0.5": {
+            "delta": -0.0097,
+            "ci": [
+              -0.0262,
+              0.005
+            ],
+            "p_boot": 0.206
+          },
+          "gap_1.0": {
+            "delta": -0.0125,
+            "ci": [
+              -0.0366,
+              0.0109
+            ],
+            "p_boot": 0.292
+          }
+        },
+        "rolesplit_k1_vs_g0": {
+          "label": "C4 split vs mean pooling",
+          "arms": [
+            "rolesplit_k1",
+            "g0"
+          ],
+          "gap_0.5": {
+            "delta": 0.0156,
+            "ci": [
+              -0.0048,
+              0.0362
+            ],
+            "p_boot": 0.126
+          },
+          "gap_1.0": {
+            "delta": 0.0205,
+            "ci": [
+              -0.0081,
+              0.0517
+            ],
+            "p_boot": 0.154
+          }
+        },
+        "inter_k2_vs_raw": {
+          "label": "C5 dose-response",
+          "arms": [
+            "inter_k2",
+            "raw"
+          ],
+          "gap_0.5": {
+            "delta": 0.0085,
+            "ci": [
+              -0.0003,
+              0.0163
+            ],
+            "p_boot": 0.058
+          },
+          "gap_1.0": {
+            "delta": 0.0145,
+            "ci": [
+              0.0006,
+              0.0278
+            ],
+            "p_boot": 0.038
+          }
+        }
+      }
+    },
+    "uss_mwoz": {
+      "multiseed": {
+        "inter_k1": {
+          "gap_0.5": {
+            "mean": 0.6635,
+            "std": 0.0073
+          },
+          "gap_1.0": {
+            "mean": 0.7457,
+            "std": 0.0094
+          }
+        },
+        "inter_k2": {
+          "gap_0.5": {
+            "mean": 0.6627,
+            "std": 0.0073
+          },
+          "gap_1.0": {
+            "mean": 0.7493,
+            "std": 0.0084
+          }
+        },
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.6653,
+            "std": 0.0096
+          },
+          "gap_1.0": {
+            "mean": 0.757,
+            "std": 0.0141
+          }
+        },
+        "rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6679,
+            "std": 0.0019
+          },
+          "gap_1.0": {
+            "mean": 0.7656,
+            "std": 0.0028
+          }
+        },
+        "g0": {
+          "gap_0.5": {
+            "mean": 0.645,
+            "std": 0.0031
+          },
+          "gap_1.0": {
+            "mean": 0.7302,
+            "std": 0.0123
+          }
+        }
+      },
+      "seedens_accuracy": {
+        "inter_k1": {
+          "gap_0.5": 0.6718,
+          "gap_1.0": 0.7577
+        },
+        "inter_k2": {
+          "gap_0.5": 0.671,
+          "gap_1.0": 0.7614
+        },
+        "raw": {
+          "gap_0.5": 0.6762,
+          "gap_1.0": 0.774
+        },
+        "rolesplit_k1": {
+          "gap_0.5": 0.6752,
+          "gap_1.0": 0.7746
+        },
+        "g0": {
+          "gap_0.5": 0.6519,
+          "gap_1.0": 0.7401
+        }
+      },
+      "contrasts": {
+        "rolesplit_k1_vs_inter_k1": {
+          "label": "C1 decisive degree-matched",
+          "arms": [
+            "rolesplit_k1",
+            "inter_k1"
+          ],
+          "gap_0.5": {
+            "delta": 0.0034,
+            "ci": [
+              -0.011,
+              0.0163
+            ],
+            "p_boot": 0.72
+          },
+          "gap_1.0": {
+            "delta": 0.0169,
+            "ci": [
+              -0.0047,
+              0.0387
+            ],
+            "p_boot": 0.146
+          }
+        },
+        "inter_k1_vs_raw": {
+          "label": "C2 truncation effect",
+          "arms": [
+            "inter_k1",
+            "raw"
+          ],
+          "gap_0.5": {
+            "delta": -0.0043,
+            "ci": [
+              -0.0186,
+              0.01
+            ],
+            "p_boot": 0.55
+          },
+          "gap_1.0": {
+            "delta": -0.0162,
+            "ci": [
+              -0.0369,
+              0.0028
+            ],
+            "p_boot": 0.102
+          }
+        },
+        "inter_k1_vs_g0": {
+          "label": "C3 drift over mean, interleaved",
+          "arms": [
+            "inter_k1",
+            "g0"
+          ],
+          "gap_0.5": {
+            "delta": 0.0199,
+            "ci": [
+              -0.002,
+              0.0418
+            ],
+            "p_boot": 0.066
+          },
+          "gap_1.0": {
+            "delta": 0.0177,
+            "ci": [
+              -0.0195,
+              0.0549
+            ],
+            "p_boot": 0.356
+          }
+        },
+        "rolesplit_k1_vs_g0": {
+          "label": "C4 split vs mean pooling",
+          "arms": [
+            "rolesplit_k1",
+            "g0"
+          ],
+          "gap_0.5": {
+            "delta": 0.0233,
+            "ci": [
+              -0.0014,
+              0.0475
+            ],
+            "p_boot": 0.066
+          },
+          "gap_1.0": {
+            "delta": 0.0346,
+            "ci": [
+              -0.006,
+              0.0788
+            ],
+            "p_boot": 0.116
+          }
+        },
+        "inter_k2_vs_raw": {
+          "label": "C5 dose-response",
+          "arms": [
+            "inter_k2",
+            "raw"
+          ],
+          "gap_0.5": {
+            "delta": -0.0052,
+            "ci": [
+              -0.0154,
+              0.0046
+            ],
+            "p_boot": 0.294
+          },
+          "gap_1.0": {
+            "delta": -0.0126,
+            "ci": [
+              -0.026,
+              -0.0001
+            ],
+            "p_boot": 0.05
+          }
+        }
+      }
+    },
+    "prism": {
+      "multiseed": {
+        "inter_k1": {
+          "gap_0.5": {
+            "mean": 0.5759,
+            "std": 0.0014
+          },
+          "gap_1.0": {
+            "mean": 0.6038,
+            "std": 0.002
+          }
+        },
+        "inter_k2": {
+          "gap_0.5": {
+            "mean": 0.5791,
+            "std": 0.001
+          },
+          "gap_1.0": {
+            "mean": 0.6045,
+            "std": 0.0019
+          }
+        },
+        "raw": {
+          "gap_0.5": {
+            "mean": 0.5815,
+            "std": 0.0016
+          },
+          "gap_1.0": {
+            "mean": 0.61,
+            "std": 0.0016
+          }
+        },
+        "rolesplit_k1": {
+          "gap_0.5": {
+            "mean": 0.6004,
+            "std": 0.0014
+          },
+          "gap_1.0": {
+            "mean": 0.6382,
+            "std": 0.0014
+          }
+        },
+        "g0": {
+          "gap_0.5": {
+            "mean": 0.5817,
+            "std": 0.0011
+          },
+          "gap_1.0": {
+            "mean": 0.6135,
+            "std": 0.001
+          }
+        }
+      },
+      "seedens_accuracy": {
+        "inter_k1": {
+          "gap_0.5": 0.5777,
+          "gap_1.0": 0.6064
+        },
+        "inter_k2": {
+          "gap_0.5": 0.5818,
+          "gap_1.0": 0.608
+        },
+        "raw": {
+          "gap_0.5": 0.5848,
+          "gap_1.0": 0.6143
+        },
+        "rolesplit_k1": {
+          "gap_0.5": 0.6035,
+          "gap_1.0": 0.6424
+        },
+        "g0": {
+          "gap_0.5": 0.5834,
+          "gap_1.0": 0.6158
+        }
+      },
+      "contrasts": {
+        "rolesplit_k1_vs_inter_k1": {
+          "label": "C1 decisive degree-matched",
+          "arms": [
+            "rolesplit_k1",
+            "inter_k1"
+          ],
+          "gap_0.5": {
+            "delta": 0.0258,
+            "ci": [
+              0.0115,
+              0.0381
+            ],
+            "p_boot": 0.0
+          },
+          "gap_1.0": {
+            "delta": 0.036,
+            "ci": [
+              0.0187,
+              0.0517
+            ],
+            "p_boot": 0.0
+          }
+        },
+        "inter_k1_vs_raw": {
+          "label": "C2 truncation effect",
+          "arms": [
+            "inter_k1",
+            "raw"
+          ],
+          "gap_0.5": {
+            "delta": -0.0071,
+            "ci": [
+              -0.0256,
+              0.0119
+            ],
+            "p_boot": 0.482
+          },
+          "gap_1.0": {
+            "delta": -0.0079,
+            "ci": [
+              -0.0334,
+              0.016
+            ],
+            "p_boot": 0.542
+          }
+        },
+        "inter_k1_vs_g0": {
+          "label": "C3 drift over mean, interleaved",
+          "arms": [
+            "inter_k1",
+            "g0"
+          ],
+          "gap_0.5": {
+            "delta": -0.0057,
+            "ci": [
+              -0.0223,
+              0.0107
+            ],
+            "p_boot": 0.512
+          },
+          "gap_1.0": {
+            "delta": -0.0094,
+            "ci": [
+              -0.0304,
+              0.0115
+            ],
+            "p_boot": 0.41
+          }
+        },
+        "rolesplit_k1_vs_g0": {
+          "label": "C4 split vs mean pooling",
+          "arms": [
+            "rolesplit_k1",
+            "g0"
+          ],
+          "gap_0.5": {
+            "delta": 0.0201,
+            "ci": [
+              0.0019,
+              0.0393
+            ],
+            "p_boot": 0.034
+          },
+          "gap_1.0": {
+            "delta": 0.0266,
+            "ci": [
+              0.0042,
+              0.0493
+            ],
+            "p_boot": 0.02
+          }
+        },
+        "inter_k2_vs_raw": {
+          "label": "C5 dose-response",
+          "arms": [
+            "inter_k2",
+            "raw"
+          ],
+          "gap_0.5": {
+            "delta": -0.0029,
+            "ci": [
+              -0.0145,
+              0.0097
+            ],
+            "p_boot": 0.68
+          },
+          "gap_1.0": {
+            "delta": -0.0063,
+            "ci": [
+              -0.0226,
+              0.01
+            ],
+            "p_boot": 0.44
+          }
+        }
+      }
+    },
+    "decisive_family_c1": [
+      {
+        "corpus": "uss_sgd",
+        "h": "C1 rolesplit_k1>inter_k1 uss_sgd",
+        "delta": 0.0331,
+        "ci": [
+          0.0131,
+          0.0556
+        ],
+        "p_boot": 0.006,
+        "p_holm": 0.012
+      },
+      {
+        "corpus": "uss_mwoz",
+        "h": "C1 rolesplit_k1>inter_k1 uss_mwoz",
+        "delta": 0.0169,
+        "ci": [
+          -0.0047,
+          0.0387
+        ],
+        "p_boot": 0.146,
+        "p_holm": 0.146
+      },
+      {
+        "corpus": "prism",
+        "h": "C1 rolesplit_k1>inter_k1 prism",
+        "delta": 0.036,
+        "ci": [
+          0.0187,
+          0.0517
+        ],
+        "p_boot": 0.0,
+        "p_holm": 0.0
+      }
+    ]
+  }
+}

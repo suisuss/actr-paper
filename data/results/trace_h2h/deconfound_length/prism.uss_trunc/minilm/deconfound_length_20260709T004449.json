@@ -1,0 +1,220 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_deconfound_length",
+    "config": "minilm",
+    "dataset": "prism.uss_trunc",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5,
+      "trunc": 7
+    },
+    "timestamp": "20260709T004449",
+    "script": "scripts/deconfound_length.py",
+    "duration_seconds": null,
+    "git_commit": "86daedfd6d1deb489ea9014dda4cc2a78f1b5179",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "8406e5a498ed48a91171e31f25a07363bc3d566294e5d3c373737197633f7f4b",
+    "argv": [
+      "scripts/deconfound_length.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "uss_sgd_trunc7": {
+      "gap_0.5": {
+        "trace": 0.4847,
+        "raw": 0.5369,
+        "rolesplit": 0.5146,
+        "g0": 0.5442,
+        "g1to3": 0.5435,
+        "g0_plus_trace": 0.543,
+        "shape_vs_g0": {
+          "ci_lo": -0.04275596290932728,
+          "ci_hi": 0.04013677495077731,
+          "p_boot": 0.996
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": -0.05389939259276615,
+          "ci_hi": 0.009026631369575515,
+          "p_boot": 0.168
+        },
+        "combo_vs_g0": {
+          "ci_lo": -0.013748082334774913,
+          "ci_hi": 0.0116410606724728,
+          "p_boot": 0.816
+        }
+      },
+      "gap_1.0": {
+        "trace": 0.4901,
+        "raw": 0.5544,
+        "rolesplit": 0.5456,
+        "g0": 0.5634,
+        "g1to3": 0.5686,
+        "g0_plus_trace": 0.5681,
+        "shape_vs_g0": {
+          "ci_lo": -0.06465817965771811,
+          "ci_hi": 0.07864559662642985,
+          "p_boot": 0.89
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": -0.06074658596069147,
+          "ci_hi": 0.04024915781570039,
+          "p_boot": 0.708
+        },
+        "combo_vs_g0": {
+          "ci_lo": -0.02196500006890083,
+          "ci_hi": 0.03237942138285704,
+          "p_boot": 0.706
+        }
+      }
+    },
+    "uss_mwoz_trunc7": {
+      "gap_0.5": {
+        "trace": 0.5045,
+        "raw": 0.5038,
+        "rolesplit": 0.4957,
+        "g0": 0.5204,
+        "g1to3": 0.4674,
+        "g0_plus_trace": 0.5159,
+        "shape_vs_g0": {
+          "ci_lo": -0.09753469798923088,
+          "ci_hi": -0.007461387337983399,
+          "p_boot": 0.018
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": -0.04297412417232514,
+          "ci_hi": 0.027542877903568828,
+          "p_boot": 0.708
+        },
+        "combo_vs_g0": {
+          "ci_lo": -0.02150370715722479,
+          "ci_hi": 0.013337346407100069,
+          "p_boot": 0.612
+        }
+      },
+      "gap_1.0": {
+        "trace": 0.5346,
+        "raw": 0.5407,
+        "rolesplit": 0.5358,
+        "g0": 0.5512,
+        "g1to3": 0.4644,
+        "g0_plus_trace": 0.5332,
+        "shape_vs_g0": {
+          "ci_lo": -0.18540163440373725,
+          "ci_hi": 0.0047809161141365115,
+          "p_boot": 0.06
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": -0.08297574565283156,
+          "ci_hi": 0.06463573009094063,
+          "p_boot": 0.936
+        },
+        "combo_vs_g0": {
+          "ci_lo": -0.048097139827730805,
+          "ci_hi": 0.014897493575707117,
+          "p_boot": 0.296
+        }
+      }
+    },
+    "prism_short": {
+      "gap_0.5": {
+        "trace": 0.5469,
+        "raw": 0.575,
+        "rolesplit": 0.5906,
+        "g0": 0.5733,
+        "g1to3": 0.5341,
+        "g0_plus_trace": 0.596,
+        "shape_vs_g0": {
+          "ci_lo": -0.07536935734712959,
+          "ci_hi": -0.006055088161825423,
+          "p_boot": 0.02
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": 0.0011960194171157731,
+          "ci_hi": 0.03087493898027363,
+          "p_boot": 0.032
+        },
+        "combo_vs_g0": {
+          "ci_lo": 0.008251049776241862,
+          "ci_hi": 0.036516075490251654,
+          "p_boot": 0.002
+        }
+      },
+      "gap_1.0": {
+        "trace": 0.5712,
+        "raw": 0.6019,
+        "rolesplit": 0.6234,
+        "g0": 0.603,
+        "g1to3": 0.5451,
+        "g0_plus_trace": 0.6303,
+        "shape_vs_g0": {
+          "ci_lo": -0.10271737388803678,
+          "ci_hi": -0.014572766612663345,
+          "p_boot": 0.006
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": 0.0036457363058690602,
+          "ci_hi": 0.04040954900957103,
+          "p_boot": 0.018
+        },
+        "combo_vs_g0": {
+          "ci_lo": 0.008573323429949804,
+          "ci_hi": 0.04488298644773696,
+          "p_boot": 0.002
+        }
+      }
+    },
+    "prism_long": {
+      "gap_0.5": {
+        "trace": 0.5564,
+        "raw": 0.5678,
+        "rolesplit": 0.5815,
+        "g0": 0.577,
+        "g1to3": 0.5084,
+        "g0_plus_trace": 0.5967,
+        "shape_vs_g0": {
+          "ci_lo": -0.1057640190426352,
+          "ci_hi": -0.03548158728903592,
+          "p_boot": 0.0
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": -0.003433021951757395,
+          "ci_hi": 0.03199178193111172,
+          "p_boot": 0.102
+        },
+        "combo_vs_g0": {
+          "ci_lo": 0.005889352508074261,
+          "ci_hi": 0.03354742394831415,
+          "p_boot": 0.006
+        }
+      },
+      "gap_1.0": {
+        "trace": 0.5866,
+        "raw": 0.5928,
+        "rolesplit": 0.6143,
+        "g0": 0.6108,
+        "g1to3": 0.5111,
+        "g0_plus_trace": 0.6419,
+        "shape_vs_g0": {
+          "ci_lo": -0.14646426339271362,
+          "ci_hi": -0.056335100887211345,
+          "p_boot": 0.0
+        },
+        "rolesplit_vs_raw": {
+          "ci_lo": -0.00026442907452401483,
+          "ci_hi": 0.04463169265433245,
+          "p_boot": 0.06
+        },
+        "combo_vs_g0": {
+          "ci_lo": 0.01307401309531963,
+          "ci_hi": 0.049469675965899636,
+          "p_boot": 0.002
+        }
+      }
+    }
+  }
+}

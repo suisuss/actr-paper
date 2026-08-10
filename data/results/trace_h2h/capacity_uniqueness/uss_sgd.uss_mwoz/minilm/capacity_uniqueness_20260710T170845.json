@@ -1,0 +1,147 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_review63_controls",
+    "config": "minilm",
+    "dataset": "uss_sgd.uss_mwoz",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seeds": [
+        42,
+        7,
+        123,
+        2024,
+        31337
+      ],
+      "n_folds": 5,
+      "k": 9,
+      "issue": 63
+    },
+    "timestamp": "20260710T170845",
+    "script": "scripts/review63_controls.py",
+    "duration_seconds": null,
+    "git_commit": "fb278249e8726143431daddda2238eb1e9444be5",
+    "git_branch": "docs/review-63",
+    "git_dirty": false,
+    "script_sha256": "9e96b0bf32ddbb9f45bbd8f9028327008669b7cd76938ab34c96ddd7c748eaed",
+    "argv": [
+      "scripts/review63_controls.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "seeds": [
+      42,
+      7,
+      123,
+      2024,
+      31337
+    ],
+    "k": 9,
+    "uniqueness_sgd": {
+      "gap_0.5": {
+        "rs1_acc": 0.6826,
+        "combo_acc": 0.6713,
+        "diff": 0.0113,
+        "ci": [
+          -0.009077209571665995,
+          0.03142805335004892
+        ],
+        "p_boot": 0.276
+      },
+      "gap_1.0": {
+        "rs1_acc": 0.7646,
+        "combo_acc": 0.7478,
+        "diff": 0.0169,
+        "ci": [
+          -0.01027169750725424,
+          0.047494375631951455
+        ],
+        "p_boot": 0.25
+      }
+    },
+    "pca9": {
+      "uss_sgd": {
+        "raw_pca9": {
+          "gap_0.5": {
+            "mean": 0.5826,
+            "std": 0.0119
+          },
+          "gap_1.0": {
+            "mean": 0.6228,
+            "std": 0.0212
+          }
+        },
+        "raw_rp9": {
+          "gap_0.5": {
+            "mean": 0.5328,
+            "std": 0.0262
+          },
+          "gap_1.0": {
+            "mean": 0.5585,
+            "std": 0.0475
+          }
+        },
+        "contrasts": {
+          "pca9_vs_scalarized": {
+            "diff": 0.0789,
+            "ci": [
+              0.006414716354128592,
+              0.1528857835585101
+            ],
+            "p_boot": 0.032
+          },
+          "pca9_vs_trace": {
+            "diff": -0.0161,
+            "ci": [
+              -0.07118572959476777,
+              0.047792472983348246
+            ],
+            "p_boot": 0.6
+          }
+        }
+      },
+      "uss_mwoz": {
+        "raw_pca9": {
+          "gap_0.5": {
+            "mean": 0.613,
+            "std": 0.0064
+          },
+          "gap_1.0": {
+            "mean": 0.6746,
+            "std": 0.0169
+          }
+        },
+        "raw_rp9": {
+          "gap_0.5": {
+            "mean": 0.5509,
+            "std": 0.031
+          },
+          "gap_1.0": {
+            "mean": 0.5852,
+            "std": 0.0623
+          }
+        },
+        "contrasts": {
+          "pca9_vs_scalarized": {
+            "diff": 0.0786,
+            "ci": [
+              0.014582981857118323,
+              0.15047058658678986
+            ],
+            "p_boot": 0.016
+          },
+          "pca9_vs_trace": {
+            "diff": 0.0423,
+            "ci": [
+              -0.021774828705505705,
+              0.10863280957117903
+            ],
+            "p_boot": 0.182
+          }
+        }
+      }
+    }
+  }
+}

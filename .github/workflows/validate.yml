@@ -1,0 +1,82 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # Fast validity gate (seconds, no datasets / torch / GPU): the paper's
+  # tables match its shipped artifacts, and every artifact is
+  # provenance-clean. This is the ./run.sh check core.
+  validate:
+    name: paper matches its artifacts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install core dependencies
+        run: pip install -r requirements-core.txt
+      - name: Tables match the paper (data/results -> paper/paper.md)
+        run: python verify_draft_tables.py
+        working-directory: src
+      - name: Artifacts provenance-clean (git commit + script sha256)
+        run: python -m lib.campaign verify
+        working-directory: src
+
+  # Every <!-- src: ... --> tag in the paper resolves to a real script, and
+  # every figure is tagged. Stdlib-only, no dependencies.
+  src-tags:
+    name: paper src-tags resolve
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Verify the paper's [src:] tags
+        run: python src_check.py
+        working-directory: src
+
+  # The committed paper/paper.pdf is not stale: it rebuilds from the
+  # shipped figures/tables/paper.md and the rebuild carries the same
+  # words. Content-fidelity gate, not a byte diff (XeLaTeX output is not
+  # byte-reproducible across TeX Live versions). XCharter
+  # (texlive-fonts-extra) IS installed so the CI build uses the paper's
+  # main font: glyph-level pdftotext extraction of math subscripts and
+  # ligatures is font-dependent, so a fallback font mis-splits those
+  # tokens. verify_pdf_matches.py compares the word multiset, which
+  # ignores metadata, whitespace, hyphenation, order, and pagination.
+  pdf-matches:
+    name: committed PDF reproduces
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install core dependencies
+        run: pip install -r requirements-core.txt
+      - name: Install PDF toolchain (incl. XCharter, the paper's main font)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-fonts-extra librsvg2-bin fonts-dejavu-core poppler-utils
+          # make XCharter resolvable by fontconfig (fontspec matches
+          # mainfont=XCharter by family name)
+          sudo mkdir -p /usr/local/share/fonts
+          sudo find /usr/share/texlive -iname 'XCharter*.otf' -exec cp -t /usr/local/share/fonts/ {} +
+          sudo fc-cache -f
+          fc-list | grep -qi xcharter && echo "XCharter available" \
+            || { echo "ERROR: XCharter not visible to fontconfig"; exit 1; }
+      - name: Rebuild the PDF and verify it matches the committed paper.pdf
+        run: python verify_pdf_matches.py
+        working-directory: src

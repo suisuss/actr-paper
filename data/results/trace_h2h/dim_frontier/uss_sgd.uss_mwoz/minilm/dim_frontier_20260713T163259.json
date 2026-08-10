@@ -1,0 +1,93 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/dim_frontier",
+    "config": "minilm",
+    "dataset": "uss_sgd.uss_mwoz",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5
+    },
+    "timestamp": "20260713T163259",
+    "script": "scripts/dim_frontier.py",
+    "duration_seconds": null,
+    "git_commit": "59860a5324186187a1510906ea37d63e9b58f88a",
+    "git_branch": "HEAD",
+    "git_dirty": false,
+    "script_sha256": "e8e3cb263b6f9e2f7fc2793aa0dbca3534fa4fc07f04317f0d31ce1a4e0f4b96",
+    "argv": [
+      "scripts/dim_frontier.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "uss_sgd": {
+      "d384": {
+        "gap_0.5": 0.6693,
+        "gap_1.0": 0.7433
+      },
+      "d192": {
+        "gap_0.5": 0.6638,
+        "gap_1.0": 0.7455,
+        "vs_full_gap1.0": {
+          "ci_lo": -0.03477253142783534,
+          "ci_hi": 0.03769855120421442,
+          "p_boot": 0.848
+        }
+      },
+      "d96": {
+        "gap_0.5": 0.6675,
+        "gap_1.0": 0.7482,
+        "vs_full_gap1.0": {
+          "ci_lo": -0.025726329318149044,
+          "ci_hi": 0.036898951873445905,
+          "p_boot": 0.732
+        }
+      },
+      "d48": {
+        "gap_0.5": 0.6707,
+        "gap_1.0": 0.7556,
+        "vs_full_gap1.0": {
+          "ci_lo": -0.01908080406467172,
+          "ci_hi": 0.043602286094961126,
+          "p_boot": 0.446
+        }
+      }
+    },
+    "uss_mwoz": {
+      "d384": {
+        "gap_0.5": 0.6638,
+        "gap_1.0": 0.7591
+      },
+      "d192": {
+        "gap_0.5": 0.6007,
+        "gap_1.0": 0.6385,
+        "vs_full_gap1.0": {
+          "ci_lo": -0.18197028221681166,
+          "ci_hi": -0.06484728989513575,
+          "p_boot": 0.0
+        }
+      },
+      "d96": {
+        "gap_0.5": 0.6182,
+        "gap_1.0": 0.6882,
+        "vs_full_gap1.0": {
+          "ci_lo": -0.12819808494108853,
+          "ci_hi": -0.01320271740468195,
+          "p_boot": 0.004
+        }
+      },
+      "d48": {
+        "gap_0.5": 0.6407,
+        "gap_1.0": 0.7152,
+        "vs_full_gap1.0": {
+          "ci_lo": -0.09995615312009686,
+          "ci_hi": 0.006826349184998048,
+          "p_boot": 0.096
+        }
+      }
+    }
+  }
+}

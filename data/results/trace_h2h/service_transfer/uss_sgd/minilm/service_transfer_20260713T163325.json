@@ -1,0 +1,46 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/service_transfer",
+    "config": "minilm",
+    "dataset": "uss_sgd",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "n_folds": 5
+    },
+    "timestamp": "20260713T163325",
+    "script": "scripts/service_transfer.py",
+    "duration_seconds": null,
+    "git_commit": "59860a5324186187a1510906ea37d63e9b58f88a",
+    "git_branch": "HEAD",
+    "git_dirty": false,
+    "script_sha256": "da821b78c1eebee9f093e3d37564152e481cabbd7e31de22dca5d928e43dca03",
+    "argv": [
+      "scripts/service_transfer.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "task": "dominant service, top-8 + other",
+    "n": 1000,
+    "n_classes": 9,
+    "trace": {
+      "acc": 0.452,
+      "macro_f1": 0.3379
+    },
+    "g0": {
+      "acc": 0.769,
+      "macro_f1": 0.6945
+    },
+    "raw": {
+      "acc": 0.846,
+      "macro_f1": 0.7939
+    },
+    "rolesplit": {
+      "acc": 0.825,
+      "macro_f1": 0.754
+    }
+  }
+}

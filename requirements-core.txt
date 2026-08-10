@@ -1,0 +1,10 @@
+# Core tier: every analysis, figure, and table stage. Sufficient on its
+# own when work/data/embeddings/ is seeded from the release bundle (the
+# embedding stages are output-guarded and skip themselves).
+numpy==2.2.2
+scipy==1.16.3
+scikit-learn==1.8.0
+PyYAML==6.0.2
+tqdm==4.67.1
+matplotlib==3.10.8
+huggingface-hub==0.28.1

@@ -1,0 +1,13 @@
+{
+ "paper": "Analysis of Conversation Trajectory Representations: Orthogonal Projections versus Scalar Geometry for Satisfaction Prediction",
+ "dataset_pins": {
+  "uss_repo_commit": "8ba06bd92570fd94d3ec0cb828aad45172be71b2",
+  "sgd_original_commit": "e852981ae34990f4358979625854259302feaa78",
+  "prism_revision": "18ab5cfb37456f4ec8cbc00212ce54cf7b1239f6",
+  "prism_conversations_sha256": "55ec67a194ca59d567b57acaeab813cb30abe801e73f9e495597a77ab674d638"
+ },
+ "embeddings_bundle": {
+  "url": null,
+  "sha256": null
+ }
+}

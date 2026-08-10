@@ -1,0 +1,135 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_ledger_stats",
+    "config": "minilm",
+    "dataset": "uss_sgd.uss_mwoz.prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seed": 42,
+      "ledger_items": "1-5"
+    },
+    "timestamp": "20260709T103818",
+    "script": "scripts/ledger_stats.py",
+    "duration_seconds": null,
+    "git_commit": "7be7177a08ac76244618140dc8c1127951a1a9bf",
+    "git_branch": "evidence/paper-evidence",
+    "git_dirty": false,
+    "script_sha256": "5c04b09e0c268ede480cff262bb9ec6b30fe3bb3dcb500fbc554cb968b9082c7",
+    "argv": [
+      "scripts/ledger_stats.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "role_geometry_sgd": {
+      "n_dialogues_used": 1000,
+      "drift_alignment": {
+        "rho": 0.1417,
+        "p": 6.909100568451782e-06,
+        "n": 1000
+      },
+      "gap_slope": {
+        "rho": -0.0712,
+        "p": 0.02438120690675012,
+        "n": 1000
+      },
+      "gap_mean": {
+        "rho": -0.1814,
+        "p": 7.664318709351316e-09,
+        "n": 1000
+      },
+      "resid_user": {
+        "rho": 0.1134,
+        "p": 0.00032730643630837504,
+        "n": 1000
+      },
+      "resid_model": {
+        "rho": 0.1018,
+        "p": 0.0012645522359043372,
+        "n": 1000
+      },
+      "resid_midline": {
+        "rho": 0.0688,
+        "p": 0.029496758896587684,
+        "n": 1000
+      },
+      "residual_above_deg3_mean": {
+        "interleaved": 0.6017,
+        "user": 0.4996,
+        "model": 0.4656
+      }
+    },
+    "causal_surprise_sgd": {
+      "user_sur_mean": {
+        "rho": -0.1001,
+        "p": 0.0015271498540134446
+      },
+      "user_sur_max": {
+        "rho": 0.0213,
+        "p": 0.5011365783342715
+      },
+      "user_trend_gain": {
+        "rho": -0.0911,
+        "p": 0.003932638265120785
+      },
+      "user_bits": {
+        "rho": -0.1001,
+        "p": 0.0015271498540134446
+      },
+      "model_sur_mean": {
+        "rho": -0.0527,
+        "p": 0.09569424320740486
+      },
+      "model_sur_max": {
+        "rho": 0.0246,
+        "p": 0.4378979966333416
+      },
+      "model_trend_gain": {
+        "rho": -0.1304,
+        "p": 3.549095034068855e-05
+      },
+      "model_bits": {
+        "rho": -0.0527,
+        "p": 0.09569424320740486
+      }
+    },
+    "corpus_stats": {
+      "uss_sgd": {
+        "n_dialogues": 1000,
+        "mean_turns": 25.67,
+        "median_turns": 24.0,
+        "turn_range": [
+          8,
+          50
+        ],
+        "rating_mean": 3.214,
+        "rating_std": 0.387
+      },
+      "uss_mwoz": {
+        "n_dialogues": 1000,
+        "mean_turns": 22.11,
+        "median_turns": 21.0,
+        "turn_range": [
+          7,
+          47
+        ],
+        "rating_mean": 3.122,
+        "rating_std": 0.366
+      },
+      "prism": {
+        "n_dialogues": 7951,
+        "mean_turns": 6.82,
+        "median_turns": 6.0,
+        "turn_range": [
+          4,
+          44
+        ],
+        "rating_mean": 4.261,
+        "rating_std": 0.876
+      }
+    },
+    "_scope_note": "ledger items 1-5; items 6 (DCT=Gram tie) and 7 (Chebyshev degradation) are out of scope - see docstring"
+  }
+}

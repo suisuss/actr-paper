@@ -1,0 +1,269 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h_judge_stack",
+    "config": "bge_minilm",
+    "dataset": "uss_sgd.uss_mwoz.prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "seeds": [
+        42,
+        7,
+        123
+      ],
+      "n_folds": 5,
+      "n_boot": 1000,
+      "judge": "haiku",
+      "inference": "seed-ensembled",
+      "issues": "#53"
+    },
+    "timestamp": "20260710T081654",
+    "script": "scripts/judge_stack.py",
+    "duration_seconds": null,
+    "git_commit": "2686b4ac7e9ab9a6f15ad81f6aa1d4b5c60260db",
+    "git_branch": "evidence/judge-stack",
+    "git_dirty": false,
+    "script_sha256": "c91d7fd260e07ca5c80d17ee9ee3690f275e1c9bf16b363913d9a837baaec937",
+    "argv": [
+      "scripts/judge_stack.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "seeds": [
+      42,
+      7,
+      123
+    ],
+    "gap_primary": 1.0,
+    "judge": "haiku",
+    "n_boot": 1000,
+    "inference": "seed-ensembled",
+    "calibration": "no equivalence bands below +-2.5pt (measured instrument resolution, #43)",
+    "uss_sgd": {
+      "n": 1000,
+      "judge_alone": {
+        "gap_0.5": {
+          "judge_strict": 0.392,
+          "judge_ties_half": 0.6343
+        },
+        "gap_1.0": {
+          "judge_strict": 0.5126,
+          "judge_ties_half": 0.7176
+        }
+      },
+      "multiseed": {
+        "bge_rs1": {
+          "gap_0.5": {
+            "mean": 0.7154,
+            "std": 0.0037
+          },
+          "gap_1.0": {
+            "mean": 0.8021,
+            "std": 0.0034
+          }
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.7234,
+            "std": 0.0054
+          },
+          "gap_1.0": {
+            "mean": 0.8181,
+            "std": 0.0013
+          }
+        },
+        "minilm_rs1": {
+          "gap_0.5": {
+            "mean": 0.6717,
+            "std": 0.0028
+          },
+          "gap_1.0": {
+            "mean": 0.7555,
+            "std": 0.0031
+          }
+        },
+        "minilm_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.7038,
+            "std": 0.0063
+          },
+          "gap_1.0": {
+            "mean": 0.7999,
+            "std": 0.011
+          }
+        }
+      },
+      "accuracy_seedens": {
+        "bge_rs1": {
+          "gap_0.5": 0.7227,
+          "gap_1.0": 0.8112
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": 0.7307,
+          "gap_1.0": 0.8257
+        },
+        "minilm_rs1": {
+          "gap_0.5": 0.6801,
+          "gap_1.0": 0.7655
+        },
+        "minilm_rs1_judge": {
+          "gap_0.5": 0.7105,
+          "gap_1.0": 0.8083
+        }
+      },
+      "reproduction_23": {
+        "minilm_rs1_judge_seed42_gap1.0": 0.8152,
+        "reference_23": 0.8152,
+        "match": true
+      }
+    },
+    "uss_mwoz": {
+      "n": 1000,
+      "judge_alone": {
+        "gap_0.5": {
+          "judge_strict": 0.3407,
+          "judge_ties_half": 0.586
+        },
+        "gap_1.0": {
+          "judge_strict": 0.4942,
+          "judge_ties_half": 0.6905
+        }
+      },
+      "multiseed": {
+        "bge_rs1": {
+          "gap_0.5": {
+            "mean": 0.6955,
+            "std": 0.0047
+          },
+          "gap_1.0": {
+            "mean": 0.7932,
+            "std": 0.008
+          }
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.6965,
+            "std": 0.005
+          },
+          "gap_1.0": {
+            "mean": 0.793,
+            "std": 0.0096
+          }
+        }
+      },
+      "accuracy_seedens": {
+        "bge_rs1": {
+          "gap_0.5": 0.7039,
+          "gap_1.0": 0.8033
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": 0.7047,
+          "gap_1.0": 0.8028
+        }
+      }
+    },
+    "prism": {
+      "n": 2000,
+      "judge_alone": {
+        "gap_0.5": {
+          "judge_strict": 0.374,
+          "judge_ties_half": 0.6025
+        },
+        "gap_1.0": {
+          "judge_strict": 0.4344,
+          "judge_ties_half": 0.6413
+        }
+      },
+      "multiseed": {
+        "bge_rs1": {
+          "gap_0.5": {
+            "mean": 0.5765,
+            "std": 0.0015
+          },
+          "gap_1.0": {
+            "mean": 0.6088,
+            "std": 0.0023
+          }
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": {
+            "mean": 0.6159,
+            "std": 0.0021
+          },
+          "gap_1.0": {
+            "mean": 0.6608,
+            "std": 0.002
+          }
+        }
+      },
+      "accuracy_seedens": {
+        "bge_rs1": {
+          "gap_0.5": 0.5785,
+          "gap_1.0": 0.6115
+        },
+        "bge_rs1_judge": {
+          "gap_0.5": 0.617,
+          "gap_1.0": 0.6625
+        }
+      },
+      "note": "judge-rated 2000-conversation subset (#23 rng(42) draw), GroupKFold by user (unseeded splits; seed variance is RF-only); bge_rs1 REFIT on the subset - the #51 full-corpus cache is not comparable under a subset protocol"
+    },
+    "primary_family": [
+      {
+        "h": "C1 bge_rs1_judge>bge_rs1 SGD",
+        "test": "superiority",
+        "gap": 1.0,
+        "point": 0.0145,
+        "diff_ci": [
+          -0.004895245178677896,
+          0.03501743727687407
+        ],
+        "p_boot": 0.14,
+        "p_holm": 0.14
+      }
+    ],
+    "C2_estimation": {
+      "h": "C2 bge_rs1_judge vs minilm_rs1_judge SGD",
+      "test": "estimation",
+      "gap": 1.0,
+      "point": 0.0174,
+      "diff_ci": [
+        -0.0037143171257025486,
+        0.03852369165379716
+      ],
+      "p_boot": 0.11
+    },
+    "secondary_estimates": [
+      {
+        "h": "S1 bge_rs1_judge>bge_rs1 MWOZ",
+        "test": "estimation",
+        "gap": 1.0,
+        "point": -0.0005,
+        "diff_ci": [
+          -0.006366858208068822,
+          0.005099423898043428
+        ],
+        "p_boot": 0.89
+      },
+      {
+        "h": "S2 bge_rs1_judge>bge_rs1 PRISM-subset",
+        "test": "estimation",
+        "gap": 1.0,
+        "point": 0.051,
+        "diff_ci": [
+          0.0284510050892366,
+          0.07512905997430276
+        ],
+        "p_boot": 0.0
+      }
+    ],
+    "ceiling_distance_sgd": {
+      "ceiling_gap_1.0": 0.9895,
+      "best_arm": "bge_rs1_judge",
+      "accuracy_seedens": 0.8257,
+      "distance": 0.1638
+    }
+  }
+}

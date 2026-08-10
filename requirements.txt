@@ -1,0 +1,19 @@
+# Full set: core tier + the embedding stack (torch / sentence-transformers),
+# needed only by stages that (re)build model embeddings from raw text.
+#
+# GPU (NVIDIA/CUDA): install as-is - the default PyPI torch wheel bundles
+# CUDA support and the pipeline uses the GPU automatically when one is
+# visible (override with EXPERIMENT_DEVICE=cpu|cuda). Embedding runs
+# roughly 6x faster on GPU; the pipeline's statistics are identical
+# either way.
+#
+#   pip install -r requirements.txt
+#
+# CPU-only machines: pull the much smaller CPU wheels instead:
+#
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+#
+-r requirements-core.txt
+torch==2.9.1
+sentence-transformers==5.2.0
+transformers==4.48.3

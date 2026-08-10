@@ -1,0 +1,30 @@
+{
+  "name": "eqdim_evidence",
+  "workdir": ".",
+  "env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "stages": [
+    {
+      "name": "eqdim_probes",
+      "depends_on": [],
+      "cmd": [
+        "python3",
+        "eqdim_probes.py"
+      ]
+    },
+    {
+      "name": "interleaved_degree",
+      "depends_on": [
+        "eqdim_probes"
+      ],
+      "cmd": [
+        "python3",
+        "interleaved_degree.py"
+      ]
+    }
+  ]
+}

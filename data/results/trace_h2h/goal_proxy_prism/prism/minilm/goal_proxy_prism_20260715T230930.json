@@ -1,0 +1,64 @@
+{
+  "_provenance": {
+    "experiment": "trace_h2h/goal_proxy_prism",
+    "config": "minilm",
+    "dataset": "prism",
+    "variant": "none",
+    "n_samples": null,
+    "params": {
+      "deterministic": true,
+      "n_raw_conversations": 8011
+    },
+    "timestamp": "20260715T230930",
+    "script": "goal_proxy_prism.py",
+    "duration_seconds": null,
+    "git_commit": "4b980f531312f8762c8b69941bddf5d79ac701ff",
+    "git_branch": "master",
+    "git_dirty": false,
+    "script_sha256": "e36cdc56fed8309b4ad4bf420c63834f7894cfbcfaa2ed2266102f8c7642b16f",
+    "argv": [
+      "goal_proxy_prism.py"
+    ],
+    "python": "3.13.5",
+    "hostname": "debian"
+  },
+  "results": {
+    "opening_prompt_equals_first_user_turn": {
+      "conversations": 8011,
+      "first_turn_is_user": 8011,
+      "byte_identical": 8011,
+      "byte_identical_fraction": 1.0,
+      "mismatch_example_ids": []
+    },
+    "composition": {
+      "raw": {
+        "counts": {
+          "unguided": 3113,
+          "controversy guided": 2438,
+          "values guided": 2460
+        },
+        "n": 8011,
+        "values_or_controversy_guided": 4898,
+        "values_or_controversy_fraction": 0.6114
+      },
+      "analyzed": {
+        "counts": {
+          "unguided": 3095,
+          "controversy guided": 2410,
+          "values guided": 2446
+        },
+        "n": 7951,
+        "values_or_controversy_guided": 4856,
+        "values_or_controversy_fraction": 0.6107,
+        "filter": "helpfulness present and >= 2 turns"
+      }
+    },
+    "goal_degeneracies": {
+      "n_dialogues_encoded": 7951,
+      "goal_initial_prompt_dist_max_abs": 2.384185791015625e-07,
+      "model_goal_vs_initial_prompt_corr": 0.9999999999999761,
+      "model_goal_vs_initial_prompt_max_abs_diff": 1.671058791341551e-07
+    },
+    "note": "G := first user turn on every corpus. On PRISM the opening_prompt is a byte-identical copy of that turn, so the choice is exact, not a substitution; the two goal degeneracies then hold to float precision (goal_initial_prompt_dist identically 0; model_goal_dist_mean identically model_initial_prompt_dist). Deterministic; float32 embedding inputs."
+  }
+}

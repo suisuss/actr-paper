@@ -1,0 +1,175 @@
+{
+ "seeds": [
+  42,
+  7,
+  123,
+  2024,
+  31337
+ ],
+ "n_boot": 1000,
+ "n_dialogues": 7951,
+ "n_models": 21,
+ "models": [
+  "HuggingFaceH4/zephyr-7b-beta",
+  "OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+  "claude-2",
+  "claude-2.1",
+  "claude-instant-1",
+  "command",
+  "command-light",
+  "command-nightly",
+  "google/flan-t5-xxl",
+  "gpt-3.5-turbo",
+  "gpt-4",
+  "gpt-4-1106-preview",
+  "luminous-extended-control",
+  "luminous-supreme-control",
+  "meta-llama/Llama-2-13b-chat-hf",
+  "meta-llama/Llama-2-70b-chat-hf",
+  "meta-llama/Llama-2-7b-chat-hf",
+  "mistralai/Mistral-7B-Instruct-v0.1",
+  "models/chat-bison-001",
+  "tiiuae/falcon-7b-instruct",
+  "timdettmers/guanaco-33b-merged"
+ ],
+ "dims": {
+  "interleaved": 1536,
+  "rolesplit_1": 1536,
+  "interleaved_id": 1557,
+  "rolesplit_1_id": 1557
+ },
+ "protocol": {
+  "head": "RandomForestRegressor(300, min_samples_leaf=2)",
+  "cv": "GroupKFold(5) by user_id",
+  "inference": "seed-ensembled (Section 5.2)"
+ },
+ "accuracy": {
+  "interleaved": {
+   "per_seed_mean": 0.61,
+   "per_seed_std": 0.0016,
+   "seedens": 0.6143
+  },
+  "rolesplit_1": {
+   "per_seed_mean": 0.6382,
+   "per_seed_std": 0.0014,
+   "seedens": 0.6424
+  },
+  "interleaved_id": {
+   "per_seed_mean": 0.6178,
+   "per_seed_std": 0.0008,
+   "seedens": 0.6221
+  },
+  "rolesplit_1_id": {
+   "per_seed_mean": 0.6435,
+   "per_seed_std": 0.0024,
+   "seedens": 0.648
+  }
+ },
+ "contrasts": {
+  "interleaved_id_vs_rolesplit_1": {
+   "kind": "diagnostic",
+   "arms": [
+    "interleaved_id",
+    "rolesplit_1"
+   ],
+   "gap_0.5": {
+    "delta": -0.0136,
+    "ci": [
+     -0.0327,
+     0.0068
+    ],
+    "p_boot": 0.208
+   },
+   "gap_1.0": {
+    "delta": -0.0203,
+    "ci": [
+     -0.0441,
+     0.0063
+    ],
+    "p_boot": 0.15
+   }
+  },
+  "rolesplit_1_id_vs_rolesplit_1": {
+   "kind": "secondary_not_alone",
+   "arms": [
+    "rolesplit_1_id",
+    "rolesplit_1"
+   ],
+   "gap_0.5": {
+    "delta": 0.0036,
+    "ci": [
+     -0.0003,
+     0.008
+    ],
+    "p_boot": 0.072
+   },
+   "gap_1.0": {
+    "delta": 0.0056,
+    "ci": [
+     0.0001,
+     0.0124
+    ],
+    "p_boot": 0.042
+   }
+  },
+  "rolesplit_1_id_vs_interleaved_id": {
+   "kind": "both_augmented",
+   "arms": [
+    "rolesplit_1_id",
+    "interleaved_id"
+   ],
+   "gap_0.5": {
+    "delta": 0.0172,
+    "ci": [
+     -0.0017,
+     0.0349
+    ],
+    "p_boot": 0.086
+   },
+   "gap_1.0": {
+    "delta": 0.0258,
+    "ci": [
+     0.0005,
+     0.0481
+    ],
+    "p_boot": 0.05
+   }
+  },
+  "rolesplit_1_vs_interleaved": {
+   "kind": "reference_table2",
+   "arms": [
+    "rolesplit_1",
+    "interleaved"
+   ],
+   "gap_0.5": {
+    "delta": 0.0188,
+    "ci": [
+     -0.0013,
+     0.0382
+    ],
+    "p_boot": 0.074
+   },
+   "gap_1.0": {
+    "delta": 0.0281,
+    "ci": [
+     0.0024,
+     0.0511
+    ],
+    "p_boot": 0.032
+   }
+  }
+ },
+ "verdict": {
+  "reference_delta_rolesplit_vs_interleaved": 0.0281,
+  "delta_both_augmented": 0.0258,
+  "margin_retained_under_identity": 0.918,
+  "delta_interleaved_id_vs_rolesplit": -0.0203,
+  "identity_increment": {
+   "interleaved": 0.0078,
+   "rolesplit_1": 0.0056
+  },
+  "gain_is_content_beyond_identity": true,
+  "rule": "decisive = rolesplit_1_id vs interleaved_id: CI excludes zero AND >=50% of the reference margin retained when BOTH arms hold model identity. C1 is a GENEROUS test of H_confound: the one-hot block hands interleaved more identity than the split could encode (A: pooled mean recovers model ID unaided).",
+  "reading": "role-split(1) retains its margin over the interleaved arm when BOTH are handed model identity: the gain is content beyond model identity, not a fingerprint effect - corroborates B"
+ }
+}

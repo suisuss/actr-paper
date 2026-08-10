@@ -1,0 +1,2147 @@
+{
+  "created": "2026-07-07T22:45:56.975908",
+  "results": {
+    "trace_h2h/designs:none:uss_mwoz:default:20260709T044157": {
+      "checksum": "sha256:76e17d3903e21c7d",
+      "config": "none",
+      "dataset": "uss_mwoz",
+      "duration_seconds": 55.849323749542236,
+      "experiment": "trace_h2h/designs",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/designs/uss_mwoz/none/20260709T044157.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 4317,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T044157",
+      "variant": "default"
+    },
+    "trace_h2h/designs:none:uss_sgd:default:20260709T044100": {
+      "checksum": "sha256:94d68551cc3645ea",
+      "config": "none",
+      "dataset": "uss_sgd",
+      "duration_seconds": 53.07774329185486,
+      "experiment": "trace_h2h/designs",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/designs/uss_sgd/none/20260709T044100.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 4900,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T044100",
+      "variant": "default"
+    },
+    "trace_h2h/features:none:uss_mwoz:default:20260709T043948": {
+      "checksum": "sha256:20c9daa01f04a19b",
+      "config": "none",
+      "dataset": "uss_mwoz",
+      "duration_seconds": 0.1892855167388916,
+      "experiment": "trace_h2h/features",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/features/uss_mwoz/none/20260709T043948.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 3013,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T043948",
+      "variant": "default"
+    },
+    "trace_h2h/features:none:uss_sgd:default:20260709T043947": {
+      "checksum": "sha256:1401a664fcea4f5e",
+      "config": "none",
+      "dataset": "uss_sgd",
+      "duration_seconds": 0.20278501510620117,
+      "experiment": "trace_h2h/features",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/features/uss_sgd/none/20260709T043947.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 3369,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T043947",
+      "variant": "default"
+    },
+    "trace_h2h/floors:none:uss_mwoz:default:20260709T044006": {
+      "checksum": "sha256:fc6cfb39ab13d523",
+      "config": "none",
+      "dataset": "uss_mwoz",
+      "duration_seconds": 6.352798700332642,
+      "experiment": "trace_h2h/floors",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/floors/uss_mwoz/none/20260709T044006.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 2897,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T044006",
+      "variant": "default"
+    },
+    "trace_h2h/floors:none:uss_sgd:default:20260709T043958": {
+      "checksum": "sha256:04267510e7e0e3aa",
+      "config": "none",
+      "dataset": "uss_sgd",
+      "duration_seconds": 8.959063529968262,
+      "experiment": "trace_h2h/floors",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/floors/uss_sgd/none/20260709T043958.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 2897,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T043958",
+      "variant": "default"
+    },
+    "trace_h2h/hybrid:none:uss_mwoz:default:20260709T044222": {
+      "checksum": "sha256:e183c3cd373a5427",
+      "config": "none",
+      "dataset": "uss_mwoz",
+      "duration_seconds": 11.113614320755005,
+      "experiment": "trace_h2h/hybrid",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/hybrid/uss_mwoz/none/20260709T044222.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 2825,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T044222",
+      "variant": "default"
+    },
+    "trace_h2h/hybrid:none:uss_sgd:default:20260709T044209": {
+      "checksum": "sha256:acf19ae68034ac75",
+      "config": "none",
+      "dataset": "uss_sgd",
+      "duration_seconds": 11.115586757659912,
+      "experiment": "trace_h2h/hybrid",
+      "params": {
+        "degree": 3,
+        "n_bootstrap": 1000,
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/hybrid/uss_sgd/none/20260709T044209.json",
+      "script": "lib/experiment.py",
+      "size_bytes": 2818,
+      "summary": {},
+      "tags": [
+        "trace",
+        "paper2"
+      ],
+      "timestamp": "20260709T044209",
+      "variant": "default"
+    },
+    "trace_h2h/feature_ablation_uss_mwoz:minilm:uss_mwoz:none:20260709T014326": {
+      "checksum": "sha256:5de58bf0cad427af",
+      "config": "minilm",
+      "dataset": "uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/feature_ablation_uss_mwoz",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/feature_ablation_uss_mwoz/uss_mwoz/minilm/feature_ablation_uss_mwoz_20260709T014326.json",
+      "script": "scripts/feature_ablation.py",
+      "size_bytes": 2163,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T014326",
+      "variant": "none"
+    },
+    "trace_h2h/feature_ablation_uss_sgd:minilm:uss_sgd:none:20260709T014207": {
+      "checksum": "sha256:3445349193b384f4",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/feature_ablation_uss_sgd",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/feature_ablation_uss_sgd/uss_sgd/minilm/feature_ablation_uss_sgd_20260709T014207.json",
+      "script": "scripts/feature_ablation.py",
+      "size_bytes": 2161,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T014207",
+      "variant": "none"
+    },
+    "trace_h2h/annotator_ceiling:none:uss_sgd.uss_mwoz:none:20260708T202944": {
+      "checksum": "sha256:6cdd1385c9486cdb",
+      "config": "none",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/annotator_ceiling",
+      "params": {
+        "seed": 42
+      },
+      "path": "trace_h2h/annotator_ceiling/uss_sgd.uss_mwoz/none/annotator_ceiling_20260708T202944.json",
+      "script": "scripts/annotator_ceiling.py",
+      "size_bytes": 1229,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260708T202944",
+      "variant": "none"
+    },
+    "trace_h2h/basis_calibration:minilm:uss_sgd.uss_mwoz.prism:none:20260709T202814": {
+      "checksum": "sha256:b8cbf01877a6a492",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/basis_calibration",
+      "params": {
+        "gap": 1.0,
+        "issues": "#43 amendment",
+        "n_boot": 1000,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "source": "cached OOF preds from basis_probes"
+      },
+      "path": "trace_h2h/basis_calibration/uss_sgd.uss_mwoz.prism/minilm/basis_calibration_20260709T202814.json",
+      "script": "scripts/basis_calibration.py",
+      "size_bytes": 14142,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T202814",
+      "variant": "none"
+    },
+    "trace_h2h/basis_probes:minilm:uss_sgd.uss_mwoz.prism:none:20260709T201745": {
+      "checksum": "sha256:fc9563c08f77b47f",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/basis_probes",
+      "params": {
+        "band": 0.01,
+        "gap_primary": 1.0,
+        "issues": "#43 #44 #46",
+        "n_boot": 1000,
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/basis_probes/uss_sgd.uss_mwoz.prism/minilm/basis_probes_20260709T201745.json",
+      "script": "scripts/basis_probes.py",
+      "size_bytes": 12707,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T201745",
+      "variant": "none"
+    },
+    "trace_h2h/basis_subspace:none:synthetic:none:20260709T201745": {
+      "checksum": "sha256:592a70eb9145d1e8",
+      "config": "none",
+      "dataset": "synthetic",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/basis_subspace",
+      "params": {
+        "n_hi": 40,
+        "n_lo": 4,
+        "ncoef": 4,
+        "note": "deterministic, no seeds involved"
+      },
+      "path": "trace_h2h/basis_subspace/synthetic/none/basis_subspace_20260709T201745.json",
+      "script": "scripts/basis_probes.py",
+      "size_bytes": 9471,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T201745",
+      "variant": "none"
+    },
+    "trace_h2h/containment_graft_uss_mwoz:minilm:uss_mwoz:none:20260709T021427": {
+      "checksum": "sha256:130c2384873a3e2b",
+      "config": "minilm",
+      "dataset": "uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/containment_graft_uss_mwoz",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/containment_graft_uss_mwoz/uss_mwoz/minilm/containment_graft_uss_mwoz_20260709T021427.json",
+      "script": "scripts/containment_graft.py",
+      "size_bytes": 5031,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T021427",
+      "variant": "none"
+    },
+    "trace_h2h/containment_graft_uss_sgd:minilm:uss_sgd:none:20260709T021143": {
+      "checksum": "sha256:dbff5c153f4e635c",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/containment_graft_uss_sgd",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/containment_graft_uss_sgd/uss_sgd/minilm/containment_graft_uss_sgd_20260709T021143.json",
+      "script": "scripts/containment_graft.py",
+      "size_bytes": 5025,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T021143",
+      "variant": "none"
+    },
+    "trace_h2h/g0_combo_prism:minilm:prism:none:20260709T020908": {
+      "checksum": "sha256:ea1869e4b6e5fb84",
+      "config": "minilm",
+      "dataset": "prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/g0_combo_prism",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/g0_combo_prism/prism/minilm/g0_combo_prism_20260709T020908.json",
+      "script": "scripts/g0_combo.py",
+      "size_bytes": 2069,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T020908",
+      "variant": "none"
+    },
+    "trace_h2h/g0_combo_uss_mwoz:minilm:uss_mwoz:none:20260709T014514": {
+      "checksum": "sha256:0e0dd1f8b78d19d1",
+      "config": "minilm",
+      "dataset": "uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/g0_combo_uss_mwoz",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/g0_combo_uss_mwoz/uss_mwoz/minilm/g0_combo_uss_mwoz_20260709T014514.json",
+      "script": "scripts/g0_combo.py",
+      "size_bytes": 1618,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T014514",
+      "variant": "none"
+    },
+    "trace_h2h/g0_combo_uss_sgd:minilm:uss_sgd:none:20260709T014419": {
+      "checksum": "sha256:90046dcad58fc0aa",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/g0_combo_uss_sgd",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/g0_combo_uss_sgd/uss_sgd/minilm/g0_combo_uss_sgd_20260709T014419.json",
+      "script": "scripts/g0_combo.py",
+      "size_bytes": 1614,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T014419",
+      "variant": "none"
+    },
+    "trace_h2h/deconfound_length:minilm:prism.uss_trunc:none:20260709T004449": {
+      "checksum": "sha256:abafd996e33d1330",
+      "config": "minilm",
+      "dataset": "prism.uss_trunc",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/deconfound_length",
+      "params": {
+        "n_folds": 5,
+        "seed": 42,
+        "trunc": 7
+      },
+      "path": "trace_h2h/deconfound_length/prism.uss_trunc/minilm/deconfound_length_20260709T004449.json",
+      "script": "scripts/deconfound_length.py",
+      "size_bytes": 5782,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T004449",
+      "variant": "none"
+    },
+    "trace_h2h/degree_ablation:minilm:uss_sgd.uss_mwoz:none:20260708T234754": {
+      "checksum": "sha256:e761a3f1146a1667",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/degree_ablation",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/degree_ablation/uss_sgd.uss_mwoz/minilm/degree_ablation_20260708T234754.json",
+      "script": "scripts/degree_ablation.py",
+      "size_bytes": 5284,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260708T234754",
+      "variant": "none"
+    },
+    "trace_h2h/degree_matched_confirm:minilm:uss_sgd.uss_mwoz:none:20260712T135153": {
+      "checksum": "sha256:c76814b5958a099b",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/degree_matched_confirm",
+      "params": {
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/degree_matched_confirm/uss_sgd.uss_mwoz/minilm/degree_matched_confirm_20260712T135153.json",
+      "script": "scripts/degree_matched_confirm.py",
+      "size_bytes": 5750,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "degree2_unlocks",
+        "paper3"
+      ],
+      "timestamp": "20260712T135153",
+      "variant": "none"
+    },
+    "trace_h2h/degree_matched_confirm:minilm:uss_sgd.uss_mwoz:none:20260712T135455": {
+      "checksum": "sha256:df9608b472346665",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/degree_matched_confirm",
+      "params": {
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/degree_matched_confirm/uss_sgd.uss_mwoz/minilm/degree_matched_confirm_20260712T135455.json",
+      "script": "scripts/degree_matched_confirm.py",
+      "size_bytes": 5750,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "degree2_unlocks",
+        "paper3"
+      ],
+      "timestamp": "20260712T135455",
+      "variant": "none"
+    },
+    "trace_h2h/degree_matched_confirm:minilm:uss_sgd.uss_mwoz:none:20260712T135605": {
+      "checksum": "sha256:e1b7967d8783b6e3",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/degree_matched_confirm",
+      "params": {
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/degree_matched_confirm/uss_sgd.uss_mwoz/minilm/degree_matched_confirm_20260712T135605.json",
+      "script": "scripts/degree_matched_confirm.py",
+      "size_bytes": 5750,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "degree2_unlocks",
+        "paper3"
+      ],
+      "timestamp": "20260712T135605",
+      "variant": "none"
+    },
+    "trace_h2h/descriptive_profiles:minilm:uss_sgd.uss_mwoz:none:20260709T011158": {
+      "checksum": "sha256:a15f9135f8481012",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/descriptive_profiles",
+      "params": {
+        "test": "kruskal_fdr"
+      },
+      "path": "trace_h2h/descriptive_profiles/uss_sgd.uss_mwoz/minilm/descriptive_profiles_20260709T011158.json",
+      "script": "scripts/descriptive_profiles.py",
+      "size_bytes": 7202,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T011158",
+      "variant": "none"
+    },
+    "trace_h2h/dim_frontier:minilm:uss_sgd.uss_mwoz:none:20260709T011146": {
+      "checksum": "sha256:0de94ee20a2aa994",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/dim_frontier",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/dim_frontier/uss_sgd.uss_mwoz/minilm/dim_frontier_20260709T011146.json",
+      "script": "scripts/dim_frontier.py",
+      "size_bytes": 2230,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T011146",
+      "variant": "none"
+    },
+    "trace_h2h/dims_control:minilm:uss_sgd.uss_mwoz:none:20260708T203112": {
+      "checksum": "sha256:8429782a664f6455",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/dims_control",
+      "params": {
+        "n_folds": 5,
+        "pca_k": 26,
+        "seed": 42
+      },
+      "path": "trace_h2h/dims_control/uss_sgd.uss_mwoz/minilm/dims_control_20260708T203112.json",
+      "script": "scripts/dims_control.py",
+      "size_bytes": 3734,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260708T203112",
+      "variant": "none"
+    },
+    "trace_h2h/eqdim_probes:minilm:uss_sgd.uss_mwoz.prism:none:20260709T122756": {
+      "checksum": "sha256:e387ad41d08f2e16",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/eqdim_probes",
+      "params": {
+        "arms": "rolesplit_k1(1536) vs raw(1536)",
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/eqdim_probes/uss_sgd.uss_mwoz.prism/minilm/eqdim_probes_20260709T122756.json",
+      "script": "scripts/eqdim_probes.py",
+      "size_bytes": 3606,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T122756",
+      "variant": "none"
+    },
+    "trace_h2h/extension_arms_uss:minilm:uss_sgd.uss_mwoz:none:20260709T005817": {
+      "checksum": "sha256:91c9c4a825b9ccf2",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/extension_arms_uss",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/extension_arms_uss/uss_sgd.uss_mwoz/minilm/extension_arms_uss_20260709T005817.json",
+      "script": "scripts/extension_arms.py",
+      "size_bytes": 7970,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T005817",
+      "variant": "none"
+    },
+    "trace_h2h/g2_renorm_probe:minilm:uss_sgd.uss_mwoz.prism:none:20260712T092237": {
+      "checksum": "sha256:2f6f75fda09a29ab",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/g2_renorm_probe",
+      "params": {
+        "arms": [
+          "rs2_raw",
+          "rs2_hat",
+          "rs1(reused)"
+        ],
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/g2_renorm_probe/uss_sgd.uss_mwoz.prism/minilm/g2_renorm_probe_20260712T092237.json",
+      "script": "scripts/g2_renorm_probe.py",
+      "size_bytes": 5634,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "degree2_unlocks"
+      ],
+      "timestamp": "20260712T092237",
+      "variant": "none"
+    },
+    "trace_h2h/gram_crosslength:none:synthetic:none:20260711T220006": {
+      "checksum": "sha256:7541552de97c10e1",
+      "config": "none",
+      "dataset": "synthetic",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/gram_crosslength",
+      "params": {
+        "T_range": [
+          3,
+          30
+        ],
+        "d": 384,
+        "ncoef": 4,
+        "seed": 42,
+        "slope": 0.02
+      },
+      "path": "trace_h2h/gram_crosslength/synthetic/none/gram_crosslength_20260711T220006.json",
+      "script": "scripts/gram_crosslength.py",
+      "size_bytes": 4763,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "timestamp": "20260711T220006",
+      "variant": "none"
+    },
+    "trace_h2h/gram_crosslength:none:synthetic:none:20260711T220144": {
+      "checksum": "sha256:15f2f36f3ebf62c9",
+      "config": "none",
+      "dataset": "synthetic",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/gram_crosslength",
+      "params": {
+        "T_range": [
+          3,
+          30
+        ],
+        "d": 384,
+        "ncoef": 4,
+        "seed": 42,
+        "slope": 0.02
+      },
+      "path": "trace_h2h/gram_crosslength/synthetic/none/gram_crosslength_20260711T220144.json",
+      "script": "scripts/gram_crosslength.py",
+      "size_bytes": 4784,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "timestamp": "20260711T220144",
+      "variant": "none"
+    },
+    "trace_h2h/gram_degree_sweep:minilm:uss_sgd:none:20260711T230656": {
+      "checksum": "sha256:91f93b4f3dad1803",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/gram_degree_sweep",
+      "params": {
+        "bases": [
+          "gram",
+          "dct"
+        ],
+        "ks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/gram_degree_sweep/uss_sgd/minilm/gram_degree_sweep_20260711T230656.json",
+      "script": "scripts/gram_degree_sweep.py",
+      "size_bytes": 4529,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "timestamp": "20260711T230656",
+      "variant": "none"
+    },
+    "trace_h2h/gram_identities:minilm:uss_sgd.uss_mwoz.prism:none:20260711T215927": {
+      "checksum": "sha256:2ec2632ed30ef89e",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/gram_identities",
+      "params": {
+        "checks": [
+          "g0_vs_mean",
+          "degree_independence",
+          "midline_recovery",
+          "offset_recovery"
+        ],
+        "precisions": [
+          "float64",
+          "float32"
+        ]
+      },
+      "path": "trace_h2h/gram_identities/uss_sgd.uss_mwoz.prism/minilm/gram_identities_20260711T215927.json",
+      "script": "scripts/gram_identities.py",
+      "size_bytes": 2604,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "timestamp": "20260711T215927",
+      "variant": "none"
+    },
+    "trace_h2h/gram_timing:minilm:synthetic:none:20260711T220439": {
+      "checksum": "sha256:3d79f1b1eeecb49e",
+      "config": "minilm",
+      "dataset": "synthetic",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/gram_timing",
+      "params": {
+        "Ts": [
+          5,
+          10,
+          25
+        ],
+        "d": 384,
+        "repeats_minilm": 10,
+        "repeats_proj": 500
+      },
+      "path": "trace_h2h/gram_timing/synthetic/minilm/gram_timing_20260711T220439.json",
+      "script": "scripts/gram_timing.py",
+      "size_bytes": 3449,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "timestamp": "20260711T220439",
+      "variant": "none"
+    },
+    "trace_h2h/hier_eval:minilm:uss_sgd.uss_mwoz:none:20260709T010738": {
+      "checksum": "sha256:b6908a0ce45dfeb2",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/hier_eval",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/hier_eval/uss_sgd.uss_mwoz/minilm/hier_eval_20260709T010738.json",
+      "script": "scripts/hier_eval.py",
+      "size_bytes": 5342,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T010738",
+      "variant": "none"
+    },
+    "trace_h2h/judge_stack:bge_minilm:uss_sgd.uss_mwoz.prism:none:20260710T081654": {
+      "checksum": "sha256:14d17bb37294bc19",
+      "config": "bge_minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/judge_stack",
+      "params": {
+        "inference": "seed-ensembled",
+        "issues": "#53",
+        "judge": "haiku",
+        "n_boot": 1000,
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123
+        ]
+      },
+      "path": "trace_h2h/judge_stack/uss_sgd.uss_mwoz.prism/bge_minilm/judge_stack_20260710T081654.json",
+      "script": "scripts/judge_stack.py",
+      "size_bytes": 6218,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260710T081654",
+      "variant": "none"
+    },
+    "trace_h2h/judge_template1:bge_minilm:uss_sgd.uss_mwoz.prism:none:20260710T105623": {
+      "checksum": "sha256:fa78675714ab96eb",
+      "config": "bge_minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/judge_template1",
+      "params": {
+        "inference": "seed-ensembled",
+        "issues": "#53",
+        "judge_model": "claude-haiku-4-5",
+        "n_boot": 1000,
+        "n_folds": 5,
+        "prompt": "trace_appendix_d_template_1",
+        "seeds": [
+          42,
+          7,
+          123
+        ]
+      },
+      "path": "trace_h2h/judge_template1/uss_sgd.uss_mwoz.prism/bge_minilm/judge_template1_20260710T105623.json",
+      "script": "scripts/judge_template1.py",
+      "size_bytes": 8373,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260710T105623",
+      "variant": "none"
+    },
+    "trace_h2h/ledger_stats:minilm:uss_sgd.uss_mwoz.prism:none:20260709T103818": {
+      "checksum": "sha256:ed9f830becbcf62a",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/ledger_stats",
+      "params": {
+        "ledger_items": "1-5",
+        "seed": 42
+      },
+      "path": "trace_h2h/ledger_stats/uss_sgd.uss_mwoz.prism/minilm/ledger_stats_20260709T103818.json",
+      "script": "scripts/ledger_stats.py",
+      "size_bytes": 3161,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T103818",
+      "variant": "none"
+    },
+    "trace_h2h/scoreboard_arms:minilm:uss_sgd.uss_mwoz.prism:none:20260710T152343": {
+      "checksum": "sha256:2061fe1079064f64",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/scoreboard_arms",
+      "params": {
+        "arms": [
+          "floor1",
+          "design_a",
+          "design_b",
+          "hybrid",
+          "combo_duration(prism)"
+        ],
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/scoreboard_arms/uss_sgd.uss_mwoz.prism/minilm/scoreboard_arms_20260710T152343.json",
+      "script": "scripts/scoreboard_arms.py",
+      "size_bytes": 4296,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260710T152343",
+      "variant": "none"
+    },
+    "trace_h2h/scoreboard_arms:minilm:uss_sgd.uss_mwoz.prism:none:20260710T162256": {
+      "checksum": "sha256:7968f52ba7a2abea",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/scoreboard_arms",
+      "params": {
+        "arms": [
+          "floor1",
+          "design_a",
+          "design_b",
+          "hybrid",
+          "combo_duration(prism)"
+        ],
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/scoreboard_arms/uss_sgd.uss_mwoz.prism/minilm/scoreboard_arms_20260710T162256.json",
+      "script": "scripts/scoreboard_arms.py",
+      "size_bytes": 4296,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260710T162256",
+      "variant": "none"
+    },
+    "trace_h2h/mdl_degree_uss_sgd:minilm:uss_sgd:none:20260709T014051": {
+      "checksum": "sha256:9801b0424edd1fe2",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/mdl_degree_uss_sgd",
+      "params": {
+        "analysis": "mdl_degree"
+      },
+      "path": "trace_h2h/mdl_degree_uss_sgd/uss_sgd/minilm/mdl_degree_uss_sgd_20260709T014051.json",
+      "script": "scripts/mdl_degree.py",
+      "size_bytes": 1255,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T014051",
+      "variant": "none"
+    },
+    "trace_h2h/multimodel_eval:gte_bge:uss_sgd.uss_mwoz.prism:none:20260709T021612": {
+      "checksum": "sha256:2bb6680d57491636",
+      "config": "gte_bge",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/multimodel_eval",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/multimodel_eval/uss_sgd.uss_mwoz.prism/gte_bge/multimodel_eval_20260709T021612.json",
+      "script": "scripts/multimodel_eval.py",
+      "size_bytes": 7695,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T021612",
+      "variant": "none"
+    },
+    "trace_h2h/multiseed_probes:minilm:uss_sgd.uss_mwoz.prism:none:20260709T021525": {
+      "checksum": "sha256:8495cb7233a3cb7e",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/multiseed_probes",
+      "params": {
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/multiseed_probes/uss_sgd.uss_mwoz.prism/minilm/multiseed_probes_20260709T021525.json",
+      "script": "scripts/multiseed_probes.py",
+      "size_bytes": 6350,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T021525",
+      "variant": "none"
+    },
+    "trace_h2h/prism_reversal:minilm:prism:none:20260709T014006": {
+      "checksum": "sha256:095240abdd048817",
+      "config": "minilm",
+      "dataset": "prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/prism_reversal",
+      "params": {
+        "n_boot": 1000,
+        "seed": 42
+      },
+      "path": "trace_h2h/prism_reversal/prism/minilm/prism_reversal_20260709T014006.json",
+      "script": "scripts/prism_reversal.py",
+      "size_bytes": 5109,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T014006",
+      "variant": "none"
+    },
+    "trace_h2h/capacity_uniqueness:minilm:uss_sgd.uss_mwoz:none:20260710T170845": {
+      "checksum": "sha256:e199f57ff7b652bf",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/capacity_uniqueness",
+      "params": {
+        "issue": 63,
+        "k": 9,
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/capacity_uniqueness/uss_sgd.uss_mwoz/minilm/capacity_uniqueness_20260710T170845.json",
+      "script": "scripts/capacity_uniqueness.py",
+      "size_bytes": 3162,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260710T170845",
+      "variant": "none"
+    },
+    "trace_h2h/role_surprise_sgd:minilm:uss_sgd:none:20260709T010940": {
+      "checksum": "sha256:15f84c359bc32a32",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/role_surprise_sgd",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/role_surprise_sgd/uss_sgd/minilm/role_surprise_sgd_20260709T010940.json",
+      "script": "scripts/role_surprise.py",
+      "size_bytes": 1481,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T010940",
+      "variant": "none"
+    },
+    "trace_h2h/roleblind_probes:minilm:prism.uss_sgd:none:20260710T080134": {
+      "checksum": "sha256:5c63af0d30d63a22",
+      "config": "minilm",
+      "dataset": "prism.uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/roleblind_probes",
+      "params": {
+        "inference": "seed-ensembled",
+        "issues": "#45",
+        "n_boot": 1000,
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/roleblind_probes/prism.uss_sgd/minilm/roleblind_probes_20260710T080134.json",
+      "script": "scripts/roleblind_probes.py",
+      "size_bytes": 6110,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260710T080134",
+      "variant": "none"
+    },
+    "trace_h2h/rolesplit_graft:minilm:uss_sgd.uss_mwoz.prism:none:20260709T232856": {
+      "checksum": "sha256:954b6144aaee63a2",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/rolesplit_graft",
+      "params": {
+        "inference": "seed-ensembled",
+        "issues": "#50",
+        "n_boot": 1000,
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/rolesplit_graft/uss_sgd.uss_mwoz.prism/minilm/rolesplit_graft_20260709T232856.json",
+      "script": "scripts/rolesplit_graft.py",
+      "size_bytes": 9666,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T232856",
+      "variant": "none"
+    },
+    "trace_h2h/rolesplit_embedders:gte_bge:uss_sgd.uss_mwoz.prism:none:20260710T051528": {
+      "checksum": "sha256:c94bf68dcf5c73b0",
+      "config": "gte_bge",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/rolesplit_embedders",
+      "params": {
+        "inference": "seed-ensembled",
+        "issues": "#51",
+        "n_boot": 1000,
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123
+        ]
+      },
+      "path": "trace_h2h/rolesplit_embedders/uss_sgd.uss_mwoz.prism/gte_bge/rolesplit_embedders_20260710T051528.json",
+      "script": "scripts/rolesplit_embedders.py",
+      "size_bytes": 6485,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260710T051528",
+      "variant": "none"
+    },
+    "trace_h2h/service_transfer:minilm:uss_sgd:none:20260709T011156": {
+      "checksum": "sha256:fc2cfd432e1aef7d",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/service_transfer",
+      "params": {
+        "n_folds": 5,
+        "seed": 42
+      },
+      "path": "trace_h2h/service_transfer/uss_sgd/minilm/service_transfer_20260709T011156.json",
+      "script": "scripts/service_transfer.py",
+      "size_bytes": 1027,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260709T011156",
+      "variant": "none"
+    },
+    "trace_h2h/spike_degree_matched:minilm:uss_sgd.uss_mwoz:none:20260712T095915": {
+      "checksum": "sha256:e784e8fdf9b199cf",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/spike_degree_matched",
+      "params": {
+        "arms": [
+          "floor",
+          "g0",
+          "rs1",
+          "rs2"
+        ],
+        "n_folds": 5,
+        "seed": 42,
+        "targets": [
+          "y0",
+          "y1",
+          "y2"
+        ]
+      },
+      "path": "trace_h2h/spike_degree_matched/uss_sgd.uss_mwoz/minilm/spike_degree_matched_20260712T095915.json",
+      "script": "scripts/spike_degree_matched.py",
+      "size_bytes": 3796,
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "degree2_unlocks",
+        "spike"
+      ],
+      "timestamp": "20260712T095915",
+      "variant": "none"
+    },
+    "trace_h2h/transform_grafting:minilm:uss_sgd.uss_mwoz.prism:none:20260712T011745": {
+      "checksum": "sha256:cd516b904b9ccae8",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/transform_grafting",
+      "params": {
+        "degree": 3,
+        "head": "ridgecv_linear",
+        "inference": "seed-ensembled",
+        "issues": "#38",
+        "n_boot": 1000,
+        "n_folds": 5,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/transform_grafting/uss_sgd.uss_mwoz.prism/minilm/transform_grafting_20260712T011745.json",
+      "script": "scripts/transform_grafting_probes.py",
+      "size_bytes": 15022,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260712T011745",
+      "variant": "none"
+    },
+    "trace_h2h/uniqueness_mwoz:minilm:uss_mwoz:none:20260711T014648": {
+      "checksum": "sha256:0c3c6396e7f3c970",
+      "config": "minilm",
+      "dataset": "uss_mwoz",
+      "duration_seconds": null,
+      "experiment": "trace_h2h/uniqueness_mwoz",
+      "params": {
+        "follows_issue": 63,
+        "n_boot": 1000,
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ]
+      },
+      "path": "trace_h2h/uniqueness_mwoz/uss_mwoz/minilm/uniqueness_mwoz_20260711T014648.json",
+      "script": "scripts/uniqueness_mwoz.py",
+      "size_bytes": 1331,
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "timestamp": "20260711T014648",
+      "variant": "none"
+    },
+    "trace_h2h/dims_control:minilm:uss_sgd.uss_mwoz:none:20260713T011101": {
+      "experiment": "trace_h2h/dims_control",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "20260713T011101",
+      "path": "trace_h2h/dims_control/uss_sgd.uss_mwoz/minilm/dims_control_20260713T011101.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5,
+        "pca_k": 26
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:0504f7c290f1c2b7",
+      "size_bytes": 3715,
+      "duration_seconds": null,
+      "script": "scripts/dims_control.py"
+    },
+    "trace_h2h/gram_identities:minilm:uss_sgd.uss_mwoz.prism:none:20260713T220757": {
+      "experiment": "trace_h2h/gram_identities",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260713T220757",
+      "path": "trace_h2h/gram_identities/uss_sgd.uss_mwoz.prism/minilm/gram_identities_20260713T220757.json",
+      "params": {
+        "checks": [
+          "g0_vs_mean",
+          "degree_independence",
+          "midline_recovery",
+          "offset_recovery"
+        ],
+        "precisions": [
+          "float64",
+          "float32"
+        ]
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "checksum": "sha256:d92f7d432f884af5",
+      "size_bytes": 2585,
+      "duration_seconds": null,
+      "script": "scripts/gram_identities.py"
+    },
+    "trace_h2h/gram_crosslength:none:synthetic:none:20260713T220758": {
+      "experiment": "trace_h2h/gram_crosslength",
+      "config": "none",
+      "dataset": "synthetic",
+      "variant": "none",
+      "timestamp": "20260713T220758",
+      "path": "trace_h2h/gram_crosslength/synthetic/none/gram_crosslength_20260713T220758.json",
+      "params": {
+        "seed": 42,
+        "d": 384,
+        "slope": 0.02,
+        "ncoef": 4,
+        "T_range": [
+          3,
+          30
+        ]
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "checksum": "sha256:c343194a5405fa4d",
+      "size_bytes": 4765,
+      "duration_seconds": null,
+      "script": "scripts/gram_crosslength.py"
+    },
+    "trace_h2h/gram_timing:minilm:synthetic:none:20260713T220819": {
+      "experiment": "trace_h2h/gram_timing",
+      "config": "minilm",
+      "dataset": "synthetic",
+      "variant": "none",
+      "timestamp": "20260713T220819",
+      "path": "trace_h2h/gram_timing/synthetic/minilm/gram_timing_20260713T220819.json",
+      "params": {
+        "repeats_proj": 500,
+        "repeats_minilm": 10,
+        "Ts": [
+          5,
+          10,
+          25
+        ],
+        "d": 384
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "checksum": "sha256:f09f5cd50e1cc1f2",
+      "size_bytes": 3415,
+      "duration_seconds": null,
+      "script": "scripts/gram_timing.py"
+    },
+    "trace_h2h/multiseed_probes:minilm:uss_sgd.uss_mwoz.prism:none:20260713T221025": {
+      "experiment": "trace_h2h/multiseed_probes",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260713T221025",
+      "path": "trace_h2h/multiseed_probes/uss_sgd.uss_mwoz.prism/minilm/multiseed_probes_20260713T221025.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:4dca469642766baf",
+      "size_bytes": 6331,
+      "duration_seconds": null,
+      "script": "scripts/multiseed_probes.py"
+    },
+    "trace_h2h/eqdim_probes:minilm:uss_sgd.uss_mwoz.prism:none:20260713T221134": {
+      "experiment": "trace_h2h/eqdim_probes",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260713T221134",
+      "path": "trace_h2h/eqdim_probes/uss_sgd.uss_mwoz.prism/minilm/eqdim_probes_20260713T221134.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_folds": 5,
+        "arms": "rolesplit_k1(1536) vs raw(1536)"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:2679a30b8a11206b",
+      "size_bytes": 3587,
+      "duration_seconds": null,
+      "script": "scripts/eqdim_probes.py"
+    },
+    "trace_h2h/basis_subspace:none:synthetic:none:20260713T221518": {
+      "experiment": "trace_h2h/basis_subspace",
+      "config": "none",
+      "dataset": "synthetic",
+      "variant": "none",
+      "timestamp": "20260713T221518",
+      "path": "trace_h2h/basis_subspace/synthetic/none/basis_subspace_20260713T221518.json",
+      "params": {
+        "n_lo": 4,
+        "n_hi": 40,
+        "ncoef": 4,
+        "note": "deterministic, no seeds involved"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:7c4b83f82af325e5",
+      "size_bytes": 9450,
+      "duration_seconds": null,
+      "script": "scripts/basis_probes.py"
+    },
+    "trace_h2h/basis_probes:minilm:uss_sgd.uss_mwoz.prism:none:20260713T221518": {
+      "experiment": "trace_h2h/basis_probes",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260713T221518",
+      "path": "trace_h2h/basis_probes/uss_sgd.uss_mwoz.prism/minilm/basis_probes_20260713T221518.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_folds": 5,
+        "band": 0.01,
+        "gap_primary": 1.0,
+        "n_boot": 1000,
+        "issues": "#43 #44 #46"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:d475c4c0664a911d",
+      "size_bytes": 12686,
+      "duration_seconds": null,
+      "script": "scripts/basis_probes.py"
+    },
+    "trace_h2h/basis_calibration:minilm:uss_sgd.uss_mwoz.prism:none:20260713T221734": {
+      "experiment": "trace_h2h/basis_calibration",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260713T221734",
+      "path": "trace_h2h/basis_calibration/uss_sgd.uss_mwoz.prism/minilm/basis_calibration_20260713T221734.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "gap": 1.0,
+        "n_boot": 1000,
+        "source": "cached OOF preds from basis_probes",
+        "issues": "#43 amendment"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:d2b511dcf0a5281a",
+      "size_bytes": 14121,
+      "duration_seconds": null,
+      "script": "scripts/basis_calibration.py"
+    },
+    "trace_h2h/degree_ablation:minilm:uss_sgd.uss_mwoz:none:20260713T221832": {
+      "experiment": "trace_h2h/degree_ablation",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "20260713T221832",
+      "path": "trace_h2h/degree_ablation/uss_sgd.uss_mwoz/minilm/degree_ablation_20260713T221832.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:616f91fdcf3320f5",
+      "size_bytes": 5265,
+      "duration_seconds": null,
+      "script": "scripts/degree_ablation.py"
+    },
+    "trace_h2h/gram_degree_sweep:minilm:uss_sgd:none:20260713T221841": {
+      "experiment": "trace_h2h/gram_degree_sweep",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "variant": "none",
+      "timestamp": "20260713T221841",
+      "path": "trace_h2h/gram_degree_sweep/uss_sgd/minilm/gram_degree_sweep_20260713T221841.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_folds": 5,
+        "ks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "bases": [
+          "gram",
+          "dct"
+        ]
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "gram_paper"
+      ],
+      "checksum": "sha256:f16e3ae9a84e6a92",
+      "size_bytes": 4510,
+      "duration_seconds": null,
+      "script": "scripts/gram_degree_sweep.py"
+    },
+    "trace_h2h/deconfound_length:minilm:prism.uss_trunc:none:20260713T153908": {
+      "experiment": "trace_h2h/deconfound_length",
+      "config": "minilm",
+      "dataset": "prism.uss_trunc",
+      "variant": "none",
+      "timestamp": "deconfound_length_20260713T153908",
+      "path": "trace_h2h/deconfound_length/prism.uss_trunc/minilm/deconfound_length_20260713T153908.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5,
+        "trunc": 7
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:4b1eea8d098b7a57",
+      "size_bytes": 5763,
+      "duration_seconds": null,
+      "script": "scripts/deconfound_length.py"
+    },
+    "trace_h2h/degree_ablation:minilm:uss_sgd.uss_mwoz:none:20260713T153822": {
+      "experiment": "trace_h2h/degree_ablation",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "degree_ablation_20260713T153822",
+      "path": "trace_h2h/degree_ablation/uss_sgd.uss_mwoz/minilm/degree_ablation_20260713T153822.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:f2d5aae1d2d1b202",
+      "size_bytes": 5265,
+      "duration_seconds": null,
+      "script": "scripts/degree_ablation.py"
+    },
+    "trace_h2h/descriptive_profiles:minilm:uss_sgd.uss_mwoz:none:20260713T163329": {
+      "experiment": "trace_h2h/descriptive_profiles",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "descriptive_profiles_20260713T163329",
+      "path": "trace_h2h/descriptive_profiles/uss_sgd.uss_mwoz/minilm/descriptive_profiles_20260713T163329.json",
+      "params": {
+        "test": "kruskal_fdr"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:3394072ec4e25985",
+      "size_bytes": 7183,
+      "duration_seconds": null,
+      "script": "scripts/descriptive_profiles.py"
+    },
+    "trace_h2h/dim_frontier:minilm:uss_sgd.uss_mwoz:none:20260713T163259": {
+      "experiment": "trace_h2h/dim_frontier",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "dim_frontier_20260713T163259",
+      "path": "trace_h2h/dim_frontier/uss_sgd.uss_mwoz/minilm/dim_frontier_20260713T163259.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:72bbff42d269f2c4",
+      "size_bytes": 2211,
+      "duration_seconds": null,
+      "script": "scripts/dim_frontier.py"
+    },
+    "trace_h2h/extension_arms_uss:minilm:uss_sgd.uss_mwoz:none:20260713T160603": {
+      "experiment": "trace_h2h/extension_arms_uss",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "extension_arms_uss_20260713T160603",
+      "path": "trace_h2h/extension_arms_uss/uss_sgd.uss_mwoz/minilm/extension_arms_uss_20260713T160603.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:e61475a02d3a3adb",
+      "size_bytes": 7957,
+      "duration_seconds": null,
+      "script": "scripts/extension_arms.py"
+    },
+    "trace_h2h/feature_ablation_uss_mwoz:minilm:uss_mwoz:none:20260713T173700": {
+      "experiment": "trace_h2h/feature_ablation_uss_mwoz",
+      "config": "minilm",
+      "dataset": "uss_mwoz",
+      "variant": "none",
+      "timestamp": "feature_ablation_uss_mwoz_20260713T173700",
+      "path": "trace_h2h/feature_ablation_uss_mwoz/uss_mwoz/minilm/feature_ablation_uss_mwoz_20260713T173700.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:fd7ec82f516060ec",
+      "size_bytes": 2154,
+      "duration_seconds": null,
+      "script": "scripts/feature_ablation.py"
+    },
+    "trace_h2h/feature_ablation_uss_sgd:minilm:uss_sgd:none:20260713T173426": {
+      "experiment": "trace_h2h/feature_ablation_uss_sgd",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "variant": "none",
+      "timestamp": "feature_ablation_uss_sgd_20260713T173426",
+      "path": "trace_h2h/feature_ablation_uss_sgd/uss_sgd/minilm/feature_ablation_uss_sgd_20260713T173426.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:740aa48ef90a4862",
+      "size_bytes": 2152,
+      "duration_seconds": null,
+      "script": "scripts/feature_ablation.py"
+    },
+    "trace_h2h/g0_combo_uss_mwoz:minilm:uss_mwoz:none:20260713T174027": {
+      "experiment": "trace_h2h/g0_combo_uss_mwoz",
+      "config": "minilm",
+      "dataset": "uss_mwoz",
+      "variant": "none",
+      "timestamp": "g0_combo_uss_mwoz_20260713T174027",
+      "path": "trace_h2h/g0_combo_uss_mwoz/uss_mwoz/minilm/g0_combo_uss_mwoz_20260713T174027.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:1fa371d3663a5bd7",
+      "size_bytes": 1598,
+      "duration_seconds": null,
+      "script": "scripts/g0_combo.py"
+    },
+    "trace_h2h/g0_combo_uss_sgd:minilm:uss_sgd:none:20260713T173840": {
+      "experiment": "trace_h2h/g0_combo_uss_sgd",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "variant": "none",
+      "timestamp": "g0_combo_uss_sgd_20260713T173840",
+      "path": "trace_h2h/g0_combo_uss_sgd/uss_sgd/minilm/g0_combo_uss_sgd_20260713T173840.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:a0cf1442b392379b",
+      "size_bytes": 1594,
+      "duration_seconds": null,
+      "script": "scripts/g0_combo.py"
+    },
+    "trace_h2h/hier_eval:minilm:uss_sgd.uss_mwoz:none:20260713T162445": {
+      "experiment": "trace_h2h/hier_eval",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "hier_eval_20260713T162445",
+      "path": "trace_h2h/hier_eval/uss_sgd.uss_mwoz/minilm/hier_eval_20260713T162445.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:99ffe39d3c7f6e71",
+      "size_bytes": 5323,
+      "duration_seconds": null,
+      "script": "scripts/hier_eval.py"
+    },
+    "trace_h2h/mdl_degree_uss_sgd:minilm:uss_sgd:none:20260713T173200": {
+      "experiment": "trace_h2h/mdl_degree_uss_sgd",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "variant": "none",
+      "timestamp": "mdl_degree_uss_sgd_20260713T173200",
+      "path": "trace_h2h/mdl_degree_uss_sgd/uss_sgd/minilm/mdl_degree_uss_sgd_20260713T173200.json",
+      "params": {
+        "analysis": "mdl_degree"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:b2e46623452fb53d",
+      "size_bytes": 1222,
+      "duration_seconds": null,
+      "script": "scripts/mdl_degree.py"
+    },
+    "trace_h2h/prism_reversal:minilm:prism:none:20260713T173032": {
+      "experiment": "trace_h2h/prism_reversal",
+      "config": "minilm",
+      "dataset": "prism",
+      "variant": "none",
+      "timestamp": "prism_reversal_20260713T173032",
+      "path": "trace_h2h/prism_reversal/prism/minilm/prism_reversal_20260713T173032.json",
+      "params": {
+        "seed": 42,
+        "n_boot": 1000
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:1109d8b65a2a3a37",
+      "size_bytes": 5096,
+      "duration_seconds": null,
+      "script": "scripts/prism_reversal.py"
+    },
+    "trace_h2h/role_surprise_sgd:minilm:uss_sgd:none:20260713T162846": {
+      "experiment": "trace_h2h/role_surprise_sgd",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "variant": "none",
+      "timestamp": "role_surprise_sgd_20260713T162846",
+      "path": "trace_h2h/role_surprise_sgd/uss_sgd/minilm/role_surprise_sgd_20260713T162846.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:13a6796a39496f86",
+      "size_bytes": 1462,
+      "duration_seconds": null,
+      "script": "scripts/role_surprise.py"
+    },
+    "trace_h2h/service_transfer:minilm:uss_sgd:none:20260713T163325": {
+      "experiment": "trace_h2h/service_transfer",
+      "config": "minilm",
+      "dataset": "uss_sgd",
+      "variant": "none",
+      "timestamp": "service_transfer_20260713T163325",
+      "path": "trace_h2h/service_transfer/uss_sgd/minilm/service_transfer_20260713T163325.json",
+      "params": {
+        "seed": 42,
+        "n_folds": 5
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:622e13200ae1bac6",
+      "size_bytes": 1015,
+      "duration_seconds": null,
+      "script": "scripts/service_transfer.py"
+    },
+    "trace_h2h/llm_judge_eval:minilm:uss_sgd.uss_mwoz.prism:none:20260713T233405": {
+      "experiment": "trace_h2h/llm_judge_eval",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260713T233405",
+      "path": "trace_h2h/llm_judge_eval/uss_sgd.uss_mwoz.prism/minilm/llm_judge_eval_20260713T233405.json",
+      "params": {},
+      "summary": {},
+      "tags": [
+        "trace_h2h",
+        "judge"
+      ],
+      "checksum": "sha256:e1c8fa08accd8b49",
+      "size_bytes": 5176,
+      "duration_seconds": null,
+      "script": "scripts/llm_judge.py"
+    },
+    "trace_h2h/ledger_stats:minilm:uss_sgd.uss_mwoz.prism:none:20260715T110738": {
+      "experiment": "trace_h2h/ledger_stats",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260715T110738",
+      "path": "trace_h2h/ledger_stats/uss_sgd.uss_mwoz.prism/minilm/ledger_stats_20260715T110738.json",
+      "params": {
+        "seed": 42,
+        "ledger_items": "1-5"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:30c4d81f73f22117",
+      "size_bytes": 3231,
+      "duration_seconds": null,
+      "script": "scripts/ledger_stats.py"
+    },
+    "trace_h2h/ledger_stats:minilm:uss_sgd.uss_mwoz.prism:none:20260715T151931": {
+      "experiment": "trace_h2h/ledger_stats",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260715T151931",
+      "path": "trace_h2h/ledger_stats/uss_sgd.uss_mwoz.prism/minilm/ledger_stats_20260715T151931.json",
+      "params": {
+        "seed": 42,
+        "ledger_items": "1-5"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:54ba45e6c1e62122",
+      "size_bytes": 3232,
+      "duration_seconds": null,
+      "script": "scripts/ledger_stats.py"
+    },
+    "trace_h2h/goal_proxy_prism:minilm:prism:none:20260715T225749": {
+      "experiment": "trace_h2h/goal_proxy_prism",
+      "config": "minilm",
+      "dataset": "prism",
+      "variant": "none",
+      "timestamp": "20260715T225749",
+      "path": "trace_h2h/goal_proxy_prism/prism/minilm/goal_proxy_prism_20260715T225749.json",
+      "params": {
+        "deterministic": true,
+        "n_raw_conversations": 8011
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:33c87ae19db48719",
+      "size_bytes": 1765,
+      "duration_seconds": null,
+      "script": "goal_proxy_prism.py"
+    },
+    "trace_h2h/goal_proxy_prism:minilm:prism:none:20260715T230930": {
+      "experiment": "trace_h2h/goal_proxy_prism",
+      "config": "minilm",
+      "dataset": "prism",
+      "variant": "none",
+      "timestamp": "20260715T230930",
+      "path": "trace_h2h/goal_proxy_prism/prism/minilm/goal_proxy_prism_20260715T230930.json",
+      "params": {
+        "deterministic": true,
+        "n_raw_conversations": 8011
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:c15963c9bc364e00",
+      "size_bytes": 2149,
+      "duration_seconds": null,
+      "script": "goal_proxy_prism.py"
+    },
+    "trace_h2h/identity_probes_prism:minilm:prism:none:20260715T220118": {
+      "experiment": "trace_h2h/identity_probes_prism",
+      "config": "minilm",
+      "dataset": "prism",
+      "variant": "none",
+      "timestamp": "20260715T220118",
+      "path": "trace_h2h/identity_probes_prism/prism/minilm/identity_probes_prism_20260715T220118.json",
+      "params": {
+        "n_folds": 5,
+        "head": "logreg",
+        "issue": 97,
+        "analysis": "A"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:21ecf4d75792688a",
+      "size_bytes": 4745,
+      "duration_seconds": null,
+      "script": "scripts/identity_probes_prism.py"
+    },
+    "trace_h2h/identity_controls_prism:minilm:prism:none:20260715T220415": {
+      "experiment": "trace_h2h/identity_controls_prism",
+      "config": "minilm",
+      "dataset": "prism",
+      "variant": "none",
+      "timestamp": "20260715T220415",
+      "path": "trace_h2h/identity_controls_prism/prism/minilm/identity_controls_prism_20260715T220415.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_boot": 1000,
+        "issue": 97,
+        "analysis": "B",
+        "gap_primary": 1.0
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:f79f105065c5fee2",
+      "size_bytes": 15574,
+      "duration_seconds": null,
+      "script": "scripts/identity_controls_prism.py"
+    },
+    "trace_h2h/identity_augment_prism:minilm:prism:none:20260716T131413": {
+      "experiment": "trace_h2h/identity_augment_prism",
+      "config": "minilm",
+      "dataset": "prism",
+      "variant": "none",
+      "timestamp": "20260716T131413",
+      "path": "trace_h2h/identity_augment_prism/prism/minilm/identity_augment_prism_20260716T131413.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_boot": 1000,
+        "issue": 97,
+        "analysis": "C1",
+        "gap_primary": 1.0
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:13a07ca75b76f17e",
+      "size_bytes": 5310,
+      "duration_seconds": null,
+      "script": "scripts/identity_augment_prism.py"
+    },
+    "trace_h2h/interleaved_degree:minilm:uss_sgd.uss_mwoz.prism:none:20260717T030523": {
+      "experiment": "trace_h2h/interleaved_degree",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz.prism",
+      "variant": "none",
+      "timestamp": "20260717T030523",
+      "path": "trace_h2h/interleaved_degree/uss_sgd.uss_mwoz.prism/minilm/interleaved_degree_20260717T030523.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_folds": 5,
+        "arms": "inter_k1(768) inter_k2(1152) vs raw/rolesplit_k1/g0 (reused)"
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:b095aa3293cc5d91",
+      "size_bytes": 14388,
+      "duration_seconds": null,
+      "script": "interleaved_degree.py"
+    },
+    "trace_h2h/capacity_uniqueness:minilm:uss_sgd.uss_mwoz:none:20260717T095844": {
+      "experiment": "trace_h2h/capacity_uniqueness",
+      "config": "minilm",
+      "dataset": "uss_sgd.uss_mwoz",
+      "variant": "none",
+      "timestamp": "20260717T095844",
+      "path": "trace_h2h/capacity_uniqueness/uss_sgd.uss_mwoz/minilm/capacity_uniqueness_20260717T095844.json",
+      "params": {
+        "seeds": [
+          42,
+          7,
+          123,
+          2024,
+          31337
+        ],
+        "n_folds": 5,
+        "k": 9,
+        "issue": 63
+      },
+      "summary": {},
+      "tags": [
+        "trace_h2h"
+      ],
+      "checksum": "sha256:a21d623ab39ba43b",
+      "size_bytes": 3580,
+      "duration_seconds": null,
+      "script": "capacity_uniqueness.py"
+    }
+  },
+  "updated": "2026-07-17T09:58:44.914840",
+  "version": "1.0"
+}

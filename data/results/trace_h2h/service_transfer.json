@@ -1,0 +1,21 @@
+{
+ "task": "dominant service, top-8 + other",
+ "n": 1000,
+ "n_classes": 9,
+ "trace": {
+  "acc": 0.452,
+  "macro_f1": 0.3379
+ },
+ "g0": {
+  "acc": 0.769,
+  "macro_f1": 0.6945
+ },
+ "raw": {
+  "acc": 0.846,
+  "macro_f1": 0.7939
+ },
+ "rolesplit": {
+  "acc": 0.825,
+  "macro_f1": 0.754
+ }
+}

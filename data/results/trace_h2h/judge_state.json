@@ -1,0 +1,14 @@
+{
+ "batches": {
+  "haiku": {
+   "id": "msgbatch_01Qbnf2c8YNqDEsexCfqZBsQ",
+   "n": 4000,
+   "model": "claude-haiku-4-5"
+  },
+  "opus": {
+   "id": "msgbatch_01VLdVtS4B6TFjG3cPxrDg2o",
+   "n": 2000,
+   "model": "claude-opus-4-8"
+  }
+ }
+}
