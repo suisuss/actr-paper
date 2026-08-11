@@ -6,11 +6,11 @@ Jacob Sussmilch, Heya Enterprises Pty Ltd
 
 Everything needed to read, check, and re-run the paper: the manuscript source (`paper/paper.md`, built to `paper/paper.pdf`), every result artifact it cites, the ~40 scripts that produced them, and a one-command pipeline that regenerates the lot from public data.
 
-This is the **representation study** of a three-paper line on reading conversations as trajectories through embedding space. A conversation can be represented as a trajectory through high-dimensional semantic space, one point per turn, then summarized as a fixed-size vector for a simple learner. *Which summary* is the question this paper studies: hand-crafted scalar geometry, or an orthogonal-polynomial projection of the trajectory.
+This is the **representation study** of a three-paper line on reading conversations as trajectories through embedding space: embed each turn, and a conversation becomes a path of points that can be summarized as a fixed-size vector for a simple learner. *Which summary* is the question this paper studies: hand-crafted scalar geometry, or an orthogonal-polynomial projection of the trajectory.
 
 *Status: preprint in preparation. The kit is complete and gated; the manuscript has not yet been posted or peer-reviewed.*
 
-## For reviewers: start here
+## Start here
 
 | | |
 |---|---|
@@ -72,7 +72,7 @@ Each repo is a self-contained, public reproduction kit built on the same harness
 | **`actr-paper`** (this repo) | **Representation** | Which trajectory representation predicts satisfaction, the role-split recommendation, and the regime boundary where it stops holding. |
 | [`mtgcr-paper`](https://github.com/suisuss/mtgcr-paper) | Reward | Answers this paper's closing warning: the naive geometric reward is gameable by selection alone; a role-restricted, task-conditioned construction is not. |
 
-This paper **adopts** the encoding rather than deriving it — the construction, the exact identities, and the basis comparison are `gp-paper`'s subject, restated here only where an arm or figure needs them. It **hands off** its closing caution to `mtgcr-paper`: this is offline preference prediction, not reward modeling, and the content-based representations that predict satisfaction best are plausibly the most optimization-gameable, so the ranking need not hold — and may invert — as a reward signal. That is the question `mtgcr-paper` takes up.
+This paper **adopts** the encoding rather than deriving it — the construction, the exact identities, and the basis comparison are `gp-paper`'s subject, restated here only where an arm or figure needs them — and **hands off** its closing caution (that the best satisfaction predictors are plausibly the most gameable rewards; see [What it does not claim](#what-it-does-not-claim)) to `mtgcr-paper`.
 
 ## The encoding: from conversation to coefficient vector
 
@@ -152,7 +152,7 @@ export HF_TOKEN=hf_...                     # PRISM is a gated dataset (see Data)
 
 That is the full reproduction — many hours across ~40 stages, and much faster with a GPU. It is **resumable**: re-run `./run.sh` after any interruption and completed stages are skipped. `./run.sh status` shows the stage table without running anything.
 
-To validate the paper **without** reproducing it — confirm every table matches the shipped artifacts, every `<!-- src: -->` tag resolves to a real script, the artifacts are provenance-clean, and the committed `paper/paper.pdf` reproduces from those sources (same words) — run `./run.sh check`. It takes seconds and needs no datasets, torch, or GPU (only `requirements-core.txt` and, for the PDF, the toolchain). The PDF check is content-fidelity, not a byte diff: XeLaTeX output is not byte-reproducible across TeX Live versions, so it compares the *multiset of words* in the rebuild against the committed PDF (`verify_pdf_matches.py`) — metadata, whitespace, hyphenation, word order, and pagination are all normalized away, so it fails exactly when a word changed, i.e. when the PDF is stale. The rebuild must use the paper's main font (XCharter, installed by `install_pdf_tools.sh`), since `pdftotext` extraction of math subscripts and ligatures is font-dependent.
+To validate the paper **without** reproducing it — every table matches the shipped artifacts, every `<!-- src: -->` tag resolves to a real script, the artifacts are provenance-clean, and the committed `paper/paper.pdf` rebuilds with the same words — run `./run.sh check`. It takes seconds and needs no datasets, torch, or GPU (only `requirements-core.txt` and, for the PDF, the toolchain). How each gate works: [the five gates](#integrity-checking--the-five-gates).
 
 `run.sh` in order: (1) creates `.venv` and installs `requirements.txt`; (2) installs the PDF toolchain via `install_pdf_tools.sh` (needs sudo — skip it and everything but the final PDF still builds); (3) runs `python main.py --fetch-data`, which downloads the corpora and runs the whole pipeline, ending with the PDF. To drive the pipeline directly instead of through `run.sh`, use `python main.py` (same subcommands: `status`, `launch`, `reset`).
 
@@ -222,7 +222,7 @@ Every headline number in the paper traces to one stage script and one canonical 
 
 ## How the kit keeps the paper honest
 
-The infrastructure in `src/lib/` was built deliberately, for one purpose: a paper should be confident it reproduces itself *while being developed*, not just at the end. Four mechanisms carry that guarantee — **resumability, caching, provenance, and integrity checking** — and each is enforced by the pipeline rather than left to discipline. A researcher cannot forget to do them, and cannot quietly skip them to make a number appear. With ~40 stage scripts and a multi-hour full run, that enforcement is what keeps the paper honest at this size.
+The premise of the kit: a paper should be confident it reproduces itself *while being developed*, not just at the end. Four mechanisms in `src/lib/` carry that — **resumability, caching, provenance, and integrity checking** — each enforced by the pipeline rather than left to discipline.
 
 ### The stage contract
 
@@ -238,21 +238,21 @@ Importing a module never executes work. That is what lets `main.py` compile the 
 
 ### Resumability — a killed run is always safe to rerun
 
-Stage state lives in `.reproduce/main/`: `pipeline.json` is the compiled stage list, `pipeline.state.json` tracks per-stage status, and `logs/` holds per-stage output. `lib/pipeline.py` is a detached, restart-recoverable runner — it replaced ad-hoc bash chains (`cmd1; cmd2; ...` with sentinel greps), which proved fragile in practice.
+`lib/pipeline.py` is a detached, restart-recoverable runner. Stage state lives in `.reproduce/main/`: `pipeline.json` is the compiled stage list, `pipeline.state.json` tracks per-stage status, and `logs/` holds per-stage output.
 
-Re-run `./run.sh` after any interruption and completed stages are skipped; `status` / `reset` / `launch` drive it directly. A second concurrent supervisor on the same state is refused by a file lock, so two runs cannot race and corrupt each other's state. `lib/ioutils.py` writes every file atomically, so an interrupted write cannot leave a partial file that `exists()` later reports as good — the failure mode that makes naive resumability worse than none. `lib/runtime.py` caps CPU, memory, and process priority so a long run does not starve the host it is running on.
+Re-run `./run.sh` after any interruption and completed stages are skipped; `status` / `reset` / `launch` drive it directly. A file lock refuses a second concurrent supervisor on the same state, `lib/ioutils.py` writes every file atomically — an interrupted write cannot leave a partial file that `exists()` later reports as good — and `lib/runtime.py` caps CPU, memory, and process priority so a long run does not starve its host.
 
 ### Caching and invalidation — caches that expire themselves
 
 Every expensive stage checkpoints under `data/experiment-caches/<script>/` through `lib.campaign.Checkpoint`, stamped in `producer.json` with the producing script's **logic digest**: a hash of the parsed AST, not of the file bytes. Comment- and formatting-only edits leave it unchanged and do not wipe cached checkpoints; only a change to the code itself re-invalidates. If the source does not currently parse (mid-edit), it falls back to a byte hash.
 
-This is deliberately separate from the exact file sha256 recorded in each artifact's `_provenance` for external verifiability — one digest is for *cache correctness*, the other for *audit*, and conflating them either wipes caches on a typo fix or lets a logic change slip through.
+The logic digest is separate from the file sha256 recorded in each artifact's `_provenance`: one is for *cache correctness*, the other for *audit*.
 
-**Never hand-delete a cache to force freshness.** The invariant is that cache validity is derived from the code, not from memory of what you last edited; deleting by hand is how a stale number survives a rerun. Embedding caches are the one exception in kind — produce-once file guards; delete the `.npz` to force a re-embed.
+**Never hand-delete a cache to force freshness**: cache validity derives from the code, not from memory of what you last edited. Embedding caches are the one exception — produce-once file guards; delete the `.npz` to force a re-embed.
 
 ### Provenance — every number knows which code produced it
 
-A results JSON that says `accuracy 0.78` is only reproducible if it also says which code produced it. `lib/provenance.py` stamps every artifact with the git commit, the dirty flag, the script sha256, the argv, and the seeds. `save_result()` writes both the canonical flat copy the tables read and an immutable provenance-stamped copy in the run history:
+`lib/provenance.py` stamps every artifact with the git commit, the dirty flag, the script sha256, the argv, and the seeds. `save_result()` writes both the canonical flat copy the tables read and an immutable provenance-stamped copy in the run history:
 
 ```
 data/results/trace_h2h/<experiment>.json                      canonical latest (tracked)
@@ -277,9 +277,7 @@ These stamps come from the development history that produced the numbers; this r
 
 Two HTML-comment conventions in `paper/paper.md` are what make gates 2 and 4 mechanical rather than manual: `<!-- src: script.py -->` after every generated figure or table names its producing script, and `<!-- table: name -->` before a generated table lets the gate look it up and diff a fresh regeneration against the printed cells.
 
-The PDF gate is content-fidelity, not a byte diff: XeLaTeX output is not byte-reproducible across TeX Live versions, so it compares the *multiset of words* in the rebuild against the committed PDF — metadata, whitespace, hyphenation, word order, and pagination all normalize away, so it fails exactly when a word changed, i.e. when the PDF is stale.
-
-Together these close the loop the ordinary paper leaves open: the draft cannot claim a number the artifacts do not contain, the artifacts cannot come from uncommitted code, and the PDF cannot lag the draft.
+The PDF gate is content-fidelity, not a byte diff: XeLaTeX output is not byte-reproducible across TeX Live versions, so `verify_pdf_matches.py` compares the *multiset of words* in the rebuild against the committed PDF — metadata, whitespace, hyphenation, word order, and pagination all normalize away, so it fails exactly when a word changed, i.e. when the PDF is stale. The rebuild must use the paper's main font (XCharter, installed by `install_pdf_tools.sh`), since `pdftotext` extraction of math subscripts and ligatures is font-dependent.
 
 ## Repository layout
 
